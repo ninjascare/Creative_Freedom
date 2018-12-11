@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="5cd6c813-c266-45b7-a795-fa90d286cebe" name="Default Changelist" comment="" />
+=======
     <list default="true" id="5cd6c813-c266-45b7-a795-fa90d286cebe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
     </list>
+>>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +65,11 @@
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
+<<<<<<< HEAD
+>>>>>>> d0215781b761ecc8ccdb222b84aacf26831ea256
+=======
 >>>>>>> 1390a8e74b55c76857d8c2f67751f3b3eb28daf6
+>>>>>>> origin
             </state>
           </provider>
         </entry>
@@ -77,7 +85,11 @@
       <file pinned="false" current-in-tab="true">
 =======
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
+>>>>>>> d0215781b761ecc8ccdb222b84aacf26831ea256
+=======
 >>>>>>> 1390a8e74b55c76857d8c2f67751f3b3eb28daf6
+>>>>>>> origin
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
@@ -122,7 +134,11 @@
 =======
     <option name="x" value="720" />
     <option name="y" value="23" />
+<<<<<<< HEAD
+>>>>>>> d0215781b761ecc8ccdb222b84aacf26831ea256
+=======
 >>>>>>> 1390a8e74b55c76857d8c2f67751f3b3eb28daf6
+>>>>>>> origin
     <option name="width" value="720" />
     <option name="height" value="812" />
 >>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
@@ -271,7 +287,11 @@
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14910859" />
+<<<<<<< HEAD
+>>>>>>> d0215781b761ecc8ccdb222b84aacf26831ea256
+=======
 >>>>>>> 1390a8e74b55c76857d8c2f67751f3b3eb28daf6
+>>>>>>> origin
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />

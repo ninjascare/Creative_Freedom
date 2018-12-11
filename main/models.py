@@ -25,13 +25,20 @@ class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='post')
 
     def __str__(self):
+<<<<<<< HEAD
+        return self.created_At
+=======
         return str(self.created_At)
+>>>>>>> origin
 
 
 class Comment(models.Model):
     content = models.TextField()
     created_At = models.DateField(default=date.today)
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comment')
+<<<<<<< HEAD
+=======
 
     def __str__(self):
         return str(self.created_At)
+>>>>>>> origin
