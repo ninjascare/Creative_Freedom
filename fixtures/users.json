@@ -1,0 +1,50 @@
+[
+  {
+    "model": "main.user",
+    "fk": 1,
+    "fields": {
+      "name": "Kishi Bashi",
+      "title": "Painter",
+      "image_url": "http://strawdawg.com/wp-content/uploads/2014/05/addiction-visual-artist.jpg",
+      "email": "painter@gmail.com",
+      "password": "paint123"
+
+    }
+  },
+  {
+    "model": "main.user",
+    "fk": 2,
+    "fields": {
+      "name": "Drake",
+      "title": "Rapper",
+      "image_url": "https://qph.fs.quoracdn.net/main-qimg-dbf1fe8d596b8d405f38456ade1847d2",
+      "email": "rap@gmail.com",
+      "password": "rap123"
+
+    }
+  },
+  {
+    "model": "main.user",
+    "fk": 3,
+    "fields": {
+      "name": "Charlie Roberts",
+      "title": "Freelance Writer",
+      "image_url": "https://trendycrunch.com/wp-content/uploads/2016/09/Freelance-Writer--1024x743.jpg",
+      "email": "writer@gmail.com",
+      "password": "writer123"
+
+    }
+  },
+  {
+    "model": "main.user",
+    "fk": 4,
+    "fields": {
+      "name": "Karen Chapman",
+      "title": "Film-Maker",
+      "image_url": "http://playbackonline.ca/wp/wp-content/uploads/2018/08/FFF-13101-623x295.jpg",
+      "email": "film@gmail.com",
+      "password": "film123"
+
+    }
+  }
+]
