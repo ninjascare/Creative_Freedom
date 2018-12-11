@@ -1,0 +1,38 @@
+[
+  {
+    "model": "main.comment",
+    "fk": 1,
+    "fields": {
+      "content": "Thats cool!",
+      "created_At": "2014-10-16",
+      "post": 1
+    }
+  },
+  {
+    "model": "main.comment",
+    "fk": 2,
+    "fields": {
+      "content": "Awesome!",
+      "created_At": "2016-10-16",
+      "post": 6
+    }
+  },
+  {
+    "model": "main.comment",
+    "fk": 3,
+    "fields": {
+      "content": "WOW!!",
+      "created_At": "2018-11-16",
+      "post": 5
+    }
+  },
+  {
+    "model": "main.comment",
+    "fk": 4,
+    "fields": {
+      "content": "Fire!!",
+      "created_At": "2018-10-16",
+      "post": 8
+    }
+  }
+]
