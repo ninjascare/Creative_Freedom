@@ -4,3 +4,5 @@
 
 
 ![CFC](client/public/Wireframes:ERD/CFC_Splash.png)
+
+![CFC](client/public/Wireframes:ERD/MVPDiagram.png)
