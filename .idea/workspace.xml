@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="5cd6c813-c266-45b7-a795-fa90d286cebe" name="Default Changelist" comment="" />
+=======
     <list default="true" id="5cd6c813-c266-45b7-a795-fa90d286cebe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
     </list>
+>>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,8 +186,12 @@
       <option name="presentableId" value="Default" />
       <updated>1544546292395</updated>
       <workItem from="1544546296365" duration="1780000" />
+<<<<<<< HEAD
+      <workItem from="1544551693572" duration="1989000" />
+=======
       <workItem from="1544551693572" duration="1711000" />
       <workItem from="1544557049091" duration="77000" />
+<<<<<<< HEAD
       <workItem from="1544557165094" duration="1569000" />
     </task>
     <task id="LOCAL-00001" summary="added ERD to file">
@@ -192,12 +200,24 @@
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
       <updated>1544558152169</updated>
+=======
+      <workItem from="1544557165094" duration="723000" />
+>>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
+>>>>>>> 1e7b0bd7c9f7910797642fdae57209344a0d16b2
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="5137000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="3769000" />
+=======
+    <option name="totallyTimeSpent" value="4291000" />
+>>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
+>>>>>>> 1e7b0bd7c9f7910797642fdae57209344a0d16b2
   </component>
   <component name="ToolWindowManager">
     <frame x="547" y="30" width="1276" height="812" extended-state="0" />
