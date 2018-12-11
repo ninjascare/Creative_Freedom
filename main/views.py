@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from rest_framework import viewsets
 
+<<<<<<< HEAD
+=======
 # Create your views here.
 from main.models import User, Post, Comment
 
@@ -18,3 +20,4 @@ class PostView(viewsets.ModelViewSet):
 class CommentView(viewsets.ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
+>>>>>>> origin
