@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="5cd6c813-c266-45b7-a795-fa90d286cebe" name="Default Changelist" comment="" />
+=======
     <list default="true" id="5cd6c813-c266-45b7-a795-fa90d286cebe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/main/models.py" afterDir="false" />
     </list>
+>>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,9 +53,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/models.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="90">
               <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
@@ -60,10 +64,18 @@
             <state relative-caret-position="45">
               <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
 >>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
+=======
+            <state relative-caret-position="60">
+              <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+>>>>>>> d0215781b761ecc8ccdb222b84aacf26831ea256
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Procfile">
@@ -72,11 +84,14 @@
               <caret column="42" selection-start-column="42" selection-end-column="42" />
 =======
       <file pinned="false" current-in-tab="true">
+=======
+      <file pinned="false" current-in-tab="false">
+>>>>>>> d0215781b761ecc8ccdb222b84aacf26831ea256
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="105">
-                <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="120">
+                <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               </first_editor>
               <second_editor />
 >>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
@@ -99,10 +114,12 @@
         <option value="$PROJECT_DIR$/cf_project/urls.py" />
         <option value="$PROJECT_DIR$/cf_project/settings.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/main/models.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <option name="x" value="60" />
     <option name="y" value="23" />
@@ -111,6 +128,10 @@
 =======
     <option name="x" value="164" />
     <option name="y" value="146" />
+=======
+    <option name="x" value="720" />
+    <option name="y" value="23" />
+>>>>>>> d0215781b761ecc8ccdb222b84aacf26831ea256
     <option name="width" value="720" />
     <option name="height" value="812" />
 >>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
@@ -208,16 +229,41 @@
       <option name="presentableId" value="Default" />
       <updated>1544546292395</updated>
       <workItem from="1544546296365" duration="1780000" />
+<<<<<<< HEAD
+      <workItem from="1544551693572" duration="1989000" />
+=======
       <workItem from="1544551693572" duration="1711000" />
       <workItem from="1544557049091" duration="77000" />
-      <workItem from="1544557165094" duration="723000" />
+<<<<<<< HEAD
+      <workItem from="1544557165094" duration="1569000" />
     </task>
+    <task id="LOCAL-00001" summary="added ERD to file">
+      <created>1544558152169</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544558152169</updated>
+=======
+      <workItem from="1544557165094" duration="723000" />
+>>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
+>>>>>>> 1e7b0bd7c9f7910797642fdae57209344a0d16b2
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="5137000" />
+=======
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="3769000" />
+=======
     <option name="totallyTimeSpent" value="4291000" />
+>>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
+>>>>>>> 1e7b0bd7c9f7910797642fdae57209344a0d16b2
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
     <frame x="60" y="23" width="1380" height="709" extended-state="0" />
     <editor active="true" />
@@ -229,6 +275,12 @@
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27138644" />
 >>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
+=======
+    <frame x="547" y="30" width="1276" height="812" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14910859" />
+>>>>>>> d0215781b761ecc8ccdb222b84aacf26831ea256
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -253,6 +305,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added ERD to file" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ERD to file" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cf_project/views.py">
@@ -331,21 +387,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="120">
+            <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           </first_editor>
           <second_editor />
 >>>>>>> 6127034a77045bca09857b6fef124631a716bf6c
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
