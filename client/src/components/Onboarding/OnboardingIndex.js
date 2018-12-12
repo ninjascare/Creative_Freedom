@@ -12,6 +12,8 @@ class OnboardingPage extends Component {
             <div>
                 <h1>Hello from the Onboarding Index page of swagginess</h1>
 
+                <button>Dummy button [Link to User Login Page]</button>
+
                 <Onboarding1/>
                 <Onboarding2/>
                 <Onboarding3/>
