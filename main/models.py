@@ -21,18 +21,18 @@ class Post(models.Model):
     content = models.TextField()
     audio_url = models.TextField(blank=True, null=True)
     video_url = models.TextField(blank=True, null=True)
-    created_At = models.DateField(default=date.today)
+    created_at = models.DateField(default=date.today)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='post')
 
     def __str__(self):
-        return str(self.created_At)
+        return str(self.content)
 
 
 
 class Comment(models.Model):
     content = models.TextField()
-    created_At = models.DateField(default=date.today)
-    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comment')
+    created_at = models.DateField(default=date.today)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name='comments')
 
     def __str__(self):
-        return str(self.created_At)
+        return str(self.created_at)
