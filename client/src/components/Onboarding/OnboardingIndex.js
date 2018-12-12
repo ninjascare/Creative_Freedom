@@ -6,17 +6,22 @@ import Onboarding3 from "../Onboarding/Onboarding3";
 import Onboarding4 from "../Onboarding/Onboarding4";
 
 class OnboardingPage extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Hello from the Onboarding Index page of swagginess</h1>
-        <Onboarding1 />
-        <Onboarding2 />
-        <Onboarding3 />
-        <Onboarding4 />
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <h1>Hello from the Onboarding Index page of swagginess</h1>
+
+                <button>Dummy button [Link to User Login Page]</button>
+
+                <Onboarding1/>
+                <Onboarding2/>
+                <Onboarding3/>
+                <Onboarding4/>
+
+                
+            </div>
+        );
+    }
 }
 
 export default OnboardingPage;
