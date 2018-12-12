@@ -2,6 +2,7 @@ from datetime import date
 
 from django.db import models
 
+
 # Create your models here.
 
 
@@ -26,7 +27,6 @@ class Post(models.Model):
 
     def __str__(self):
         return str(self.content)
-
 
 
 class Comment(models.Model):
