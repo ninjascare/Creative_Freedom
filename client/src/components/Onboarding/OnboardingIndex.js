@@ -4,7 +4,7 @@ class OnboardingPage extends Component {
     render() {
         return (
             <div>
-                <h1>Hello from the Onboarding Index page of swagginess!</h1>
+                <h1>Hello from the Onboarding Index page of swagginess</h1>
             </div>
         );
     }
