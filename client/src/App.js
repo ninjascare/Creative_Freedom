@@ -11,6 +11,7 @@ import Register from "./components/Users/Register";
 import UploadContent from "./components/Users/UploadContent";
 import PostIndex from "./components/Post/PostIndex";
 import Comments from "./components/Comments/Comments";
+import Navbar from "./components/Navbar";
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
         <Router>
           <div>
             <Switch>
+              
               {/* routes for users */}
               <Route exact path="/" component={OnboardingPage} />
               <Route path="/login" component={Login} />
