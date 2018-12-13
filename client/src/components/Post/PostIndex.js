@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
-import ReactPlayer from "react-player";
+import { Link } from "react-router-dom";
+
 
 class PostIndex extends Component {
   state = {
@@ -24,11 +25,25 @@ class PostIndex extends Component {
       <div>
         {this.state.posts.map(post => (
           <div key={post._id}>
-            {post.user.name} <br />
+            <Link to={"/member/:userId"}>
+              {post.user.name} <br />
+            </Link>{" "}
+            <br />
             {post.content} <br />
             {post.created_at} <br />
+            {/* trying to make audio work with different methods */}
+            {/* <audio controls src={post.audio_url}></audio> <br/> */}
             <img src={post.image_url} />
-            <iframe src={post.video_url} frameborder="100" />
+            <iframe src={post.video_url} frameborder="100" /> <br />
+            <button >
+              View comments:
+              {post.comments.map(comment => (
+                <div>
+                  <h4>{comment.created_at}</h4>
+                  <p>{comment.content}</p>
+                </div>
+              ))}
+            </button>
           </div>
         ))}
         <h1>Post Index</h1>
