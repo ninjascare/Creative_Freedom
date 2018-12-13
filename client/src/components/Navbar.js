@@ -10,6 +10,7 @@ const Nav = styled.div`
   align-items: center;
   padding: 10px 5vw;
   height: 25px;
+  font-size: 2vw;
   a:link{
     text-decoration: none;
   }
