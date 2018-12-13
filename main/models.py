@@ -10,8 +10,19 @@ class User(models.Model):
     name = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     image_url = models.TextField()
-    email = models.TextField()
-    password = models.TextField()
+    headline = models.TextField()
+    industry = models.CharField(max_length=100, default='Creator')
+    experience = models.TextField()
+    skill1 = models.CharField(max_length=100, default='url')
+    skill1_level = models.CharField(max_length=50, default='url')
+    skill2 = models.CharField(max_length=100, default='url')
+    skill2_level = models.CharField(max_length=50, default='url')
+    skill3 = models.CharField(max_length=100, default='url')
+    skill3_level = models.CharField(max_length=50, default='url')
+    skill4 = models.CharField(max_length=100, default='url')
+    skill4_level = models.CharField(max_length=50, default='url')
+    portfolio_url = models.TextField(default='url')
+    portfolio_image = models.TextField( default='image')
 
     def __str__(self):
         return self.name
