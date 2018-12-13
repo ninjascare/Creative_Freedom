@@ -33,7 +33,7 @@ class App extends Component {
               <Route path="/creators" component={MemberList} />
               <Route path="/register" component={Register} />
               <Route path="/upload" component={UploadContent} />
-              <Route path="/settings" component={UserSettings} />
+              <Route path="/settings/:userId" component={UserSettings} />
 
               {/* routes for posts */}
               <Route path="/posts" component={PostIndex} />
