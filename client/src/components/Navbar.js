@@ -25,7 +25,7 @@ const Nav = styled.div`
 class Navbar extends Component {
     render() {
         return (
-            <Nav>
+        
             <div>
                 <Link to="/dashboard"> 🏠 </Link>
                     <Link to="/profile/:userId"> 👤 </Link>
@@ -35,7 +35,7 @@ class Navbar extends Component {
 
 
             </div>
-            </Nav>
+            </>
         );
     }
 }
