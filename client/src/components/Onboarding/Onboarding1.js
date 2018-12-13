@@ -6,10 +6,14 @@ class Onboarding1 extends Component {
     render() {
         return (
             <div>
-
+                
+                <div className='flexContainer'>
+            
                <h1 className='onboardingTitle'>
-               Hello from Onboarding1!
+               Creative ConnX
                </h1> 
+               
+               </div>
 
             </div>
         );

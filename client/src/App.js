@@ -21,6 +21,7 @@ class App extends Component {
         {/* This handles all of our routing stuff. */}
         <Router>
           <div>
+            {/* ↓ Later we must move this to all the necessary pages. ↓ */}
             <Navbar/>
             <Switch>
               

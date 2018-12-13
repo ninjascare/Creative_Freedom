@@ -2,4 +2,44 @@
 .onboardingTitle {
     border: 5px solid black;
     text-align: center;
+    height: 15vw; 
+    width: 20vw;
+}
+
+.flexContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.onboarding1 {
+    height: 50vw;
+    width: 100vw;
+    background-image: url('./images/ONBOARDING\ 1\ –\ 2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.onboarding2 {
+    height: 100vw;
+    width: 100vw;
+    background-image: url('./images/ONBOARDING\ 2\ –\ 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.onboarding3 {
+    height: 100vw;
+    width: 100vw;
+    background-image: url('./images/ONBOARDING\ 3\ –\ 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.onboarding4 {
+    height: 100vw;
+    width: 100vw;
+    background-image: url('./images/ONBOARDING\ 4\ –\ 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }

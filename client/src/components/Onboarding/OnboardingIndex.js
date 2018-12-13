@@ -9,15 +9,23 @@ class OnboardingPage extends Component {
     render() {
         return (
             <div>
-                <h1>Hello from the Onboarding Index page of swagginess</h1>
-
                 <button>Dummy button [Link to User Login Page]</button>
 
+                <div className='onboarding1'>
                 <Onboarding1/>
-                <Onboarding2/>
-                <Onboarding3/>
-                <Onboarding4/>
+                </div>
 
+                <div className='onboarding2'>
+                <Onboarding2/>
+                </div>
+
+                <div className='onboarding3'>
+                <Onboarding3/>
+                </div>
+
+                <div className='onboarding4'>
+                <Onboarding4/>
+                </div>
                 
             </div>
         );
