@@ -13,6 +13,7 @@ import PostIndex from "./components/Post/PostIndex";
 import Comments from "./components/Comments/Comments";
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/Users/Dashboard";
+import UserSettings from "./components/Users/UserSettings";
 
 class App extends Component {
   render() {
@@ -34,13 +35,17 @@ class App extends Component {
               <Route path="/creators" component={MemberList} />
               <Route path="/register" component={Register} />
               <Route path="/upload" component={UploadContent} />
+              <Route path="/settings" component={UserSettings} />
 
               {/* routes for posts */}
               <Route path="/posts" component={PostIndex} />
 
               {/* routes for comments */}
               <Route path="/comments" component={Comments} />
+
             </Switch>
+            <Navbar/>
+
           </div>
         </Router>
       </div>
