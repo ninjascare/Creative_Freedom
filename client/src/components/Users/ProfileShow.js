@@ -32,6 +32,10 @@ const ImgStyle = styled.div`
 display: flex;
 justify-content: space-around;
 
+img{
+    position: absolute;
+    z-index: 1;
+}
 `
 class ProfileShow extends Component {
     state = {
@@ -51,12 +55,13 @@ class ProfileShow extends Component {
             <div>
                 <Page>
                     <Header>
-                        <h2>Profile</h2>
-                        <h2>Posts</h2>
+                        <h2>My Profile</h2>
+
                     </Header>
                     <Content>
                         {this.state.users.title} <br />
                         <ImgStyle>
+                           <Link to= {`/user/${this.props.match.params.userId}/settings`}> <h3>⚙️</h3></Link>
                             <img src={this.state.users.image_url} alt="profile pic" />
                         </ImgStyle>
 
