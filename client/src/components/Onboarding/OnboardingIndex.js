@@ -9,11 +9,19 @@ class OnboardingPage extends Component {
     render() {
         return (
             <div>
+                    {/* ↓ next task is getting these circles to act as link buttons for the scroll functionality to work! ↓ */}
+                    
+                {/* <div className='dotSelectors'></div>
+                <div className='dotSelectors'></div>
+                <div className='dotSelectors'></div>
+                <div className='dotSelectors'></div> */}
+
                 <button>Dummy button [Link to User Login Page]</button>
 
                 <div className='onboarding1'>
                 <Onboarding1/>
                 </div>
+
 
                 <div className='onboarding2'>
                 <Onboarding2/>

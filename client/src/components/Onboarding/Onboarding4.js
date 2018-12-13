@@ -6,9 +6,13 @@ class Onboarding4 extends Component {
         return (
             <div>
 
-               <h1 className='onboardingTitle'>
-               Hello from Onboarding4!
-               </h1> 
+                <div className='flexContainer'>
+
+               <button className='buttonStyle'>Log In</button>
+
+               <button className='buttonStyle'>Register With Code</button>
+
+                </div>
 
             </div>
         );

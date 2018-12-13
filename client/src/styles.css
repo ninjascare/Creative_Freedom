@@ -1,5 +1,15 @@
 /* ↓ This is the Onboarding Index Styling ↓ */
 
+.dotSelectors {
+    text-align: center;
+    position: fixed;
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    
+}
+
 /* Onboarding Page 1 Start */
 .onboarding1 {
     height: 50vw;
@@ -75,5 +85,14 @@
     background-size: cover;
     background-position: center;
     margin-bottom: 75px;
+}
+
+.buttonStyle {
+    height: 7vw;
+    width: 20vw;
+    background-color: rgba(240, 248, 255, 0.543);
+    font-size: x-large;
+    border-radius: 30px;
+
 }
 /* Onboarding Page 4 End */
