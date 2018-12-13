@@ -6,9 +6,21 @@
       "name": "Kishi Bashi",
       "title": "Painter",
       "image_url": "http://strawdawg.com/wp-content/uploads/2014/05/addiction-visual-artist.jpg",
-      "email": "painter@gmail.com",
-      "password": "paint123"
-
+      "headline": "I am a boi with visionary art skills, work wif me!",
+      "industry": "Entertainment",
+      "experience": "Super Art Boi - 50 years",
+      "skill1": "Art",
+      "skill1_level": 4,
+      "skill2": "Directing",
+      "skill2_level": 5,
+      "skill3": "Another Skill",
+      "skill3_level": 2,
+      "skill4": "Another Skill",
+      "skill4_level": 3,
+      "skill5": "Another Skill",
+      "skill5_level": 5,
+      "Portfolio_url": "http://www.kishibashi.com/",
+      "Portfolio_image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5e62db52443271.59111e76660e2.jpg"
     }
   },
   {
@@ -18,8 +30,21 @@
       "name": "Drake",
       "title": "Rapper",
       "image_url": "https://qph.fs.quoracdn.net/main-qimg-dbf1fe8d596b8d405f38456ade1847d2",
-      "email": "rap@gmail.com",
-      "password": "rap123"
+      "headline": "I am the best rapper boi, you can't afford to work with me.",
+      "industry": "Entertainment",
+      "experience": "Super Rap Boi - 10 years",
+      "skill1": "Bars",
+      "skill1_level": 4,
+      "skill2": "Another Skill",
+      "skill2_level": 5,
+      "skill3": "Another Skill",
+      "skill3_level": 2,
+      "skill4": "Another Skill",
+      "skill4_level": 3,
+      "skill5": "Another Skill",
+      "skill5_level": 5,
+      "Portfolio_url": "http://www.kishibashi.com/",
+      "Portfolio_image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5e62db52443271.59111e76660e2.jpg"
 
     }
   },
