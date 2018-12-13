@@ -8,7 +8,7 @@ const Nav = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 26px 5vw;
+  padding: 10px 5vw;
   width: 90vw;
   height: 25px;
   border-bottom: 1px solid rgba(0,0,0,.0975);
