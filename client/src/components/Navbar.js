@@ -10,6 +10,9 @@ const Nav = styled.div`
   align-items: center;
   padding: 10px 5vw;
   height: 25px;
+  a:link{
+    text-decoration: none;
+  }
 
 `
 class Navbar extends Component {

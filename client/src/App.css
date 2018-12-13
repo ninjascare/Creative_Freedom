@@ -16,7 +16,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: rgb(181, 180, 180);
-  overflow-x: hidden 
+  overflow-x: hidden; 
+  text-decoration: none;
 }
 
 .App-link {

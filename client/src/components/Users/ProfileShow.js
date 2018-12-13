@@ -7,6 +7,10 @@ const Page = styled.div`
 overflow-x: hidden; 
 overflow-y: scroll; 
 width: 102vw;
+a:link{
+    text-decoration: none;
+  }
+
 img{
     max-width: 100vw;
     max-height: 100vh;      
@@ -26,15 +30,14 @@ const Content = styled.div`
 font-size: 2vw;
 background-color: rgb(181, 180, 180);
 width: 100vw;
-
 `
 const ImgStyle = styled.div`
 display: flex;
 justify-content: space-around;
-
 img{
     position: absolute;
     z-index: 1;
+    
 }
 `
 class ProfileShow extends Component {
