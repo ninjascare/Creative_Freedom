@@ -6,9 +6,19 @@
       "name": "Kishi Bashi",
       "title": "Painter",
       "image_url": "http://strawdawg.com/wp-content/uploads/2014/05/addiction-visual-artist.jpg",
-      "email": "painter@gmail.com",
-      "password": "paint123"
-
+      "headline": "I am a boi with visionary art skills, work wif me!",
+      "industry": "Entertainment",
+      "experience": "Super Art Boi - 50 years",
+      "skill1": "Art",
+      "skill1_level": 4,
+      "skill2": "Directing",
+      "skill2_level": 5,
+      "skill3": "Another Skill",
+      "skill3_level": 2,
+      "skill4": "Another Skill",
+      "skill4_level": 3,
+      "Portfolio_url": "http://www.kishibashi.com/",
+      "Portfolio_image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5e62db52443271.59111e76660e2.jpg"
     }
   },
   {
@@ -18,8 +28,19 @@
       "name": "Drake",
       "title": "Rapper",
       "image_url": "https://qph.fs.quoracdn.net/main-qimg-dbf1fe8d596b8d405f38456ade1847d2",
-      "email": "rap@gmail.com",
-      "password": "rap123"
+      "headline": "I am the best rapper boi, you can't afford to work with me.",
+      "industry": "Entertainment",
+      "experience": "Super Rap Boi - 10 years",
+      "skill1": "Bars",
+      "skill1_level": 4,
+      "skill2": "Another Skill",
+      "skill2_level": 5,
+      "skill3": "Another Skill",
+      "skill3_level": 2,
+      "skill4": "Another Skill",
+      "skill4_level": 3,
+      "Portfolio_url": "http://www.kishibashi.com/",
+      "Portfolio_image": "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/5e62db52443271.59111e76660e2.jpg"
 
     }
   },
@@ -30,20 +51,41 @@
       "name": "Charlie Roberts",
       "title": "Freelance Writer",
       "image_url": "https://trendycrunch.com/wp-content/uploads/2016/09/Freelance-Writer--1024x743.jpg",
-      "email": "writer@gmail.com",
-      "password": "writer123"
-
+      "headline": "I can write my way out of a left",
+      "industry": "News",
+      "experience": "Wall Street Journal - 5 years",
+      "skill1": "Wordpress",
+      "skill1_level": 4,
+      "skill2": "skill2",
+      "skill2_level": 4,
+      "skill3": "skill3",
+      "skill3_level": 3,
+      "skill4": "skill4",
+      "skill4_level": 5,
+      "portfolio_url": "https://www.freelancewriting.com/get-paid-more/building-a-professional-writing-portfolio",
+      "portfolio_image": "http://www.inkpellet.co.uk/wp-content/uploads/2015/05/GCSE-Double-Page-Spread-SM.jpg"
     }
   },
   {
     "model": "main.user",
     "fk": 4,
     "fields": {
-      "name": "Karen Chapman",
-      "title": "Film-Maker",
-      "image_url": "http://playbackonline.ca/wp/wp-content/uploads/2018/08/FFF-13101-623x295.jpg",
-      "email": "film@gmail.com",
-      "password": "film123"
+      "name": "Melina Matsoukas",
+      "title": "Filmmaker",
+      "image_url": "http://lor66yzmui-flywheel.netdna-ssl.com/wp-content/uploads/2016/12/29MELINA-master768-1-671x480.jpg",
+      "headline": "The Official Queen Bee of music videos",
+      "industry": "Music Videos",
+      "experience": "DTR Productions 10-years",
+      "skill1": "Lighting",
+      "skill1_level": 4,
+      "skill2": "skill2",
+      "skill2_level": 4,
+      "skill3": "skill3",
+      "skill3_level": 3,
+      "skill4": "skill4",
+      "skill4_level": 5,
+      "portfolio_url": "http://prettybird.co/us/talent/creatives/melina-matsoukas/work/",
+      "portfolio_image": "https://amp.businessinsider.com/images/589b86483149a165008b5fff-750-375.png"
 
     }
   }

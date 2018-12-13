@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-
 class PostIndex extends Component {
   state = {
     posts: []
@@ -32,10 +31,13 @@ class PostIndex extends Component {
             {post.content} <br />
             {post.created_at} <br />
             {/* trying to make audio work with different methods */}
-            {/* <audio controls src={post.audio_url}></audio> <br/> */}
+            {post.audio_url ? (
+              <audio controls src={post.audio_url} type="audio/mpeg"/>
+            ) : null}
+            <br />
             <img src={post.image_url} />
             <iframe src={post.video_url} frameborder="100" /> <br />
-            <button >
+            <button>
               View comments:
               {post.comments.map(comment => (
                 <div>
