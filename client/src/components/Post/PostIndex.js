@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import ReactPlayer from "react-player";
 
 class PostIndex extends Component {
   state = {

@@ -22,7 +22,6 @@ class App extends Component {
         {/* This handles all of our routing stuff. */}
         <Router>
           <div>
-            <Navbar/>
             <Switch>
               
               {/* routes for users */}
@@ -43,6 +42,8 @@ class App extends Component {
               <Route path="/comments" component={Comments} />
 
             </Switch>
+            <Navbar/>
+
           </div>
         </Router>
       </div>
