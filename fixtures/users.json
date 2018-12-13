@@ -51,20 +51,41 @@
       "name": "Charlie Roberts",
       "title": "Freelance Writer",
       "image_url": "https://trendycrunch.com/wp-content/uploads/2016/09/Freelance-Writer--1024x743.jpg",
-      "email": "writer@gmail.com",
-      "password": "writer123"
-
+      "headline": "I can write my way out of a left",
+      "industry": "News",
+      "experience": "Wall Street Journal - 5 years",
+      "skill1": "Wordpress",
+      "skill1_level": 4,
+      "skill2": "skill2",
+      "skill2_level": 4,
+      "skill3": "skill3",
+      "skill3_level": 3,
+      "skill4": "skill4",
+      "skill4_level": 5,
+      "portfolio_url": "https://www.freelancewriting.com/get-paid-more/building-a-professional-writing-portfolio",
+      "portfolio_image": "http://www.inkpellet.co.uk/wp-content/uploads/2015/05/GCSE-Double-Page-Spread-SM.jpg"
     }
   },
   {
     "model": "main.user",
     "fk": 4,
     "fields": {
-      "name": "Karen Chapman",
-      "title": "Film-Maker",
-      "image_url": "http://playbackonline.ca/wp/wp-content/uploads/2018/08/FFF-13101-623x295.jpg",
-      "email": "film@gmail.com",
-      "password": "film123"
+      "name": "Melina Matsoukas",
+      "title": "Filmmaker",
+      "image_url": "http://lor66yzmui-flywheel.netdna-ssl.com/wp-content/uploads/2016/12/29MELINA-master768-1-671x480.jpg",
+      "headline": "The Official Queen Bee of music videos",
+      "industry": "Music Videos",
+      "experience": "DTR Productions 10-years",
+      "skill1": "Lighting",
+      "skill1_level": 4,
+      "skill2": "skill2",
+      "skill2_level": 4,
+      "skill3": "skill3",
+      "skill3_level": 3,
+      "skill4": "skill4",
+      "skill4_level": 5,
+      "portfolio_url": "http://prettybird.co/us/talent/creatives/melina-matsoukas/work/",
+      "portfolio_image": "https://amp.businessinsider.com/images/589b86483149a165008b5fff-750-375.png"
 
     }
   }
