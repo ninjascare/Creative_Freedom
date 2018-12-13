@@ -11,6 +11,8 @@ import Register from "./components/Users/Register";
 import UploadContent from "./components/Users/UploadContent";
 import PostIndex from "./components/Post/PostIndex";
 import Comments from "./components/Comments/Comments";
+import Navbar from "./components/Navbar";
+import Dashboard from "./components/Users/Dashboard";
 import UserSettings from "./components/Users/UserSettings";
 
 class App extends Component {
@@ -20,11 +22,13 @@ class App extends Component {
         {/* This handles all of our routing stuff. */}
         <Router>
           <div>
+            <Navbar/>
             <Switch>
               
               {/* routes for users */}
               <Route exact path="/" component={OnboardingPage} />
               <Route path="/login" component={Login} />
+              <Route path="/dashboard" component={Dashboard} />
               <Route path="/member/:userId" component={MemberShow} />
               <Route path="/profile/:userId" component={ProfileShow} />
               <Route path="/creators" component={MemberList} />
