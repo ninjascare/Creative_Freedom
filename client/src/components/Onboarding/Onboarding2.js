@@ -6,10 +6,16 @@ class Onboarding2 extends Component {
     render() {
         return (
             <div>
+                
+                <div className='flexContainer'>
 
-               <h1 className='onboardingTitle'>
-               Hello from Onboarding2!
-               </h1> 
+               <h1 className='onboarding2Text'>
+               #Hastags
+               </h1>
+
+               <h1 className='onboardingText'>Get suggestions based on your location, interests, and goals</h1> 
+
+               </div>
 
             </div>
         );

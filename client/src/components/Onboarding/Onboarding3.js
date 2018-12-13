@@ -5,11 +5,15 @@ class Onboarding3 extends Component {
     render() {
         return (
             <div>
+                
+                <div className='flexContainer'>
 
-               <h1 className='onboardingTitle'>
-               Hello from Onboarding3!
-               <img src="/client/public/images/ONBOARDING 3 – 1.png" alt=""/>
+
+               <h1 className='onboardingText'>
+               Discover events and connect with peers
                </h1> 
+
+                </div>
 
             </div>
         );
