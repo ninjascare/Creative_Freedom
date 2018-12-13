@@ -1,45 +1,79 @@
 /* ↓ This is the Onboarding Index Styling ↓ */
-.onboardingTitle {
-    border: 5px solid black;
-    text-align: center;
-    height: 15vw; 
-    width: 20vw;
-}
 
-.flexContainer {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
+/* Onboarding Page 1 Start */
 .onboarding1 {
     height: 50vw;
     width: 100vw;
     background-image: url('./images/ONBOARDING\ 1\ –\ 2.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    margin-bottom: 75px;
 }
 
+.onboardingLogo {
+    height: 250px; 
+    width: 400px;
+    background-image: url('./images/LogoArtboard8.png');
+    background-position: center;
+    background-size: 35vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexContainer {
+    display: flex;
+    height: 50vw; 
+    width: 100vw;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.onboardingText {
+    color: white;
+}
+
+/* Onboarding Page 1 End */
+
+
+/* Onboarding Page 2 Start */
 .onboarding2 {
-    height: 100vw;
+    height: 50vw;
     width: 100vw;
     background-image: url('./images/ONBOARDING\ 2\ –\ 1.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    margin-bottom: 75px;
 }
 
+/* Onboarding Page 2 End */
+
+
+/* Onboarding Page 3 Start */
 .onboarding3 {
-    height: 100vw;
+    height: 50vw;
     width: 100vw;
     background-image: url('./images/ONBOARDING\ 3\ –\ 1.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    margin-bottom: 75px;
 }
+/* Onboarding Page 3 End */
 
+
+/* Onboarding Page 4 Start */
 .onboarding4 {
-    height: 100vw;
+    height: 50vw;
     width: 100vw;
     background-image: url('./images/ONBOARDING\ 4\ –\ 1.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    margin-bottom: 75px;
 }
+/* Onboarding Page 4 End */

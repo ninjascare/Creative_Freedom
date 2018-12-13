@@ -10,7 +10,6 @@ import MemberList from "./components/Users/MemberList";
 import Register from "./components/Users/Register";
 import UploadContent from "./components/Users/UploadContent";
 import PostIndex from "./components/Post/PostIndex";
-import Comments from "./components/Comments/Comments";
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/Users/Dashboard";
 import UserSettings from "./components/Users/UserSettings";
@@ -23,7 +22,6 @@ class App extends Component {
         <Router>
           <div>
             {/* ↓ Later we must move this to all the necessary pages. ↓ */}
-            <Navbar/>
             <Switch>
               
               {/* routes for users */}
@@ -40,8 +38,7 @@ class App extends Component {
               {/* routes for posts */}
               <Route path="/posts" component={PostIndex} />
 
-              {/* routes for comments */}
-              <Route path="/comments" component={Comments} />
+              
 
             </Switch>
             <Navbar/>

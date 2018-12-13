@@ -5,14 +5,16 @@ import '../../styles.css';
 class Onboarding1 extends Component {
     render() {
         return (
-            <div>
+            <div className='onboarding1GlobalContainer' >
                 
                 <div className='flexContainer'>
             
-               <h1 className='onboardingTitle'>
-               Creative ConnX
-               </h1> 
-               
+               <div className='onboardingLogo'/> 
+
+                <h1 className='onboardingText' >
+                    An Exclusive Social Network for Creatives
+                </h1>
+
                </div>
 
             </div>

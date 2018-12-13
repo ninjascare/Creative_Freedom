@@ -6,21 +6,15 @@ const Nav = styled.div`
   background-color: black;
   background-position: fixed;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  padding: 26px 5vw;
-  width: 90vw;
+  padding: 10px 5vw;
   height: 25px;
-  border-bottom: 1px solid rgba(0,0,0,.0975);
-
-  p{
-    font-size: 1.75rem;
-    font-family: 'Oleo Script', cursive;
-    margin: 0;
-    svg{
-      margin-bottom: 5px;
-    }
+  font-size: 2vw;
+  a:link{
+    text-decoration: none;
   }
+
 `
 class Navbar extends Component {
     render() {
