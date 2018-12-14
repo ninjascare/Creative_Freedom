@@ -16,10 +16,10 @@ const Page = styled.div`
     text-decoration: underline;
     padding: 0px;
     margin: 0px;
-}
-img{
-    height: 100vh; 
-    // height: calc(100vh * (9/16)); 
+  }
+  img {
+    height: 100vh;
+    // height: calc(100vh * (9/16));
 
     width: 150vw;
   }
@@ -54,6 +54,12 @@ const ImgStyle = styled.div`
     margin-left: -30%;
     text-shadow: 1px 1px 1px black;
   }
+  #upload {
+    position: absolute;
+    z-index: 2;
+    margin-left: -10%;
+    text-shadow: 1px 1px 1px black;
+  }
   img {
     position: absolute;
     z-index: 1;
@@ -75,19 +81,16 @@ const Skill = styled.div`
   background-color: rgb(235 194 138);
 `;
 const Portfolio = styled.div`
-img{
-height: 50vw; 
-width: 100vw;
-align-items: center;  
- 
-   }
-   
-   a:hover{
+  img {
+    height: 50vw;
+    width: 100vw;
+    align-items: center;
+  }
+
+  a:hover {
     color: white;
-}  
-`
-
-
+  }
+`;
 
 class ProfileShow extends Component {
   state = {
@@ -115,8 +118,10 @@ class ProfileShow extends Component {
               <h3>{this.state.users.title} </h3>
             </Title>
             <ImgStyle>
+              <Link to={`/profile/${this.state.users.id}/upload`}>
+                <button id="upload">➕</button>
+              </Link>
               <Link to={`/profile/${this.state.users.id}/settings`}>
-                {" "}
                 <h3 id="wheel">⚙️</h3>
               </Link>
               <img src={this.state.users.image_url} alt="profile pic" />

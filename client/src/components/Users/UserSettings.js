@@ -19,7 +19,7 @@ export default class UserSettings extends Component {
     console.log("value", e.target.value);
     const UpdateUser = { ...this.state.user };
     UpdateUser[e.target.name] = e.target.value;
-    console.log(UpdateUser)
+    console.log(UpdateUser);
     this.setState({ user: UpdateUser });
   };
 
@@ -179,7 +179,7 @@ export default class UserSettings extends Component {
             />
           </div>
           <Link to={`/profile/${this.state.user.id}`}>
-            <button type= "submit">Update Profile</button>
+            <button type="submit">Update Profile</button>
           </Link>
         </form>
       </div>
