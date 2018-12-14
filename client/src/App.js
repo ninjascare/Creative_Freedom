@@ -7,7 +7,7 @@ import Login from "./components/Users/Login";
 import MemberShow from "./components/Users/MemberShow";
 import ProfileShow from "./components/Users/ProfileShow";
 import MemberList from "./components/Users/MemberList";
-import Register from "./components/Users/Register";
+import Register from "./components/Onboarding/Register";
 import UploadContent from "./components/Users/UploadContent";
 import PostIndex from "./components/Post/PostIndex";
 import Navbar from "./components/Navbar";
@@ -41,7 +41,7 @@ class App extends Component {
               
 
             </Switch>
-            <Navbar/>
+            {/* <Navbar/> */}
 
           </div>
         </Router>
