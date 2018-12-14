@@ -94,7 +94,7 @@ class ProfileShow extends Component {
             <h2>{this.state.users.title} </h2> <br />
             <ImgStyle>
               <Link to={`/settings/userId/${this.props.match.params.userId}`}>
-                {" "}
+                
                 <h3 id="wheel">⚙️</h3>
               </Link>
               <img src={this.state.users.image_url} alt="profile pic" />
