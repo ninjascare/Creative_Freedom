@@ -27,15 +27,15 @@ class App extends Component {
               
               {/* routes for users */}
               <Route exact path="/" component={OnboardingPage} />
-              <Route path="/login" component={Login} />
-              <Route path='/new' component={CreateProfile}/>
-              <Route path="/dashboard" component={Dashboard} />
-              <Route path="/member/:userId" component={MemberShow} />
-              <Route path="/profile/:userId" component={ProfileShow} />
-              <Route path="/creators" component={MemberList} />
-              <Route path="/register" component={Register} />
-              <Route path="/upload" component={UploadContent} />
-              <Route path="/settings/:userId" component={UserSettings} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path='/new' component={CreateProfile}/>
+              <Route exact path="/dashboard" component={Dashboard} />
+              <Route exact path="/member/:userId" component={MemberShow} />
+              <Route exact path="/creators" component={MemberList} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/upload" component={UploadContent} />
+              <Route exact path="/profile/:userId" component={ProfileShow} />
+              <Route exact path="/profile/:userId/settings" component={UserSettings} />
 
               {/* routes for posts */}
               <Route path="/posts" component={PostIndex} />

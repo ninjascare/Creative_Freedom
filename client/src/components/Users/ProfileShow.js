@@ -14,19 +14,12 @@ const Page = styled.div`
   }
   h2 {
     text-decoration: underline;
-<<<<<<< HEAD
-  }
-  img {
-    height: 100vh;
-    // height: calc(100vh * (9/16));
-=======
     padding: 0px;
     margin: 0px;
 }
 img{
     height: 100vh; 
     // height: calc(100vh * (9/16)); 
->>>>>>> 20bde32a40872bac76ec03cba914788497f45fdd
 
     width: 150vw;
   }
@@ -122,7 +115,7 @@ class ProfileShow extends Component {
               <h3>{this.state.users.title} </h3>
             </Title>
             <ImgStyle>
-              <Link to={`/settings/userId/${this.props.match.params.userId}`}>
+              <Link to={`/profile/${this.state.users.id}/settings`}>
                 {" "}
                 <h3 id="wheel">⚙️</h3>
               </Link>
