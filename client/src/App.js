@@ -13,6 +13,7 @@ import PostIndex from "./components/Post/PostIndex";
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/Users/Dashboard";
 import UserSettings from "./components/Users/UserSettings";
+import CreateProfile from "./components/Users/CreateProfile";
 
 class App extends Component {
   render() {
@@ -27,6 +28,7 @@ class App extends Component {
               {/* routes for users */}
               <Route exact path="/" component={OnboardingPage} />
               <Route path="/login" component={Login} />
+              <Route path='/new' component={CreateProfile}/>
               <Route path="/dashboard" component={Dashboard} />
               <Route path="/member/:userId" component={MemberShow} />
               <Route path="/profile/:userId" component={ProfileShow} />

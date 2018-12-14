@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-import styled from 'styled-components';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const Nav = styled.div`
   background-color: black;
@@ -11,27 +11,24 @@ const Nav = styled.div`
   padding: 10px 5vw;
   height: 25px;
   font-size: 2vw;
-  a:link{
+  a:link {
     text-decoration: none;
   }
-
-`
+`;
 class Navbar extends Component {
-    render() {
-        return (
-            <Nav>
-            <div>
-                <Link to="/dashboard"> 🏠 </Link>
-                    <Link to="/profile/:userId"> 👤 </Link>
-                    <Link to="/upload"> ✚ </Link>
-                    {/* <Link to="/"> 💬 </Link> */}
-                    {/* <Link to="/"> 🔔</Link> */}
-
-
-            </div>
-            </Nav>
-        );
-    }
+  render() {
+    return (
+      <Nav>
+        <div>
+          <Link to="/dashboard"> 🏠 </Link>
+          <Link to="/profile/:userId"> 👤 </Link>
+          <Link to="/upload"> ✚ </Link>
+          {/* <Link to="/"> 💬 </Link> */}
+          {/* <Link to="/"> 🔔</Link> */}
+        </div>
+      </Nav>
+    );
+  }
 }
 
 export default Navbar;
