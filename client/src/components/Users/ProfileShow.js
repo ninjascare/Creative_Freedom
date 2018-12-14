@@ -14,6 +14,8 @@ a:link{
   }
   h2{
     text-decoration: underline;
+    padding: 0px;
+    margin: 0px;
 }
 img{
     height: 100vh; 
@@ -82,8 +84,13 @@ const Portfolio = styled.div`
 img{
 height: 50vw; 
 width: 100vw;
-align-items: center;     
+align-items: center;  
+ 
    }
+   
+   a:hover{
+    color: white;
+}  
 `
 
 
