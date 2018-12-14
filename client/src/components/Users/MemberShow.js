@@ -15,6 +15,8 @@ a:link{
   }
   h2{
     text-decoration: underline;
+    padding: 0px;
+    margin: 0px;
 }
 img{
     height: 100vh; 

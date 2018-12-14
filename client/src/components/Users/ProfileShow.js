@@ -14,10 +14,19 @@ const Page = styled.div`
   }
   h2 {
     text-decoration: underline;
+<<<<<<< HEAD
   }
   img {
     height: 100vh;
     // height: calc(100vh * (9/16));
+=======
+    padding: 0px;
+    margin: 0px;
+}
+img{
+    height: 100vh; 
+    // height: calc(100vh * (9/16)); 
+>>>>>>> 20bde32a40872bac76ec03cba914788497f45fdd
 
     width: 150vw;
   }
@@ -73,12 +82,19 @@ const Skill = styled.div`
   background-color: rgb(235 194 138);
 `;
 const Portfolio = styled.div`
-  img {
-    height: 50vw;
-    width: 100vw;
-    align-items: center;
-  }
-`;
+img{
+height: 50vw; 
+width: 100vw;
+align-items: center;  
+ 
+   }
+   
+   a:hover{
+    color: white;
+}  
+`
+
+
 
 class ProfileShow extends Component {
   state = {
