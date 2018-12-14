@@ -9,6 +9,7 @@ export default class MemberList extends Component {
   componentDidMount() {
     this.getAllUsers();
   }
+  
   getAllUsers = () => {
     axios.get("/api/user").then(res => {
       this.setState({ users: res.data });
