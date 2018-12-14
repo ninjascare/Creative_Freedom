@@ -7,11 +7,11 @@ class Onboarding4 extends Component {
     return (
       <div>
         <div className="flexContainer">
-          <Link to="/login">
-            <button className="buttonStyle">Log In</button>
+          
+          <Link to={`/new`}>
+          <button className="buttonStyle">Join the Network</button>
           </Link>
 
-          <button className="buttonStyle">Register With Code</button>
         </div>
       </div>
     );

@@ -7,13 +7,12 @@ import Login from "./components/Users/Login";
 import MemberShow from "./components/Users/MemberShow";
 import ProfileShow from "./components/Users/ProfileShow";
 import MemberList from "./components/Users/MemberList";
-import Register from "./components/Onboarding/Register";
 import UploadContent from "./components/Users/UploadContent";
 import PostIndex from "./components/Post/PostIndex";
 import Navbar from "./components/Navbar";
 import Dashboard from "./components/Users/Dashboard";
 import UserSettings from "./components/Users/UserSettings";
-import CreateProfile from "./components/Users/CreateProfile";
+import CreateProfile from "./components/Onboarding/CreateProfile";
 
 class App extends Component {
   render() {
@@ -32,7 +31,6 @@ class App extends Component {
               <Route exact path="/dashboard" component={Dashboard} />
               <Route exact path="/member/:userId" component={MemberShow} />
               <Route exact path="/creators" component={MemberList} />
-              <Route exact path="/register" component={Register} />
               <Route exact path="/profile/:userId/upload" component={UploadContent} />
               <Route exact path="/profile/:userId" component={ProfileShow} />
               <Route exact path="/profile/:userId/settings" component={UserSettings} />
