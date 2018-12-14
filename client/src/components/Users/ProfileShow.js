@@ -40,6 +40,24 @@ img{
     
 }
 `
+const Headline = styled.div`
+
+`
+const Industry = styled.div`
+
+`
+const Experience = styled.div`
+
+`
+const Skill = styled.div`
+
+`
+const Portfolio = styled.div`
+
+`
+
+
+
 class ProfileShow extends Component {
     state = {
         users: {}
