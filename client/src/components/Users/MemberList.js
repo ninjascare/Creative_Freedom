@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default class MemberList extends Component {
   state = {
@@ -23,10 +23,11 @@ export default class MemberList extends Component {
         {this.state.users.map(user => (
           <div key={user._id}>
             <Link to={`/member/${user.id}`}>
-              <h2>{user.name}</h2></Link> <br />
+              <h2>{user.name}</h2>
+            </Link>{" "}
+            <br />
             {user.title} <br />
             <img src={user.image_url} alt="dfg" />
-
           </div>
         ))}
       </div>
