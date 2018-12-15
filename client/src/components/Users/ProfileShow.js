@@ -4,7 +4,7 @@ import styled from "styled-components";
 import axios from "axios";
 
 const Container = styled.div`
-border: solid red;
+// border: solid red;
 `
 
 const Page = styled.div`
