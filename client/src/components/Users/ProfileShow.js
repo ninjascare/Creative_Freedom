@@ -4,107 +4,97 @@ import styled from "styled-components";
 import axios from "axios";
 
 const Page = styled.div`
-  overflow-x: hidden;
-  overflow-y: scroll;
-  width: 102vw;
-  background-color: rgb(181, 180, 180);
-  justify-content: space-around;
-
-  a:link {
+overflow-x: hidden; 
+overflow-y: scroll; 
+width: 102vw;
+background-color: rgb(181, 180, 180);
+justify-content: space-around;
+color: white;
+a:link{
     text-decoration: none;
   }
-  h2 {
+  h2{
     text-decoration: underline;
     padding: 0px;
     margin: 0px;
-  }
-  
-`;
-const Container = styled.div`
-display: flex;
-flex-direction: column;
-`;
+}
+a:visited{
+  color: white;
+}
+img{
+    height: 100vh; 
+    // height: calc(100vh * (9/16)); 
 
+    width: 150vh;     
+   }
+   
+`
+const Container = styled.div`
+
+`
 const Header = styled.div`
-  font-size: 2vw;
-  background-color: white;
-  border-bottom: 1px solid black;
-  display: flex;
-  justify-content: space-around;
-`;
+font-size: 2vw;
+color: black;
+background-color: white;
+border-bottom: 1px solid black;
+display: flex;
+justify-content: space-around;
+
+`
 
 const Content = styled.div`
-  // font-size: 2vw;
-  width: 100vw;
-  height: 100vh;
-  border: solid red;
-
-`;
+font-size: 2vw;
+width: 100vw;
+height: 100vh;
+`
 const Title = styled.div`
-  position: absolute;
-  z-index: 2;
-  color: white;
-  text-shadow: 2px 2px 2px black;
-  margin-top: 50%;
+position: absolute;
+z-index: 2;
+color: white;
+text-shadow: 2px 2px 2px black;
+margin-top: 50%;
 
-`;
+`
 const ImgStyle = styled.div`
-  display: flex;
-  justify-content: space-around;
-
-  #wheel {
-    font-size: 4vw;
+display: flex;
+justify-content: space-around;
+#wheel{
     position: absolute;
     z-index: 2;
     margin-left: -30%;
-  }
-  a:visited{
-    color: white;
-  }
-  #upload {
-    position: absolute;
-    z-index: 2;
-    margin-left: -10%;
-    text-shadow: 1px 1px 1px black;
-  }
-  img {
-    position: absolute;
-    // z-index: 1;
-    border: solid blue;
-
-  }
-`;
-const InfoStyle = styled.div`
-
-`;
-
-const Headline = styled.div`
-  background-color: rgb(31 24 22);
-  color: white;
-`;
-const Industry = styled.div`
-  background-color: rgb(31 24 22);
-  color: white;
-`;
-const Experience = styled.div`
-  background-color: rgb(24 142 156);
-`;
-const Skill = styled.div`
-  background-color: rgb(235 194 138);
-`;
-const Portfolio = styled.div`
-align-items: center;
-
-img{
-  margin: auto;
-  max-width: 150vw;
-  max-height: 150vh;
 }
 
-  a:hover {
-    color: white;
-  }
-`;
+
+img{
+    position: absolute;
+    z-index: 1;   
+}
+
+`
+const InfoStyle = styled.div`
+
+`
+const Headline = styled.div`
+background-color: rgb(31 24 22);
+`
+const Industry = styled.div`
+background-color: rgb(31 24 22);
+`
+const Experience = styled.div`
+background-color: rgb(24 142 156);
+`
+const Skill = styled.div`
+background-color: rgb(235 194 138);
+
+`
+const Portfolio = styled.div`
+img{
+height: 50vw; 
+width: 100vw;
+align-items: center;     
+   }
+`
+
 
 class ProfileShow extends Component {
   state = {

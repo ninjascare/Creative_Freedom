@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
@@ -15,6 +14,8 @@ a:link{
   }
   h2{
     text-decoration: underline;
+    padding: 0px;
+    margin: 0px;
 }
 img{
     height: 100vh; 
@@ -143,7 +144,7 @@ class ProfileShow extends Component {
                         </Skill>
                         <Portfolio>
 
-                            <a href={this.state.users.portfolio_url} >  <h2>Portfolio </h2>
+                            <a href={this.state.users.portfolio_url} >
                                 <img src={this.state.users.portfolio_image} alt="Portfolio Image" />  <br /> </a>
                         </Portfolio>
 
