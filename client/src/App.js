@@ -10,7 +10,6 @@ import MemberList from "./components/Users/MemberList";
 import UploadContent from "./components/Users/UploadContent";
 import PostIndex from "./components/Post/PostIndex";
 import Navbar from "./components/Navbar";
-import Dashboard from "./components/Users/Dashboard";
 import UserSettings from "./components/Users/UserSettings";
 import CreateProfile from "./components/Onboarding/CreateProfile";
 
@@ -28,7 +27,6 @@ class App extends Component {
               <Route exact path="/" component={OnboardingPage} />
               <Route exact path="/login" component={Login} />
               <Route exact path='/new' component={CreateProfile}/>
-              <Route exact path="/dashboard" component={Dashboard} />
               <Route exact path="/member/:userId" component={MemberShow} />
               <Route exact path="/creators" component={MemberList} />
               <Route exact path="/profile/:userId/upload" component={UploadContent} />
