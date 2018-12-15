@@ -32,12 +32,15 @@ class Navbar extends Component {
           <IconStyle>
           
           <div className="App">
-          <Link to="/">  <i class="fas fa-home"></i></Link>
-            
-            <Link to="/profile/:userId"> <i class="fas fa-user-alt"></i></Link>
+          <Link to="/">  <i class="fas fa-home"></i></Link>        
+          <Link to="/profile/:userId"> <i class="fas fa-user-alt"></i></Link>
           <Link to="/profile/:userId/upload"> <i class="fas fa-plus-circle"></i> </Link>
+
+          {/* Link to stretch goal components (Messages and Notifications) below */}
+
           {/* <Link to="/"> <i class="fas fa-comment-alt"></i> </Link>
           <Link to="/"><i class="fas fa-bell"></i></Link> */}
+
           </div>
           </IconStyle>
 

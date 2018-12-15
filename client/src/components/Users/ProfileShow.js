@@ -91,7 +91,7 @@ const Portfolio = styled.div`
 img{
 height: 50vw; 
 width: 100vw;
-align-items: center;     
+align-items: center;
    }
 `
 

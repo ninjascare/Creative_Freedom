@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 import axios from "axios";
+// import Navbar from "./components/Navbar";
 
 const Page = styled.div`
 overflow-x: hidden; 
@@ -150,6 +151,8 @@ class ProfileShow extends Component {
 
                     </InfoStyle>
                 </Page>
+                            {/* <Navbar/> */}
+
             </div>
         );
     }
