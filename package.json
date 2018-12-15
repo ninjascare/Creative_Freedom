@@ -3,5 +3,12 @@
   "scripts": {
     "build": "cd client && npm install && npm run build && cd ..",
     "postinstall": "npm run build && echo 'Client built!'"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "react-icons": "^3.2.2"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.1"
   }
 }

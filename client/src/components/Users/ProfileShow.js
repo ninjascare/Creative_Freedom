@@ -18,13 +18,11 @@ const Page = styled.div`
     padding: 0px;
     margin: 0px;
   }
-  img {
-    // height: 100%;
-    // height: calc(100vh * (9/16));
-    // width: 100%;
-    padding: 0px;
-    margin: 0px;
-  }
+  
+`;
+const Container = styled.div`
+display: flex;
+flex-direction: column;
 `;
 
 const Header = styled.div`
@@ -39,6 +37,8 @@ const Content = styled.div`
   // font-size: 2vw;
   width: 100vw;
   height: 100vh;
+  border: solid red;
+
 `;
 const Title = styled.div`
   position: absolute;
@@ -46,16 +46,20 @@ const Title = styled.div`
   color: white;
   text-shadow: 2px 2px 2px black;
   margin-top: 50%;
+
 `;
 const ImgStyle = styled.div`
   display: flex;
   justify-content: space-around;
 
   #wheel {
+    font-size: 4vw;
     position: absolute;
     z-index: 2;
     margin-left: -30%;
-    text-shadow: 1px 1px 1px black;
+  }
+  a:visited{
+    color: white;
   }
   #upload {
     position: absolute;
@@ -65,10 +69,15 @@ const ImgStyle = styled.div`
   }
   img {
     position: absolute;
-    z-index: 1;
+    // z-index: 1;
+    border: solid blue;
+
   }
 `;
-const InfoStyle = styled.div``;
+const InfoStyle = styled.div`
+
+`;
+
 const Headline = styled.div`
   background-color: rgb(31 24 22);
   color: white;
@@ -84,11 +93,13 @@ const Skill = styled.div`
   background-color: rgb(235 194 138);
 `;
 const Portfolio = styled.div`
-  img {
-    height: 50vw;
-    width: 100vw;
-    align-items: center;
-  }
+align-items: center;
+
+img{
+  margin: auto;
+  max-width: 150vw;
+  max-height: 150vh;
+}
 
   a:hover {
     color: white;
@@ -112,56 +123,59 @@ class ProfileShow extends Component {
     return (
       <div>
         <Page>
-          <Header>
-            <h1>My Profile</h1>
-          </Header>
-          <Content>
-            <Title>
-              <h1>{this.state.users.name} </h1>
-              <h3>{this.state.users.title} </h3>
-            </Title>
-            <ImgStyle>
-              {/* <Link to={"/profile/${this.state.users.id}/upload"}>
+          <Container>
+            <Header>
+              <h1>My Profile</h1>
+            </Header>
+            <Content>
+              <Title>
+                <h1>{this.state.users.name} </h1>
+                <h3>{this.state.users.title} </h3>
+              </Title>
+              <ImgStyle>
+                {/* <Link to={"/profile/${this.state.users.id}/upload"}>
                 <button id="upload">➕</button>
               </Link> */}
-              <Link to={`/profile/${this.props.match.params.userId}/settings`}>
-                <h3 id="wheel">⚙️</h3>
-              </Link>
-              <img src={this.state.users.image_url} alt="profile pic" />
-            </ImgStyle>
-          </Content>
-          <InfoStyle>
-            <Headline>
-              <h2> Headline </h2>
-              {this.state.users.headline}
-            </Headline>
-            <Industry>
-              <h2>Industry </h2>
-              {this.state.users.industry} <br />
-            </Industry>
-            <Experience>
-              <h2>Experience </h2>
-              {this.state.users.experience} <br />
-            </Experience>
-            <Skill>
-              <h2> Skills</h2>
-              {this.state.users.skill1} {this.state.users.skill1_level} <br />
-              {this.state.users.skill2} {this.state.users.skill2_level} <br />
-              {this.state.users.skill3} {this.state.users.skill3_level} <br />
-              {this.state.users.skill4} {this.state.users.skill4_level} <br />
-              <br />
-            </Skill>
-            <Portfolio>
-              <a href={this.state.users.portfolio_url}>
-                {/* <h2>Portfolio </h2> */}
-                <img
-                  src={this.state.users.portfolio_image}
-                  alt="Portfolio"
-                />{" "}
-                <br />{" "}
-              </a>
-            </Portfolio>
-          </InfoStyle>
+
+                <Link to={`/profile/${this.props.match.params.userId}/settings`}>
+                  <h3 id="wheel"><i class="fas fa-cog"></i></h3>
+                </Link>
+                <img src={this.state.users.image_url} alt="profile pic" />
+              </ImgStyle>
+            </Content>
+            <InfoStyle>
+              <Headline>
+                <h2> Headline </h2>
+                {this.state.users.headline}
+              </Headline>
+              <Industry>
+                <h2>Industry </h2>
+                {this.state.users.industry} <br />
+              </Industry>
+              <Experience>
+                <h2>Experience </h2>
+                {this.state.users.experience} <br />
+              </Experience>
+              <Skill>
+                <h2> Skills</h2>
+                {this.state.users.skill1} {this.state.users.skill1_level} <br />
+                {this.state.users.skill2} {this.state.users.skill2_level} <br />
+                {this.state.users.skill3} {this.state.users.skill3_level} <br />
+                {this.state.users.skill4} {this.state.users.skill4_level} <br />
+                <br />
+              </Skill>
+              <Portfolio>
+                <a href={this.state.users.portfolio_url}>
+                  {/* <h2>Portfolio </h2> */}
+                  <img
+                    src={this.state.users.portfolio_image}
+                    alt="Portfolio"
+                  />{" "}
+                  <br />{" "}
+                </a>
+              </Portfolio>
+            </InfoStyle>
+          </Container>
         </Page>
       </div>
     );
