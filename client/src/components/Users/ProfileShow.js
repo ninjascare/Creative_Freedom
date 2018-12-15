@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
 
+const Container = styled.div`
+border: solid red;
+`
+
 const Page = styled.div`
 overflow-x: hidden; 
 overflow-y: scroll; 
@@ -13,7 +17,7 @@ color: white;
 a:link{
     text-decoration: none;
   }
-  h2{
+  h3{
     text-decoration: underline;
     padding: 0px;
     margin: 0px;
@@ -23,15 +27,13 @@ a:visited{
 }
 img{
     height: 100vh; 
-    // height: calc(100vh * (9/16)); 
+    // height: calc(100vh * (1/3)); 
 
     width: 150vh;     
    }
    
 `
-const Container = styled.div`
 
-`
 const Header = styled.div`
 font-size: 2vw;
 color: black;
@@ -43,27 +45,32 @@ justify-content: space-around;
 `
 
 const Content = styled.div`
-font-size: 2vw;
+font-size: 5vw;
 width: 100vw;
 height: 100vh;
+
 `
 const Title = styled.div`
 position: absolute;
 z-index: 2;
 color: white;
-text-shadow: 2px 2px 2px black;
-margin-top: 50%;
+align-items: left;
+margin-left: -20%;
+margin-top: calc(50vh * (3/4));
 
 `
 const ImgStyle = styled.div`
 display: flex;
 justify-content: space-around;
 #wheel{
+    color: white;
     position: absolute;
     z-index: 2;
     margin-left: -30%;
 }
-
+h3{
+  text-decoration: none;
+} 
 
 img{
     position: absolute;
@@ -112,17 +119,18 @@ class ProfileShow extends Component {
   render() {
     return (
       <div>
-        <Page>
-          <Container>
+        <Page>    
             <Header>
               <h1>My Profile</h1>
             </Header>
+            <Container>
             <Content>
+
+              <ImgStyle>
               <Title>
-                <h1>{this.state.users.name} </h1>
+                <h2>{this.state.users.name} </h2>
                 <h3>{this.state.users.title} </h3>
               </Title>
-              <ImgStyle>
                 {/* <Link to={"/profile/${this.state.users.id}/upload"}>
                 <button id="upload">➕</button>
               </Link> */}
@@ -135,19 +143,19 @@ class ProfileShow extends Component {
             </Content>
             <InfoStyle>
               <Headline>
-                <h2> Headline </h2>
+                <h3> Headline </h3>
                 {this.state.users.headline}
               </Headline>
               <Industry>
-                <h2>Industry </h2>
+                <h3>Industry </h3>
                 {this.state.users.industry} <br />
               </Industry>
               <Experience>
-                <h2>Experience </h2>
+                <h3>Experience </h3>
                 {this.state.users.experience} <br />
               </Experience>
               <Skill>
-                <h2> Skills</h2>
+                <h3> Skills</h3>
                 {this.state.users.skill1} {this.state.users.skill1_level} <br />
                 {this.state.users.skill2} {this.state.users.skill2_level} <br />
                 {this.state.users.skill3} {this.state.users.skill3_level} <br />
@@ -156,7 +164,7 @@ class ProfileShow extends Component {
               </Skill>
               <Portfolio>
                 <a href={this.state.users.portfolio_url}>
-                  {/* <h2>Portfolio </h2> */}
+                  {/* <h3>Portfolio </h3> */}
                   <img
                     src={this.state.users.portfolio_image}
                     alt="Portfolio"
