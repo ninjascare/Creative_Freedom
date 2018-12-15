@@ -88,7 +88,6 @@ align-items: center;
 `
 
 
-
 class ProfileShow extends Component {
     state = {
         users: {}

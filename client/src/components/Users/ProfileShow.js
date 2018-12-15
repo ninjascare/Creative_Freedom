@@ -33,13 +33,12 @@ const Header = styled.div`
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-around;
-`;
+`
 
 const Content = styled.div`
 // font-size: 2vw;
 width: 100vw;
 height: 100vh;
-
 `
 const Title = styled.div`
 position: absolute;
@@ -47,8 +46,6 @@ z-index: 2;
 color: white;
 text-shadow: 2px 2px 2px black;
 margin-top: 50%;
-
-
 `
 const ImgStyle = styled.div`
 display: flex;
@@ -62,8 +59,7 @@ justify-content: space-around;
   }
   img {
     position: absolute;
-    z-index: 1;
-      
+    z-index: 1;     
 }
 
 `
@@ -78,13 +74,13 @@ color: white;
 const Industry = styled.div`
   background-color: rgb(31 24 22);
   color: white;
-`;
+`
 const Experience = styled.div`
   background-color: rgb(24 142 156);
-`;
+`
 const Skill = styled.div`
   background-color: rgb(235 194 138);
-`;
+`
 const Portfolio = styled.div`
 img{
 height: 50vw; 
@@ -96,8 +92,6 @@ align-items: center;
     color: white;
 }  
 `
-
-
 
 class ProfileShow extends Component {
     state = {
@@ -159,8 +153,6 @@ class ProfileShow extends Component {
                             {/* <h2>Portfolio </h2> */}
                                 <img src={this.state.users.portfolio_image} alt="Portfolio" />  <br /> </a>
                         </Portfolio>
-
-
           </InfoStyle>
         </Page>
       </div>
