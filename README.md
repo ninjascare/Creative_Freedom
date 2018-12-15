@@ -6,3 +6,15 @@
 ![CFC](client/public/Wireframes:ERD/CFC_Splash.png)
 
 ![CFC](client/public/Wireframes:ERD/MVPDiagram.png)
+
+
+## Weblink: https://creative-freedom.herokuapp.com/
+
+## Trello link: https://trello.com/b/xXVVM6mE/cfc-app
+
+## Technologies Used:
+Languages - HTML5, CSS3, Javascript, Python React
+
+Design - Animista.net
+
+Software - Visual Studio, PyCharm,  and Google, Google and more Google.
