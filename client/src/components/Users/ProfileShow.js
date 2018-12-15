@@ -121,7 +121,7 @@ class ProfileShow extends Component {
               <h3>{this.state.users.title} </h3>
             </Title>
             <ImgStyle>
-              <Link to={"/profile/${this.state.users.id}/settings"}>
+              <Link to={"/profile/${this.state.users.id}/upload"}>
                 <button id="upload">➕</button>
               </Link>
               <Link to={`/profile/${this.props.match.params.userId}/settings`}>
