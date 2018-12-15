@@ -20,7 +20,7 @@ class Navbar extends Component {
     return (
       <Nav>
         <div>
-          <Link to="/dashboard"> 🏠 </Link>
+          <Link to="/"> 🏠 </Link>
           <Link to="/profile/:userId"> 👤 </Link>
           <Link to="/profile/:userId/upload"> ✚ </Link>
           {/* <Link to="/"> 💬 </Link> */}
