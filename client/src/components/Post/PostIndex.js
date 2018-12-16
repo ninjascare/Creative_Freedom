@@ -13,7 +13,6 @@ class PostIndex extends Component {
 
   getAllPosts = () => {
     axios.get("/api/post").then(res => {
-      console.log(res.data)
       this.setState({
         posts: res.data
       });
@@ -26,10 +25,10 @@ class PostIndex extends Component {
         <h1>Post Index</h1>
         <h2>News Feed</h2>
         {this.state.posts.map(post => (
-          <div key={post.id}>
-            <Link to={`/member/:userId`}>
+          <div key={post._id}>
+            <Link to={"/member/:userId"}>
               {post.user.name} <br />
-            </Link>
+            </Link>{" "}
             <br />
             {post.content} <br />
             {post.created_at} <br />
