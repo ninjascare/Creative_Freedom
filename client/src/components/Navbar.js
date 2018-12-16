@@ -5,9 +5,9 @@ import styled from "styled-components";
 const Nav = styled.div`
   background-color: black;
   background-position: fixed;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  // display: flex;
+  // justify-content: space-evenly;
+  // align-items: left;
   padding: 3vw;
   height: 25px;
   font-size: 2vw;
@@ -18,8 +18,8 @@ const Nav = styled.div`
 const IconStyle = styled.div`
 font-size: 5vw;
 color: white;
-// display: flex;
-// justify-content: space-evenly;
+display: flex;
+justify-content: space-evenly;
 a:visited{
   color: white;
 }

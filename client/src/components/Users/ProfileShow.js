@@ -4,7 +4,7 @@ import styled from "styled-components";
 import axios from "axios";
 
 const Container = styled.div`
-// border: solid red;
+
 `
 
 const Page = styled.div`
@@ -83,16 +83,22 @@ const InfoStyle = styled.div`
 `
 const Headline = styled.div`
 background-color: rgb(31 24 22);
+padding: 8px 15px 15px 15px;
+
 `
 const Industry = styled.div`
 background-color: rgb(31 24 22);
+padding: 8px 15px 15px 15px;
+
 `
 const Experience = styled.div`
 background-color: rgb(24 142 156);
+padding: 8px 15px 15px 15px;
 `
 const Skill = styled.div`
 background-color: rgb(235 194 138);
-
+padding: 8px 15px 15px 15px;
+line-height: 25px;
 `
 const Portfolio = styled.div`
 img{
@@ -119,18 +125,18 @@ class ProfileShow extends Component {
   render() {
     return (
       <div>
-        <Page>    
-            <Header>
-              <h1>My Profile</h1>
-            </Header>
-            <Container>
+        <Page>
+          <Header>
+            <h1>My Profile</h1>
+          </Header>
+          <Container>
             <Content>
 
               <ImgStyle>
-              <Title>
-                <h2>{this.state.users.name} </h2>
-                <h3>{this.state.users.title} </h3>
-              </Title>
+                <Title>
+                  <h2>{this.state.users.name} </h2>
+                  <h3>{this.state.users.title} </h3>
+                </Title>
                 {/* <Link to={"/profile/${this.state.users.id}/upload"}>
                 <button id="upload">➕</button>
               </Link> */}
@@ -143,24 +149,29 @@ class ProfileShow extends Component {
             </Content>
             <InfoStyle>
               <Headline>
-                <h3> Headline </h3>
+                <h3>Headline </h3>
                 {this.state.users.headline}
               </Headline>
               <Industry>
+               
                 <h3>Industry </h3>
-                {this.state.users.industry} <br />
-              </Industry>
+                {this.state.users.industry}
+
+              </Industry> 
               <Experience>
                 <h3>Experience </h3>
-                {this.state.users.experience} <br />
+                {this.state.users.experience} 
               </Experience>
               <Skill>
                 <h3> Skills</h3>
-                {this.state.users.skill1} {this.state.users.skill1_level} <br />
-                {this.state.users.skill2} {this.state.users.skill2_level} <br />
-                {this.state.users.skill3} {this.state.users.skill3_level} <br />
-                {this.state.users.skill4} {this.state.users.skill4_level} <br />
-                <br />
+                Skill: {this.state.users.skill1} <br />
+                Level: {this.state.users.skill1_level} <i class="fas fa-star"></i> <br />
+                Skill: {this.state.users.skill2} <br />
+                Level: {this.state.users.skill2_level} <i class="fas fa-star"></i> <br />
+                Skill: {this.state.users.skill3} <br />
+                Level: {this.state.users.skill3_level} <i class="fas fa-star"></i> <br />
+                Skill: {this.state.users.skill4} <br />
+                Level: {this.state.users.skill4_level} <i class="fas fa-star"></i> <br />
               </Skill>
               <Portfolio>
                 <a href={this.state.users.portfolio_url}>
@@ -168,8 +179,8 @@ class ProfileShow extends Component {
                   <img
                     src={this.state.users.portfolio_image}
                     alt="Portfolio"
-                  />{" "}
-                  <br />{" "}
+                  />
+
                 </a>
               </Portfolio>
             </InfoStyle>
