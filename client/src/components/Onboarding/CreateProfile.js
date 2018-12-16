@@ -277,7 +277,7 @@ class CreateProfile extends Component {
             </Skill>
             <div>
               <PortfolioURL>
-                <label htmlFor="portfolio_url">Portfolio URL</label>
+                <label htmlFor="portfolio_url">Portfolio URL</label> <br/>
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.portfolio_url}
@@ -288,7 +288,7 @@ class CreateProfile extends Component {
             </div>
             <div>
               <PortfolioImg>
-                <label htmlFor="portfolio_image">Portfolio Image URL</label>
+                <label htmlFor="portfolio_image">Portfolio Image URL</label> <br/>
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.portfolio_image}
