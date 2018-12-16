@@ -5,9 +5,6 @@ import styled from "styled-components";
 const Nav = styled.div`
   background-color: black;
   background-position: fixed;
-  // display: flex;
-  // justify-content: space-evenly;
-  // align-items: left;
   padding: 3vw;
   height: 25px;
   font-size: 2vw;
@@ -20,6 +17,7 @@ font-size: 5vw;
 color: white;
 display: flex;
 justify-content: space-evenly;
+letter-spacing: 20px;
 a:visited{
   color: white;
 }
@@ -38,8 +36,8 @@ class Navbar extends Component {
 
           {/* Link to stretch goal components (Messages and Notifications) below */}
 
-          {/* <Link to="/"> <i class="fas fa-comment-alt"></i> </Link>
-          <Link to="/"><i class="fas fa-bell"></i></Link> */}
+          <Link to="/"> <i class="fas fa-comment-alt"></i> </Link>
+          <Link to="/"><i class="fas fa-bell"></i></Link>
 
           </div>
           </IconStyle>

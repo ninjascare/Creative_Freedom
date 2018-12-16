@@ -12,7 +12,6 @@ overflow-x: hidden;
 overflow-y: scroll; 
 width: 102vw;
 background-color: rgb(181, 180, 180);
-justify-content: space-around;
 color: white;
 a:link{
     text-decoration: none;
@@ -28,14 +27,15 @@ a:visited{
 img{
     height: 100vh; 
     // height: calc(100vh * (1/3)); 
-
-    width: 150vh;     
+    width: 150vh; 
+        
    }
+
    
 `
 
 const Header = styled.div`
-font-size: 2vw;
+font-size: 3vw;
 color: black;
 background-color: white;
 border-bottom: 1px solid black;
@@ -45,7 +45,7 @@ justify-content: space-around;
 `
 
 const Content = styled.div`
-font-size: 5vw;
+font-size: 3vw;
 width: 100vw;
 height: 100vh;
 
@@ -57,12 +57,14 @@ color: white;
 align-items: left;
 margin-left: -20%;
 margin-top: calc(50vh * (3/4));
+text-shadow: 1px 1px 1px black;
 
 `
 const ImgStyle = styled.div`
 display: flex;
 justify-content: space-around;
 #wheel{
+  font-size: 4vw;
     color: white;
     position: absolute;
     z-index: 2;
@@ -79,6 +81,7 @@ img{
 
 `
 const InfoStyle = styled.div`
+// text-shadow: 1px 1px 1px black;
 
 `
 const Headline = styled.div`
@@ -134,7 +137,7 @@ class ProfileShow extends Component {
 
               <ImgStyle>
                 <Title>
-                  <h2>{this.state.users.name} </h2>
+                  <h1>{this.state.users.name} </h1>
                   <h3>{this.state.users.title} </h3>
                 </Title>
                 {/* <Link to={"/profile/${this.state.users.id}/upload"}>

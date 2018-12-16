@@ -2,18 +2,16 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 import axios from "axios";
-// import Navbar from "./components/Navbar";
 
 const Page = styled.div`
 overflow-x: hidden; 
 overflow-y: scroll; 
 width: 102vw;
 background-color: rgb(181, 180, 180);
-justify-content: space-around;
 a:link{
     text-decoration: none;
   }
-  h2{
+  h3{
     text-decoration: underline;
     padding: 0px;
     margin: 0px;
@@ -24,10 +22,11 @@ img{
 
     width: 150vh;     
    }
+
 `
 
 const Header = styled.div`
-font-size: 2vw;
+font-size: 3vw;
 background-color: white;
 border-bottom: 1px solid black;
 display: flex;
@@ -36,7 +35,7 @@ justify-content: space-around;
 `
 
 const Content = styled.div`
-font-size: 2vw;
+font-size: 3vw;
 width: 100vw;
 height: 100vh;
 `
@@ -44,19 +43,17 @@ const Title = styled.div`
 position: absolute;
 z-index: 2;
 color: white;
-text-shadow: 2px 2px 2px black;
-margin-top: 50%;
+text-shadow: 1px 1px 1px black;
+margin-top: calc(50vh * (3/4));
+margin-left: -20%;
 
 `
 const ImgStyle = styled.div`
 display: flex;
 justify-content: space-around;
-#wheel{
-    position: absolute;
-    z-index: 2;
-    margin-left: -30%;
-    text-shadow: 1px 1px 1px black;
-}
+h3{
+    text-decoration: none;
+  } 
 img{
     position: absolute;
     z-index: 1;   
@@ -64,22 +61,30 @@ img{
 
 `
 const InfoStyle = styled.div`
+// text-shadow: 1px 1px 1px white;
 
 `
 const Headline = styled.div`
 background-color: rgb(253 199 0);
 color: black;
+padding: 8px 15px 15px 15px;
+
 `
 const Industry = styled.div`
 background-color: rgb(31 24 22);
 color: black;
+padding: 8px 15px 15px 15px;
+
 `
 const Experience = styled.div`
 background-color: rgb(137 193 195);
+padding: 8px 15px 15px 15px;
+
 `
 const Skill = styled.div`
 background-color: rgb(230 230 230);
-
+padding: 8px 15px 15px 15px;
+line-height: 25px;
 `
 const Portfolio = styled.div`
 img{
@@ -108,40 +113,43 @@ class ProfileShow extends Component {
             <div>
                 <Page>
                     <Header>
-                        <h1>Profile</h1>
-                        <h1>Member Show 'read only'</h1>
+                        <h1>{this.state.users.name} Profile</h1>
                     </Header>
                     <Content>
-                        <Title>
-                    <h1>{this.state.users.name} </h1>
-                        <h3>{this.state.users.title} </h3>
-                        </Title>
+
                         <ImgStyle>
+                            <Title>
+                                <h1>{this.state.users.name} </h1>
+                                <h3>{this.state.users.title} </h3>
+                            </Title>
                             {`/settings/userId/${this.props.match.params.userId}`}>
                             <img src={this.state.users.image_url} alt="profile pic" />
                         </ImgStyle>
                     </Content>
-                    <InfoStyle> 
+                    <InfoStyle>
                         <Headline>
-                           <h2> Headline </h2>{this.state.users.headline} 
+                            <h3> Headline </h3>{this.state.users.headline}
                         </Headline>
                         {/* <Industry>
-                            <h2>Industry </h2>
+                            <h3>Industry </h3>
                             {this.state.users.industry} <br />
 
                         </Industry> */}
                         <Experience>
-                           <h2>Experience </h2>
+                            <h3>Experience </h3>
                             {this.state.users.experience} <br />
 
                         </Experience>
                         <Skill>
-                           <h2> Skills</h2>
-                            {this.state.users.skill1} {this.state.users.skill1_level} <br />
-                            {this.state.users.skill2} {this.state.users.skill2_level} <br />
-                            {this.state.users.skill3} {this.state.users.skill3_level} <br />
-                            {this.state.users.skill4} {this.state.users.skill4_level} <br />
-                            <br />
+                            <h3> Skills</h3>
+                            Skill: {this.state.users.skill1} <br />
+                            Level: {this.state.users.skill1_level} <i class="fas fa-star"></i> <br />
+                            Skill: {this.state.users.skill2} <br />
+                            Level: {this.state.users.skill2_level} <i class="fas fa-star"></i> <br />
+                            Skill: {this.state.users.skill3} <br />
+                            Level: {this.state.users.skill3_level} <i class="fas fa-star"></i> <br />
+                            Skill: {this.state.users.skill4} <br />
+                            Level: {this.state.users.skill4_level} <i class="fas fa-star"></i> <br />
                         </Skill>
                         <Portfolio>
 
@@ -151,7 +159,7 @@ class ProfileShow extends Component {
 
                     </InfoStyle>
                 </Page>
-                            {/* <Navbar/> */}
+                {/* <Navbar/> */}
 
             </div>
         );
