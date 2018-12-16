@@ -277,7 +277,7 @@ export default class UserSettings extends Component {
           </div>
           <br/>
           <div>
-          <Link to={`/profile/${this.state.user.id}`}>
+          <Link to={`/posts/${this.state.user.id}`}>
             <button type="submit">Update Profile</button><br/>
           </Link>
           </div>
