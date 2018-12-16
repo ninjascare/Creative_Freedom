@@ -4,85 +4,88 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Header = styled.div`
-display: flex;
-justify-content: center;
-`
+  display: flex;
+  justify-content: center;
+`;
 const Container = styled.div`
-display: flex;
-justify-content: center;
-padding: 8px 15px 15px 15px;
-form{
-  border: inset rgb(220 220 220);
-  border-radius: 5px;
-  
-}
-label{
-  font-weight: bold;
-}
-input{
-  font-size: 20px;
-  border-radius: 10px;
-  height: 30px;
-  width: 80vw;
-}
-button{
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  height: 65px;
-  width: 200px;
-  border-radius: 15px;
-  box-shadow: 1px 2px 5px black;
-  display: block;
-  margin: auto;  
-  background-image: linear-gradient(to top right, rgb(236 0 255), rgb(166 4 255),rgb(32 118 255),rgb( 0 175 251));
-}
-
-`
+  display: flex;
+  justify-content: center;
+  padding: 8px 15px 15px 15px;
+  form {
+    border: inset rgb(220 220 220);
+    border-radius: 5px;
+  }
+  label {
+    font-weight: bold;
+  }
+  input {
+    font-size: 20px;
+    border-radius: 10px;
+    height: 30px;
+    width: 80vw;
+  }
+  button {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 65px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 5px black;
+    display: block;
+    margin: auto;
+    background-image: linear-gradient(
+      to top right,
+      rgb(236 0 255),
+      rgb(166 4 255),
+      rgb(32 118 255),
+      rgb(0 175 251)
+    );
+  }
+`;
 const Name = styled.div`
-background-color: rgb(250 250 250);
-padding: 8px 15px 15px 15px;
-`
+  background-color: rgb(250 250 250);
+  padding: 8px 15px 15px 15px;
+`;
 const Title = styled.div`
-background-color: rgb(250 250 250);
-padding: 8px 15px 15px 15px;
-`
+  background-color: rgb(250 250 250);
+  padding: 8px 15px 15px 15px;
+`;
 const ImgStyle = styled.div`
-background-color: rgb(245 245 245);
-padding: 8px 15px 15px 15px;
-
-`
+  background-color: rgb(245 245 245);
+  padding: 8px 15px 15px 15px;
+`;
 const Headline = styled.div`
-background-color: rgb(245 245 245);
-padding: 8px 15px 15px 15px;
-input{
-  height: 80px;
-}
-`
+  background-color: rgb(245 245 245);
+  padding: 8px 15px 15px 15px;
+  input {
+    height: 80px;
+  }
+`;
 const Industry = styled.div`
-background-color: rgb(232 232 232);
-padding: 8px 15px 15px 15px;
-`
+  background-color: rgb(232 232 232);
+  padding: 8px 15px 15px 15px;
+`;
 const Experience = styled.div`
-background-color: rgb(232 232 232);
-padding: 8px 15px 15px 15px;
-input{
-  height: 80px;
-}
-`
+  background-color: rgb(232 232 232);
+  padding: 8px 15px 15px 15px;
+  input {
+    height: 80px;
+  }
+`;
 const Skill = styled.div`
-background-color: rgb(214 214 214);
-padding: 8px 15px 15px 15px;
-line-height: 25px;
-`
+  background-color: rgb(214 214 214);
+  padding: 8px 15px 15px 15px;
+  line-height: 25px;
+`;
 const PortfolioURL = styled.div`
-background-color: rgb(190 190 190);
-padding: 8px 15px 15px 15px;
-`
+  background-color: rgb(190 190 190);
+  padding: 8px 15px 15px 15px;
+`;
 const PortfolioImg = styled.div`
-background-color: rgb(190 190 190);
-padding: 8px 15px 15px 15px;
-`
+  background-color: rgb(190 190 190);
+  padding: 8px 15px 15px 15px;
+`;
 export default class UserSettings extends Component {
   state = {
     user: {}
@@ -108,6 +111,12 @@ export default class UserSettings extends Component {
     const updatedUser = this.state.user;
     axios.put(`/api/user/${userId}/`, updatedUser).then(() => {
       console.log("Updated User");
+    });
+  };
+
+  handleDelete = userId => {
+    axios.delete(`/api/user/${userId}`).then(res => {
+      this.setState({ user: res.data });
     });
   };
 
@@ -187,7 +196,7 @@ export default class UserSettings extends Component {
             </div>
             <Skill>
               <div>
-                <h2>  Rate Your Skills 1-5 </h2> <br />
+                <h2> Rate Your Skills 1-5 </h2> <br />
                 <label htmlFor="skill1">Skill 1</label> <br />
                 <input
                   onChange={this.handleChange}
@@ -273,7 +282,8 @@ export default class UserSettings extends Component {
             </div>
             <div>
               <PortfolioImg>
-                <label htmlFor="portfolio_image">Portfolio Image URL</label> <br />
+                <label htmlFor="portfolio_image">Portfolio Image URL</label>{" "}
+                <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.user.portfolio_image}
@@ -285,12 +295,17 @@ export default class UserSettings extends Component {
             <br />
             <div>
               <Link to={`/profile/${this.state.user.id}`}>
-                <button type="submit">Update Profile</button><br />
+                <button type="submit">Update Profile</button>
+                <br />
               </Link>
             </div>
+
             <br />
           </form>
         </Container>
+        <Link to="">
+          <button          onClick={() => this.handleDelete(this.state.user.id)}>Delete This Profile</button>
+        </Link>
       </div>
     );
   }
