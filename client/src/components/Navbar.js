@@ -36,8 +36,8 @@ class Navbar extends Component {
 
           {/* Link to stretch goal components (Messages and Notifications) below */}
 
-          <Link to="/"> <i class="fas fa-comment-alt"></i> </Link>
-          <Link to="/"><i class="fas fa-bell"></i></Link>
+          {/* <Link to="/"> <i class="fas fa-comment-alt"></i> </Link>
+          <Link to="/"><i class="fas fa-bell"></i></Link> */}
 
           </div>
           </IconStyle>

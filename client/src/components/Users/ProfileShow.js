@@ -155,11 +155,9 @@ class ProfileShow extends Component {
                 <h3>Headline </h3>
                 {this.state.users.headline}
               </Headline>
-              <Industry>
-               
+              <Industry>  
                 <h3>Industry </h3>
                 {this.state.users.industry}
-
               </Industry> 
               <Experience>
                 <h3>Experience </h3>
