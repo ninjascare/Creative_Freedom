@@ -22,6 +22,8 @@ class PostIndex extends Component {
   render() {
     return (
       <div>
+        <h1>Post Index</h1>
+        <h2>News Feed</h2>
         {this.state.posts.map(post => (
           <div key={post._id}>
             <Link to={"/member/:userId"}>
@@ -32,7 +34,7 @@ class PostIndex extends Component {
             {post.created_at} <br />
             {/* trying to make audio work with different methods */}
             {post.audio_url ? (
-              <audio controls src={post.audio_url} type="audio/mpeg"/>
+              <audio controls src={post.audio_url} type="audio/mpeg" />
             ) : null}
             <br />
             <img src={post.image_url} />
@@ -48,8 +50,7 @@ class PostIndex extends Component {
             </button>
           </div>
         ))}
-        <h1>Post Index</h1>
-        <h2>News Feed</h2>
+
       </div>
     );
   }

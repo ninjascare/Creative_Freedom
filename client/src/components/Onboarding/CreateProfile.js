@@ -22,7 +22,7 @@ label{
 input{
   font-size: 20px;
   border-radius: 10px;
-  height: 80px;
+  height: 30px;
   width: 80vw;
 }
 button{
@@ -42,6 +42,7 @@ button{
 const Name = styled.div`
 background-color: rgb(250 250 250);
 padding: 8px 15px 15px 15px;
+
 `
 const Title = styled.div`
 background-color: rgb(250 250 250);
@@ -54,6 +55,9 @@ padding: 8px 15px 15px 15px;
 const Headline = styled.div`
 background-color: rgb(245 245 245);
 padding: 8px 15px 15px 15px;
+input{
+  height: 80px;
+}
 `
 const Industry = styled.div`
 background-color: rgb(232 232 232);
@@ -62,11 +66,15 @@ padding: 8px 15px 15px 15px;
 const Experience = styled.div`
 background-color: rgb(232 232 232);
 padding: 8px 15px 15px 15px;
+input{
+  height: 80px;
+}
 `
 const Skill = styled.div`
 background-color: rgb(214 214 214);
 padding: 8px 15px 15px 15px;
 line-height: 25px;
+
 `
 const PortfolioURL = styled.div`
 background-color: rgb(190 190 190);
@@ -128,7 +136,7 @@ class CreateProfile extends Component {
           <form onSubmit={this.handleSubmit}>
             <div>
               <Name>
-                <label htmlFor="name">Name</label> <br/>
+                <label htmlFor="name">Name</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.name}
@@ -139,7 +147,7 @@ class CreateProfile extends Component {
             </div>
             <div>
               <Title>
-                <label htmlFor="title">Title</label> <br/>
+                <label htmlFor="title">Title</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.title}
@@ -161,7 +169,7 @@ class CreateProfile extends Component {
             </div>
             <div>
               <Headline>
-                <label htmlFor="headline">Headline</label> <br/>
+                <label htmlFor="headline">Headline</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.headline}
@@ -172,7 +180,7 @@ class CreateProfile extends Component {
             </div>
             <div>
               <Industry>
-                <label htmlFor="industry">Industry</label> <br/>
+                <label htmlFor="industry">Industry</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.industry}
@@ -183,7 +191,7 @@ class CreateProfile extends Component {
             </div>
             <div>
               <Experience>
-                <label htmlFor="experience">Experience</label> <br/>
+                <label htmlFor="experience">Experience</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.experience}
@@ -194,8 +202,8 @@ class CreateProfile extends Component {
             </div>
             <Skill>
               <div>
-              Rate Your Skills 1-5 <br />
-                <label htmlFor="skill1">Skill 1</label> <br/>
+                <h2>  Rate Your Skills 1-5 </h2> <br />
+                <label htmlFor="skill1">Skill 1</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.skill1}
@@ -204,7 +212,7 @@ class CreateProfile extends Component {
                 />
               </div>
               <div>
-                <label htmlFor="skill1_level">Skill 1-Level</label> <br/>
+                <label htmlFor="skill1_level">Skill 1-Level</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.skill1_level}
@@ -213,7 +221,7 @@ class CreateProfile extends Component {
                 />
               </div>
               <div>
-                <label htmlFor="skill2">Skill 2</label> <br/>
+                <label htmlFor="skill2">Skill 2</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.skill2}
@@ -222,7 +230,7 @@ class CreateProfile extends Component {
                 />
               </div>
               <div>
-                <label htmlFor="skill2_level">Skill 2-Level</label> <br/>
+                <label htmlFor="skill2_level">Skill 2-Level</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.skill2_level}
@@ -231,7 +239,7 @@ class CreateProfile extends Component {
                 />
               </div>
               <div>
-                <label htmlFor="skill3">Skill 3</label> <br/>
+                <label htmlFor="skill3">Skill 3</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.skill3}
@@ -240,7 +248,7 @@ class CreateProfile extends Component {
                 />
               </div>
               <div>
-                <label htmlFor="skill3_level">Skill 3-Level</label> <br/>
+                <label htmlFor="skill3_level">Skill 3-Level</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.skill3_level}
@@ -249,7 +257,7 @@ class CreateProfile extends Component {
                 />
               </div>
               <div>
-                <label htmlFor="skill4">Skill 4</label> <br/>
+                <label htmlFor="skill4">Skill 4</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.skill4}
@@ -258,7 +266,7 @@ class CreateProfile extends Component {
                 />
               </div>
               <div>
-                <label htmlFor="skill4_level">Skill 4-Level</label> <br/>
+                <label htmlFor="skill4_level">Skill 4-Level</label> <br />
                 <input
                   onChange={this.handleChange}
                   value={this.state.newUser.skill4_level}
@@ -289,7 +297,8 @@ class CreateProfile extends Component {
                 />
               </PortfolioImg>
             </div>
-            <button type="submit">Create Profile</button>
+            <br/>
+            <button type="submit">Enter the Ecosystem</button> <br/>
           </form>
         </Container>
       </div>
