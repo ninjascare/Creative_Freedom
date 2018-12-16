@@ -43,6 +43,22 @@ const Container = styled.div`
     );
   }
 `;
+
+const DeleteButton = styled.div`
+  button {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 65px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 5px black;
+    display: block;
+    margin: auto;
+    background-color: red;
+  }
+`;
+
 const Name = styled.div`
   background-color: rgb(250 250 250);
   padding: 8px 15px 15px 15px;
@@ -303,9 +319,13 @@ export default class UserSettings extends Component {
             <br />
           </form>
         </Container>
-        <Link to="">
-          <button          onClick={() => this.handleDelete(this.state.user.id)}>Delete This Profile</button>
-        </Link>
+        <DeleteButton>
+          <Link to="">
+            <button onClick={() => this.handleDelete(this.state.user.id)}>
+              Delete This Profile
+            </button>
+          </Link>
+        </DeleteButton>
       </div>
     );
   }
