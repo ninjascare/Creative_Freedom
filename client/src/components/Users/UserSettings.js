@@ -22,7 +22,7 @@ label{
 input{
   font-size: 20px;
   border-radius: 10px;
-  height: 30px;
+  height: 80px;
   width: 80vw;
 }
 button{
