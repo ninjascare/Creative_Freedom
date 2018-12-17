@@ -82,6 +82,11 @@ img{
 `
 const InfoStyle = styled.div`
 // text-shadow: 1px 1px 1px black;
+font-weight: 500;
+line-height: 25px;
+h3{
+  font-size: 23px;
+}
 
 `
 const Headline = styled.div`
@@ -101,7 +106,6 @@ padding: 8px 15px 15px 15px;
 const Skill = styled.div`
 background-color: rgb(235 194 138);
 padding: 8px 15px 15px 15px;
-line-height: 25px;
 `
 const Portfolio = styled.div`
 img{
@@ -165,14 +169,10 @@ class ProfileShow extends Component {
               </Experience>
               <Skill>
                 <h3> Skills</h3>
-                Skill: {this.state.users.skill1} <br />
-                Level: {this.state.users.skill1_level} <i class="fas fa-star"></i> <br />
-                Skill: {this.state.users.skill2} <br />
-                Level: {this.state.users.skill2_level} <i class="fas fa-star"></i> <br />
-                Skill: {this.state.users.skill3} <br />
-                Level: {this.state.users.skill3_level} <i class="fas fa-star"></i> <br />
-                Skill: {this.state.users.skill4} <br />
-                Level: {this.state.users.skill4_level} <i class="fas fa-star"></i> <br />
+                {this.state.users.skill1}: {this.state.users.skill1_level} <i class="fas fa-star"></i> <br />
+                {this.state.users.skill2}: {this.state.users.skill2_level} <i class="fas fa-star"></i> <br />
+                {this.state.users.skill3}: {this.state.users.skill3_level} <i class="fas fa-star"></i> <br />
+                {this.state.users.skill4}: {this.state.users.skill4_level} <i class="fas fa-star"></i> <br />
               </Skill>
               <Portfolio>
                 <a href={this.state.users.portfolio_url}>

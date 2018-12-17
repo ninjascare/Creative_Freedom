@@ -5,6 +5,7 @@ import styled from "styled-components";
 const Nav = styled.div`
   background-color: black;
   background-position: fixed;
+  margin-top: -1%;
   a:link {
     text-decoration: none;
   }
