@@ -3,7 +3,35 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import styled from 'styled-components'
 
+const Post = styled.div`
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  border: 1px solid black;
+  margin: 30px auto;
+`
 
+const Profile = styled.div`
+  width: 66vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: right;
+  border-bottom: 2px solid black;
+  padding: 20px;
+  text-decoration: none;
+  img {
+    height: 50px;
+    width: 70px;
+    border-radius: 100%;
+  }
+`
+
+const ProfileInfo = styled.div`
+  border: 1px solid black;
+`
 
 class PostIndex extends Component {
   state = {
@@ -24,6 +52,7 @@ class PostIndex extends Component {
 
   render() {
     return (
+      // Page Container Lvl
       <div>
 
         <h1>Post Index</h1>
@@ -31,21 +60,29 @@ class PostIndex extends Component {
 
         {this.state.posts.map(post => (
           <div key={post._id}>
+          {/* ↓ All Posts Style Lvl ↓ */}
+          <Post>
 
-          <div className='postStyle'>
-
-            <div className='Profile'>
+            <Profile>
+          {/* ↓ User Profile Style Lvl ↓ */}
             <Link to={"/member/:userId"}>
-              <img src={post.user.image_url} alt="" className='postProfileImg' />
+              {/* User Profile Image Style */}
+              <img src={post.user.image_url} alt=""/>
               
+              
+              <ProfileInfo>
+            {/* ↓ User Profile Info Style ↓ */}
               <h1>{post.user.name}</h1>
               <h5>{post.user.title}</h5> 
-            </Link>{" "}
-            </div>
+              </ProfileInfo>
+              </Link>{" "}
+            {/* ↑ User Profile Info Style ↑ */}
 
-            <br />
-            {post.content} <br />
-            {post.created_at} <br />
+            </Profile>
+            {/* ↑ User Profile Style Lvl ↑ */}
+
+
+          {/* ↓ Post Content(s) Style Lvl ↓ */}
 
             {/* trying to make audio work with different methods */}
             {post.audio_url ? (
@@ -56,6 +93,18 @@ class PostIndex extends Component {
             <br />
             <img src={post.image_url} />
             <iframe src={post.video_url} frameborder="100" /> <br />
+          
+          {/* ↑ Post Content(s) Style Lvl ↑ */}
+
+
+          {/* ↓ Post Info Style Lvl ↓ */}
+          <br />
+            {post.content} <br />
+            {post.created_at} <br />
+          {/* ↑ Post Info Style Lvl ↑ */}
+            
+
+          {/* ↓ Post Comment Button Style Lvl ↓ */}
             <button>
               View comments:
               {post.comments.map(comment => (
@@ -65,7 +114,9 @@ class PostIndex extends Component {
                 </div>
               ))}
             </button>
-            </div>
+          {/* ↑ Post Comment Button Style Lvl ↑ */}
+
+            </Post>
 
           </div>
         ))}
