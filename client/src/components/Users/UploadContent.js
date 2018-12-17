@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import CreateProfile from "../Onboarding/CreateProfile";
 
 const Header = styled.div`
   display: flex;
@@ -76,7 +77,7 @@ class UploadContent extends Component {
       audio_url: "",
       video_url: "",
       created_at: ""
-    //   user: 
+
     }
   };
 
