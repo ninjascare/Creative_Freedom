@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
+import Navbar from "../Navbar";
 
 const Container = styled.div`
   color: white;
@@ -132,6 +133,7 @@ const Portfolio = styled.div`
   }
 `;
 
+
 class ProfileShow extends Component {
   state = {
     users: {}
@@ -147,7 +149,7 @@ class ProfileShow extends Component {
 
   render() {
     return (
-      <div>
+      <div>          
         <Page>
           <Header>
             <h1>My Profile</h1>
@@ -206,9 +208,14 @@ class ProfileShow extends Component {
             </InfoStyle>
           </Container>
         </Page>
+
+<Navbar />
+
       </div>
+
     );
   }
 }
+
 
 export default ProfileShow;

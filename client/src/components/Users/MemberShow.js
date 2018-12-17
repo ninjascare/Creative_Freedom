@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
+import Navbar from "../Navbar";
+
 
 const Page = styled.div`
   overflow-x: hidden;

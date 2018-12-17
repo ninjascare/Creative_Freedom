@@ -9,10 +9,11 @@ import MemberShow from "./components/Users/MemberShow";
 import ProfileShow from "./components/Users/ProfileShow";
 import MemberList from "./components/Users/MemberList";
 import UploadContent from "./components/Users/UploadContent";
-import Navbar from "./components/Navbar";
+import PostIndex from "./components/Post/PostIndex";
 import UserSettings from "./components/Users/UserSettings";
 import CreateProfile from "./components/Onboarding/CreateProfile";
 import PostIndex from "./components/Post/PostIndex";
+import PostShow from "./components/Post/PostShow";
 
 class App extends Component {
   render() {
@@ -37,11 +38,11 @@ class App extends Component {
 
               {/* routes for posts */}
               <Route path="/posts" component={PostIndex} />
+              <Route path="/post/:postId" component={PostShow} />
 
               
 
             </Switch>
-            <Navbar/>
 
           </div>
         </Router>
