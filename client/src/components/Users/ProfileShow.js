@@ -45,7 +45,7 @@ justify-content: space-around;
 `
 
 const Content = styled.div`
-font-size: 3vw;
+font-size: 2vw;
 width: 100vw;
 height: 100vh;
 
@@ -56,7 +56,7 @@ z-index: 2;
 color: white;
 align-items: left;
 margin-left: -20%;
-margin-top: calc(50vh * (3/4));
+margin-top: calc(50vh * (5/4));
 text-shadow: 1px 1px 1px black;
 
 `
