@@ -163,10 +163,25 @@
 }
 
 .memberListPageTop {
-    background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: white;
+    border-bottom: 3pt solid black;
+    padding: 10px;
+    margin: 0px;
+}
+
+.dummySearchBar {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    background-color: white;
+    border-bottom: 3pt solid black;
+    font-size: xx-large;
+    margin-bottom: 20px;
 }
 
 .userContainer .peskyAtag {
@@ -214,7 +229,6 @@
     justify-content: space-around;
     text-align: center;
     padding: 20px;
-
 }
 /* Member List Style End */
 

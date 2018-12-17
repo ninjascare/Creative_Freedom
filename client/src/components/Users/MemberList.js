@@ -19,7 +19,12 @@ export default class MemberList extends Component {
   render() {
     return (
       <div className='memberListPageContainer'>
-        <h1 className='memberListPageTop'><span>Connx</span> <span>Discover</span> <span>Events</span> (MemberList)</h1>
+        <h1 className='memberListPageTop'>
+        <span>Connx</span> <div>Discover</div> <div>Events</div> (MemberList)
+        </h1>
+
+        <div className='dummySearchBar'>
+        <div>Search</div> 🔍</div>
 
         {this.state.users.map(user => (
           <div key={user._id} className='userContainer'>
