@@ -2,17 +2,20 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
+import Navbar from "../Navbar";
 
 const Container = styled.div`
-
+color: white;
 `
 
 const Page = styled.div`
 overflow-x: hidden; 
 overflow-y: scroll; 
-width: 102vw;
-background-color: rgb(181, 180, 180);
-color: white;
+width: 100vw;
+background-color: #2d3436;
+background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+// background-color: #d7d7d7;
+// background-image: linear-gradient(147deg, #d7d7d7 0%, #353535 74%);
 a:link{
     text-decoration: none;
   }
@@ -24,69 +27,92 @@ a:link{
 a:visited{
   color: white;
 }
-img{
-    height: 100vh; 
-    // height: calc(100vh * (1/3)); 
-    width: 150vh; 
-        
-   }
 
-   
 `
 
 const Header = styled.div`
 font-size: 3vw;
 color: black;
 background-color: white;
-border-bottom: 1px solid black;
+border-bottom: 3px solid black;
 display: flex;
 justify-content: space-around;
 
 `
 
 const Content = styled.div`
-font-size: 2vw;
+font-size: 1.5vw;
 width: 100vw;
 height: 100vh;
+@media only screen and (min-device-width : 320px) and (max-width: 480px) {
+    { 
+        font-size: 4vw;
 
+    }
+}
 `
+
 const Title = styled.div`
 position: absolute;
 z-index: 2;
 color: white;
-align-items: left;
-margin-left: -20%;
-margin-top: calc(50vh * (5/4));
 text-shadow: 1px 1px 1px black;
+margin-top: 15%;
+margin-left: -38%;
 
+@media only screen and (min-device-width : 320px) and (max-width: 480px) {
+    { margin-top: 75%;
+        margin-left: -20%;
+
+    }
+}
 `
 const ImgStyle = styled.div`
 display: flex;
 justify-content: space-around;
 #wheel{
-  font-size: 4vw;
+  font-size: 5vw;
     color: white;
     position: absolute;
     z-index: 2;
     margin-left: -30%;
 }
 h3{
-  text-decoration: none;
-} 
-
+    text-decoration: none;
+  } 
 img{
     position: absolute;
-    z-index: 1;   
+    z-index: 1; 
+    border-radius: 5px;
+    border: inset;  
+    width:700px;
+    height:815px;
+    object-fit:cover;
+    @media only screen and (min-device-width : 320px) and (max-width: 480px) {
+        { 
+            border: none;
+            border-radius: 0px;
+            margin-left: -4%;
+            width:413px;
+            height:485px;
+            object-fit:cover;
+        }
+    }
 }
-
 `
 const InfoStyle = styled.div`
-// text-shadow: 1px 1px 1px black;
 font-weight: 500;
 line-height: 25px;
 h3{
   font-size: 23px;
 }
+@media only screen and (min-device-width : 320px) and (max-width: 480px) {
+  { margin-top: -62.5%;
+
+  }
+}
+
+
 
 `
 const Headline = styled.div`
@@ -116,6 +142,7 @@ align-items: center;
 `
 
 
+
 class ProfileShow extends Component {
   state = {
     users: {}
@@ -131,7 +158,7 @@ class ProfileShow extends Component {
 
   render() {
     return (
-      <div>
+      <div>          
         <Page>
           <Header>
             <h1>My Profile</h1>
@@ -159,13 +186,13 @@ class ProfileShow extends Component {
                 <h3>Headline </h3>
                 {this.state.users.headline}
               </Headline>
-              <Industry>  
+              <Industry>
                 <h3>Industry </h3>
                 {this.state.users.industry}
-              </Industry> 
+              </Industry>
               <Experience>
                 <h3>Experience </h3>
-                {this.state.users.experience} 
+                {this.state.users.experience}
               </Experience>
               <Skill>
                 <h3> Skills</h3>
@@ -187,9 +214,14 @@ class ProfileShow extends Component {
             </InfoStyle>
           </Container>
         </Page>
+
+<Navbar />
+
       </div>
+
     );
   }
 }
+
 
 export default ProfileShow;

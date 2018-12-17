@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import AddComment from "../comments/AddComment";
+import Navbar from "../Navbar";
 
 const CommentsView = styled.div`
   background-color: #adadad;
@@ -118,6 +119,8 @@ class PostIndex extends Component {
 
           </div>
         ))}
+        <Navbar />
+
       </div>
     );
   }

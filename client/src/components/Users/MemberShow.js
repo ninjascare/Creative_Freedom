@@ -2,12 +2,18 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 import axios from "axios";
+import Navbar from "../Navbar";
+
 
 const Page = styled.div`
 overflow-x: hidden; 
 overflow-y: scroll; 
-width: 102vw;
-background-color: rgb(181, 180, 180);
+width: 100vw;
+background-color: #2d3436;
+background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
+// background-color: #d7d7d7;
+// background-image: linear-gradient(147deg, #d7d7d7 0%, #353535 74%);
+
 a:link{
     text-decoration: none;
   }
@@ -16,37 +22,44 @@ a:link{
     padding: 0px;
     margin: 0px;
 }
-img{
-    height: 100vh; 
-    // height: calc(100vh * (9/16)); 
-
-    width: 150vh;     
-   }
 
 `
 
 const Header = styled.div`
 font-size: 3vw;
 background-color: white;
-border-bottom: 1px solid black;
+border-bottom: 3px solid black;
 display: flex;
 justify-content: space-around;
 
 `
 
 const Content = styled.div`
-font-size: 3vw;
+font-size: 2vw;
 width: 100vw;
 height: 100vh;
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    { 
+        font-size: 4vw;
+
+    }
+}
 `
+
 const Title = styled.div`
 position: absolute;
 z-index: 2;
 color: white;
 text-shadow: 1px 1px 1px black;
-margin-top: calc(50vh * (3/4));
-margin-left: -20%;
+margin-top: 15%;
+margin-left: -40%;
 
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    { margin-top: 85%;
+        margin-left: -25%;
+
+    }
+}
 `
 const ImgStyle = styled.div`
 display: flex;
@@ -55,18 +68,41 @@ h3{
     text-decoration: none;
   } 
 img{
+
     position: absolute;
-    z-index: 1;   
+    z-index: 1; 
+    border-radius: 5px;
+    border: inset;  
+    width:700px;
+    height:815px;
+    object-fit:cover;
+    @media only screen and (min-device-width : 320px) and (max-width: 480px) {
+        { 
+            border: none;
+            border-radius: 0px;
+            margin-left: -4%;
+            width:413px;
+            height:485px;
+            object-fit:cover;
+        }
+    }
 }
 
 `
 const InfoStyle = styled.div`
-// text-shadow: 1px 1px 1px white;
 font-weight: 500;
 line-height: 25px;
 h3{
   font-size: 23px;
 }
+
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    { margin-top: -62.5%;
+
+    }
+}
+
+
 `
 const Headline = styled.div`
 background-color: rgb(253 199 0);
@@ -75,11 +111,11 @@ padding: 8px 15px 15px 15px;
 
 `
 const Industry = styled.div`
-background-color: rgb(31 24 22);
-color: black;
+background-color: rgb(253 199 0);
 padding: 8px 15px 15px 15px;
 
 `
+
 const Experience = styled.div`
 background-color: rgb(137 193 195);
 padding: 8px 15px 15px 15px;
@@ -90,10 +126,10 @@ background-color: rgb(230 230 230);
 padding: 8px 15px 15px 15px;
 `
 const Portfolio = styled.div`
+
 img{
 height: 50vw; 
 width: 100vw;
-align-items: center;     
    }
 `
 
@@ -116,13 +152,13 @@ class ProfileShow extends Component {
             <div>
                 <Page>
                     <Header>
-                        <h1>{this.state.users.name} Profile</h1>
+                        <h1>{this.state.users.name}</h1>
                     </Header>
                     <Content>
 
                         <ImgStyle>
                             <Title>
-                                <h1>{this.state.users.name} </h1>
+                                {/* <h1>{this.state.users.name} </h1> */}
                                 <h3>{this.state.users.title} </h3>
                             </Title>
                             {`/settings/userId/${this.props.match.params.userId}`}>
@@ -133,11 +169,11 @@ class ProfileShow extends Component {
                         <Headline>
                             <h3> Headline </h3>{this.state.users.headline}
                         </Headline>
-                        {/* <Industry>
+                        <Industry>
                             <h3>Industry </h3>
                             {this.state.users.industry} <br />
 
-                        </Industry> */}
+                        </Industry>
                         <Experience>
                             <h3>Experience </h3>
                             {this.state.users.experience} <br />
@@ -158,7 +194,7 @@ class ProfileShow extends Component {
 
                     </InfoStyle>
                 </Page>
-                {/* <Navbar/> */}
+                <Navbar/>
 
             </div>
         );
