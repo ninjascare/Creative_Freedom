@@ -10,11 +10,18 @@ const CommentsView = styled.div`
 
 class PostIndex extends Component {
   state = {
+    user: {},
     showComments: false,
     posts: []
   };
 
   componentDidMount() {
+    const userId = this.props.match.params.userId;
+    axios.get(`/api/user/${userId}`).then(res => {
+      this.setState({
+        user: res.data
+      });
+    });
     this.getAllPosts();
   }
 
@@ -40,7 +47,7 @@ class PostIndex extends Component {
         <h2>News Feed</h2>
 
         {this.state.posts.map(post => (
-          <div key={post._id}>
+          <div key={post.id}>
             {/* ↓ All Posts Style Lvl ↓ */}
             
             <div className='PostContainer'>

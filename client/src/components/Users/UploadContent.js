@@ -77,8 +77,7 @@ class UploadContent extends Component {
       audio_url: "",
       video_url: "",
       created_at: "",
-      user: {}
-
+      user: ""
     }
   };
 
@@ -86,22 +85,40 @@ class UploadContent extends Component {
     const userId = this.props.match.params.userId;
     axios.get(`/api/user/${userId}/`).then(res => {
       console.log(res.data);
-      this.setState({ user: res.data });
+      this.setUserId();
+      this.setState({
+        user: res.data
+      });
     });
   }
+
+  setUserId = () => {
+    const userId = this.props.match.params.userId;
+    const post = {
+      image_url: "",
+      content: "",
+      audio_url: "",
+      video_url: "",
+      created_at: "",
+      user: userId
+    };
+    this.setState({ newPost: post });
+  };
 
   handleChange = e => {
     console.log("name", e.target.name);
     console.log("value", e.target.value);
     const CreatedPost = { ...this.state.newPost };
     CreatedPost[e.target.name] = e.target.value;
-    this.setState({ newPost: CreatedPost });
+    this.setState({
+      newPost: CreatedPost
+    });
   };
 
   handleSubmit = event => {
     event.preventDefault();
     axios
-      .post("/api/post/", this.state.newPost)
+      .post("/api/post/", this.state.newPost, this.state.user.id)
       .then(res => {
         console.log(res.data);
         this.props.history.push(`/profile/${this.state.user.id}`);
@@ -174,10 +191,7 @@ class UploadContent extends Component {
             <div>
               <CreatedOn>
                 <label htmlFor="user">User</label> <br />
-                <input
-                  value={this.state.user.name}
-                  name="user"
-                />
+                <input value={this.state.user.name} name="user" />
               </CreatedOn>
             </div>
             <button type="submit">Post</button>
