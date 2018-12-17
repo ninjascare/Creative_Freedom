@@ -187,7 +187,6 @@
 .userContainer .peskyAtag {
     width: 95vw;
     height: 20vw;
-    border: 3px solid black;
     border-radius: 11pt;
     background-color: white;
     display: grid;
@@ -235,5 +234,30 @@
 
 
 /* Post Index Style Start */
+.postStyle {
+  width: 95vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  border: 1px solid black;
+  margin: 30px auto;
+}
 
+.profile {
+  width: 66vw;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 5px solid black;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.postProfileImg {
+  justify-content: flex-start;
+    height: 50px;
+    width: 70px;
+    border-radius: 100%;
+  }
 /* Post Index Style End */
