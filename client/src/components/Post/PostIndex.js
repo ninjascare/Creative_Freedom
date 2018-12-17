@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import AddComment from "../comments/AddComment";
+import Navbar from "../Navbar";
 
 const CommentsView = styled.div`
   background-color: #adadad;
@@ -42,27 +43,27 @@ class PostIndex extends Component {
         {this.state.posts.map(post => (
           <div key={post._id}>
             {/* ↓ All Posts Style Lvl ↓ */}
-            
+
             <div className='PostContainer'>
 
-              
-                {/* ↓ User Profile Style Lvl ↓ */}
-                <Link to={`/member/${post.user.id}`} className='PostUserProfileInfo'>
-                
-                  {/* User Profile Image Style */}
-                  <img src={post.user.image_url} alt="" className='PostProfileImg' />
+
+              {/* ↓ User Profile Style Lvl ↓ */}
+              <Link to={`/member/${post.user.id}`} className='PostUserProfileInfo'>
+
+                {/* User Profile Image Style */}
+                <img src={post.user.image_url} alt="" className='PostProfileImg' />
 
 
-                  
-                    {/* ↓ User Profile Info Style ↓ */}
-                  <div className='PostUser'>
-                    <h2>{post.user.name}</h2>
-                    <h2>{post.user.title}</h2>
-                  </div>
-                    </Link>{" "}
 
-                {/* ↑ User Profile Info Style ↑ */}
-              
+                {/* ↓ User Profile Info Style ↓ */}
+                <div className='PostUser'>
+                  <h2>{post.user.name}</h2>
+                  <h2>{post.user.title}</h2>
+                </div>
+              </Link>{" "}
+
+              {/* ↑ User Profile Info Style ↑ */}
+
               {/* ↑ User Profile Style Lvl ↑ */}
 
 
@@ -70,7 +71,7 @@ class PostIndex extends Component {
               <img src={post.image_url} className='PostContentImg' />
 
               <div className='PostContentVideo'>
-              <iframe width='500px' height='500px' src={post.video_url} frameborder="50" allowFullScreen/>
+                <iframe width='500px' height='500px' src={post.video_url} frameborder="50" allowFullScreen />
               </div>
 
               {/* trying to make audio work with different methods */}
@@ -82,9 +83,9 @@ class PostIndex extends Component {
 
               {/* ↓ Post Info Style Lvl ↓ */}
               <div className='PostInfo'>
-              <h4>{post.user.name}</h4>
-              <h6>{post.content}</h6> 
-              <h6>{post.created_at}</h6>
+                <h4>{post.user.name}</h4>
+                <h6>{post.content}</h6>
+                <h6>{post.created_at}</h6>
               </div>
               {/* ↑ Post Info Style Lvl ↑ */}
 
@@ -109,10 +110,12 @@ class PostIndex extends Component {
                 </CommentsView>
               ) : null}
               {/* ↑ Comment Functionality Lvl ↑ */}
-              </div>
+            </div>
 
           </div>
         ))}
+        <Navbar />
+
       </div>
     );
   }

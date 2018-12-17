@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
+import Navbar from "../Navbar";
 
 const Container = styled.div`
 color: white;
@@ -141,6 +142,7 @@ align-items: center;
 `
 
 
+
 class ProfileShow extends Component {
   state = {
     users: {}
@@ -156,7 +158,7 @@ class ProfileShow extends Component {
 
   render() {
     return (
-      <div>
+      <div>          
         <Page>
           <Header>
             <h1>My Profile</h1>
@@ -184,13 +186,13 @@ class ProfileShow extends Component {
                 <h3>Headline </h3>
                 {this.state.users.headline}
               </Headline>
-              <Industry>  
+              <Industry>
                 <h3>Industry </h3>
                 {this.state.users.industry}
-              </Industry> 
+              </Industry>
               <Experience>
                 <h3>Experience </h3>
-                {this.state.users.experience} 
+                {this.state.users.experience}
               </Experience>
               <Skill>
                 <h3> Skills</h3>
@@ -212,9 +214,14 @@ class ProfileShow extends Component {
             </InfoStyle>
           </Container>
         </Page>
+
+<Navbar />
+
       </div>
+
     );
   }
 }
+
 
 export default ProfileShow;

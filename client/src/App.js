@@ -10,7 +10,6 @@ import ProfileShow from "./components/Users/ProfileShow";
 import MemberList from "./components/Users/MemberList";
 import UploadContent from "./components/Users/UploadContent";
 import PostIndex from "./components/Post/PostIndex";
-import Navbar from "./components/Navbar";
 import UserSettings from "./components/Users/UserSettings";
 import CreateProfile from "./components/Onboarding/CreateProfile";
 
@@ -41,7 +40,6 @@ class App extends Component {
               
 
             </Switch>
-            <Navbar/>
 
           </div>
         </Router>
