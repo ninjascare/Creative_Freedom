@@ -70,7 +70,7 @@ class PostIndex extends Component {
               <img src={post.image_url} className='PostContentImg' />
 
               <div className='PostContentVideo'>
-              <iframe width='500px' height='500px' src={post.video_url} frameborder="0" allowFullScreen/>
+              <iframe width='500px' height='500px' src={post.video_url} frameborder="50" allowFullScreen/>
               </div>
 
               {/* trying to make audio work with different methods */}
