@@ -155,7 +155,21 @@
 
 /* Member List Style Start */
 
-.userContainer a{
+.memberListPageContainer {
+    background: rgb(244,244,244);
+    background: linear-gradient(to bottom, rgb(244,244,244) 0%,rgb(213,213,213) 51%,rgb(111,111,111) 100%);
+    height: 100vw;
+    width: 100vw;
+}
+
+.memberListPageTop {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.userContainer .peskyAtag {
     width: 95vw;
     height: 20vw;
     border: 3px solid black;
@@ -168,6 +182,7 @@
     grid-template-areas: "picture info1 info2";
     margin: 0 auto;
     text-decoration: none;
+    margin-bottom: 50px;
     
 }
 
@@ -176,7 +191,6 @@
     border-radius: 100%;
     width: 300px;
     display: flex;
-    /* border: 1px solid yellow; */
     padding: 20px;
 }
 

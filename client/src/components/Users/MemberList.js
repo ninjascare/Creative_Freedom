@@ -19,12 +19,12 @@ export default class MemberList extends Component {
   render() {
     return (
       <div className='memberListPageContainer'>
-        <h1>Hello from member MemberList</h1>
+        <h1 className='memberListPageTop'><span>Connx</span> <span>Discover</span> <span>Events</span> (MemberList)</h1>
 
         {this.state.users.map(user => (
           <div key={user._id} className='userContainer'>
 
-            <Link to={`/member/${user.id}`}>
+            <Link to={`/member/${user.id}`} className='peskyAtag'>
             
               <img src={user.image_url} alt="dfg" className='memberPic'/>
               
