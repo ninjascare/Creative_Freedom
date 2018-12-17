@@ -43,6 +43,7 @@ class App extends Component {
               
 
             </Switch>
+            <Navbar/>
 
           </div>
         </Router>
