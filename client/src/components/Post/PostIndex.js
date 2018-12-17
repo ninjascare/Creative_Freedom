@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import styled from 'styled-components'
+import AddComment from "../comments/AddComment";
 
 const Post = styled.div`
   width: 95vw;
@@ -31,16 +32,28 @@ const Profile = styled.div`
 
 const ProfileInfo = styled.div`
   border: 1px solid black;
-`
+  `
+
+const CommentsView = styled.div`
+  border: solid black;
+  background-color: silver;
+`;
 
 class PostIndex extends Component {
   state = {
+    showComments: false,
     posts: []
   };
 
   componentDidMount() {
     this.getAllPosts();
   }
+
+  handleClick = () => {
+    this.setState({
+      showComments: !this.state.showComments
+    });
+  };
 
   getAllPosts = () => {
     axios.get("/api/post").then(res => {
@@ -86,7 +99,7 @@ class PostIndex extends Component {
 
             {/* trying to make audio work with different methods */}
             {post.audio_url ? (
-              <audio controls src={post.audio_url} type="audio/mpeg" />
+              <audio controls src={post.audio_url} typ e="audio/mpeg" />
             ) : null}
 
             
@@ -118,9 +131,24 @@ class PostIndex extends Component {
 
             </Post>
 
+          {/* ↓ Comment Functionality Lvl ↓ */}
+            <button onClick={this.handleClick}>
+              {this.state.showComments ? "Hide Comments" : "View comments:"}
+            </button>
+            {this.state.showComments ? (
+              <CommentsView>
+                {post.comments.map(comment => (
+                  <div>
+                    <h4>{comment.created_at}</h4>
+                    <p>{comment.content}</p>
+                  </div>
+                ))}
+                <h4>Add new comment:</h4>
+                <AddComment {...this.props} />
+              </CommentsView>
+            ) : null}
           </div>
         ))}
-
       </div>
     );
   }
