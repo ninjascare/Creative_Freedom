@@ -4,39 +4,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import AddComment from "../comments/AddComment";
 
-const Post = styled.div`
-  width: 95vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1000px;
-  border: 1px solid black;
-  margin: 30px auto;
-`;
-
-const Profile = styled.div`
-  width: 66vw;
-  display: flex;
-  justify-content: space-around;
-  align-items: right;
-  border-bottom: 2px solid black;
-  padding: 20px;
-  text-decoration: none;
-  img {
-    height: 50px;
-    width: 70px;
-    border-radius: 100%;
-  }
-`;
-
-const ProfileInfo = styled.div`
-  border: 1px solid black;
-`;
-
 const CommentsView = styled.div`
-  border: solid black;
-  background-color: silver;
+  background-color: #adadad;
 `;
 
 class PostIndex extends Component {
@@ -66,46 +35,63 @@ class PostIndex extends Component {
   render() {
     return (
       // Page Container Lvl
-      <div>
+      <div className='PostPageContainer'>
         <h1>Post Index</h1>
         <h2>News Feed</h2>
 
         {this.state.posts.map(post => (
           <div key={post._id}>
             {/* ↓ All Posts Style Lvl ↓ */}
-            <Post>
-              <Profile>
-                {/* ↓ User Profile Style Lvl ↓ */}
-                <Link to={"/member/:userId"}>
-                  {/* User Profile Image Style */}
-                  <img src={post.user.image_url} alt="" />
+            
+            <div className='PostContainer'>
 
-                  <ProfileInfo>
+              
+                {/* ↓ User Profile Style Lvl ↓ */}
+                <Link to={"/member/:userId"} className='PostUserProfileInfo'>
+
+                  {/* User Profile Image Style */}
+                  <img src={post.user.image_url} alt="" className='PostProfileImg' />
+
+
+                  
                     {/* ↓ User Profile Info Style ↓ */}
-                    <h1>{post.user.name}</h1>
-                    <h5>{post.user.title}</h5>
-                  </ProfileInfo>
-                </Link>{" "}
+                  <div className='PostUser'>
+                    <h2>{post.user.name}</h2>
+                    <h2>{post.user.title}</h2>
+                  </div>
+                    </Link>{" "}
+
                 {/* ↑ User Profile Info Style ↑ */}
-              </Profile>
+              
               {/* ↑ User Profile Style Lvl ↑ */}
+
+
               {/* ↓ Post Content(s) Style Lvl ↓ */}
+              <img src={post.image_url} className='PostContentImg' />
+
+              <div className='PostContentVideo'>
+              <iframe width='500px' height='500px' src={post.video_url} frameborder="0" allowFullScreen/>
+              </div>
+
               {/* trying to make audio work with different methods */}
               {post.audio_url ? (
                 <audio controls src={post.audio_url} typ e="audio/mpeg" />
               ) : null}
-              <br />
-              <img src={post.image_url} />
-              <iframe src={post.video_url} frameborder="100" /> <br />
               {/* ↑ Post Content(s) Style Lvl ↑ */}
+
+
               {/* ↓ Post Info Style Lvl ↓ */}
-              <br />
-              {post.content} <br />
-              {post.created_at} <br />
+              <div className='PostInfo'>
+              <h4>{post.user.name}</h4>
+              <h6>{post.content}</h6> 
+              <h6>{post.created_at}</h6>
+              </div>
               {/* ↑ Post Info Style Lvl ↑ */}
+
+
               {/* ↓ Comment Functionality Lvl ↓ */}
               {/* ↓ Post Comment Button Style Lvl ↓ */}
-              <button onClick={this.handleClick}>
+              <button onClick={this.handleClick} className='commentButton'>
                 {this.state.showComments ? "Hide Comments" : "View comments:"}
               </button>
               {/* ↑ Post Comment Button Style Lvl ↑ */}
@@ -123,7 +109,8 @@ class PostIndex extends Component {
                 </CommentsView>
               ) : null}
               {/* ↑ Comment Functionality Lvl ↑ */}
-            </Post>
+              </div>
+
           </div>
         ))}
       </div>

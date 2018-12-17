@@ -234,5 +234,90 @@
 
 
 /* Post Index Style Start */
+.PostPageContainer {
+    width: 95vw;
+    height: 100%;
+    max-width: 1000px;
+    border: 1px solid black;
+    margin: 30px auto;
+    display: flex; 
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
 
+.PostContainer {
+    width: 68vw;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(206, 70, 70);
+    margin-bottom: 50px;
+}
+
+.PostUserProfileInfo {
+    width: 100%;
+    height: 5%;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    border-bottom: 1px solid black;
+}
+
+.PostProfileImg {
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 90px;
+    width: 120px;
+    border-radius: 100%;
+}
+
+.PostUser {
+    margin-left: 25px;
+}
+
+.PostContentImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.PostContentVideo {
+    max-height: 50%;
+    max-width: 50%;
+}
+
+.PostInfo h4{
+    display: flex;
+    /* justify-content: space-between; */
+    align-content: left;
+}
+
+.commentButton {
+    background-color:#adadad;
+    -moz-border-radius:42px;
+    -webkit-border-radius:42px;
+    border-radius:42px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-style:italic;
+    padding:10px 76px;
+    text-decoration:none;
+    }
+.commentButton:hover {
+    background-color:#318a96;
+    }
+.commentButton:active {
+    position:relative;
+    top:1px;
+    }
+    
 /* Post Index Style End */
