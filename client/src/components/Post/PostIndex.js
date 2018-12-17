@@ -135,6 +135,7 @@ class PostIndex extends Component {
             <button onClick={this.handleClick}>
               {this.state.showComments ? "Hide Comments" : "View comments:"}
             </button>
+
             {this.state.showComments ? (
               <CommentsView>
                 {post.comments.map(comment => (
@@ -143,10 +144,12 @@ class PostIndex extends Component {
                     <p>{comment.content}</p>
                   </div>
                 ))}
+
                 <h4>Add new comment:</h4>
                 <AddComment {...this.props} />
               </CommentsView>
             ) : null}
+            {/* ↑ Comment Functionality Lvl ↑ */}
           </div>
         ))}
       </div>
