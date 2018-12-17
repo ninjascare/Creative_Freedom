@@ -76,7 +76,7 @@ class PostIndex extends Component {
             <Post>
               <Profile>
                 {/* ↓ User Profile Style Lvl ↓ */}
-                <Link to={"/member/:userId"}>
+                <Link to={`/member/${post.user.id}`}>
                   {/* User Profile Image Style */}
                   <img src={post.user.image_url} alt="" />
 
