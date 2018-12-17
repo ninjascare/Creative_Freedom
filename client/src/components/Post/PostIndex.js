@@ -118,18 +118,10 @@ class PostIndex extends Component {
             
 
           {/* ↓ Post Comment Button Style Lvl ↓ */}
-            <button>
-              View comments:
-              {post.comments.map(comment => (
-                <div>
-                  <h4>{comment.created_at}</h4>
-                  <p>{comment.content}</p>
-                </div>
-              ))}
-            </button>
+
           {/* ↑ Post Comment Button Style Lvl ↑ */}
 
-            </Post>
+          
 
           {/* ↓ Comment Functionality Lvl ↓ */}
             <button onClick={this.handleClick}>
@@ -150,6 +142,7 @@ class PostIndex extends Component {
               </CommentsView>
             ) : null}
             {/* ↑ Comment Functionality Lvl ↑ */}
+          </Post>
           </div>
         ))}
       </div>

@@ -6,6 +6,7 @@ export default class AddComment extends Component {
     newComment: {
       content: "",
       created_at: ""
+     
     }
   };
 

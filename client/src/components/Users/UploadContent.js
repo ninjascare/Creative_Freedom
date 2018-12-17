@@ -76,7 +76,8 @@ class UploadContent extends Component {
       content: "",
       audio_url: "",
       video_url: "",
-      created_at: ""
+      created_at: "",
+      user: {}
 
     }
   };
