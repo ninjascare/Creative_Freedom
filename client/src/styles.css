@@ -1,5 +1,4 @@
 /* ↓ This is the Onboarding Index Styling ↓ */
-
 * {
     scroll-behavior: smooth;
 }
@@ -94,9 +93,6 @@
 .onboardingText {
     color: white;
 }
-
-
-
 /* Onboarding Page 1 End */
 
 
@@ -152,6 +148,64 @@
     border-radius: 30px;
 
 }
-
-
 /* Onboarding Page 4 End */
+/* END ALL ONBOARDING STYLE */
+
+
+
+/* Member List Style Start */
+
+.userContainer a{
+    width: 95vw;
+    height: 20vw;
+    border: 3px solid black;
+    border-radius: 11pt;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    grid-template-areas: "picture info1 info2";
+    margin: 0 auto;
+    text-decoration: none;
+    
+}
+
+.memberPic {
+    grid-area: picture;
+    border-radius: 100%;
+    width: 300px;
+    display: flex;
+    /* border: 1px solid yellow; */
+    padding: 20px;
+}
+
+.userInfo1 {
+    width: auto;
+    height: auto;
+    grid-area: info1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.userInfo2 {
+    width: auto;
+    height: 200px;
+    grid-area: info2;
+    border-left: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px;
+
+}
+/* Member List Style End */
+
+
+
+/* Post Index Style Start */
+
+/* Post Index Style End */

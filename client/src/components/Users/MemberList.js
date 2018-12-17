@@ -18,16 +18,26 @@ export default class MemberList extends Component {
 
   render() {
     return (
-      <div>
+      <div className='memberListPageContainer'>
         <h1>Hello from member MemberList</h1>
+
         {this.state.users.map(user => (
-          <div key={user._id}>
+          <div key={user._id} className='userContainer'>
+
             <Link to={`/member/${user.id}`}>
+            
+              <img src={user.image_url} alt="dfg" className='memberPic'/>
+              
+              
+              <div className='userInfo1'>
               <h2>{user.name}</h2>
+              <h2>{user.title}</h2>
+              </div>
+
+              <h2 className='userInfo2'>{user.headline}</h2>
             </Link>{" "}
-            <br />
-            {user.title} <br />
-            <img src={user.image_url} alt="dfg" />
+            
+             
           </div>
         ))}
       </div>
