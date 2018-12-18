@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom'
 import "../../styles.css";
 import Onboarding1 from "../Onboarding/Onboarding1";
 import Onboarding2 from "../Onboarding/Onboarding2";
@@ -9,7 +10,11 @@ class OnboardingPage extends Component {
     render() {
         return (
             <div>
-                <button>Dummy button [Link to User Login Page]</button>
+            <Link to="/Auth">
+                <button type="button">
+                Log In
+                </button>
+             </Link>
 
                 <div className='onboarding1'>
                 <Onboarding1/>

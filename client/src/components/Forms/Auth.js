@@ -1,24 +1,10 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.css";
-import "./styles.css";
-import OnboardingPage from "./components/Onboarding/OnboardingIndex";
-//import Login from "./components/Users/Login";
-import MemberShow from "./components/Users/MemberShow";
-import ProfileShow from "./components/Users/ProfileShow";
-import MemberList from "./components/Users/MemberList";
-//import Register from "./components/Users/Register";
-import UploadContent from "./components/Users/UploadContent";
-import PostIndex from "./components/Post/PostIndex";
-import NavBar from "./components/NavBar";
-import LogInForm from './components/Forms/LogInForm';
-import SignUpForm from './components/Forms/SignUpForm';
-import Dashboard from "./components/Users/Dashboard";
-import UserSettings from "./components/Users/UserSettings";
+import React, { Component } from 'react';
+import NavBar from './components/NavBar';
+import LoginForm from './components/LoginForm';
+import SignupForm from './components/SignupForm';
 
-class App extends Component {
-
-constructor(props) {
+class Auth extends Component {
+  constructor(props) {
     super(props);
     this.state = {
       displayed_form: '',
@@ -63,7 +49,7 @@ constructor(props) {
 
   handle_signup = (e, data) => {
     e.preventDefault();
-    fetch('http://localhost:8000/api/users/', {
+    fetch('http://localhost:8000/core/users/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -106,27 +92,8 @@ constructor(props) {
     }
 
     return (
-      <div>
-          <Router>
-            <div>
-
-             {/* ↓ Later we must move this to all the necessary pages. ↓ */}
-            <Switch>
-
-              {/* routes for users */}
-              <Route exact path="/" component={OnboardingPage} />
-              <Route path="/dashboard" component={Dashboard} />
-              <Route path="/member/:userId" component={MemberShow} />
-              <Route path="/profile/:userId" component={ProfileShow} />
-              <Route path="/creators" component={MemberList} />
-              <Route path="/upload" component={UploadContent} />
-              <Route path="/settings" component={UserSettings} />
-              {/* routes for posts */}
-              <Route path="/posts" component={PostIndex} />
-
-            </Switch>
-            <div className="App">
-        <NavBar
+      <div className="App">
+        <Nav
           logged_in={this.state.logged_in}
           display_form={this.display_form}
           handle_logout={this.handle_logout}
@@ -138,16 +105,8 @@ constructor(props) {
             : 'Please Log In'}
         </h3>
       </div>
-      </div>
-        </Router>
-      </div>
-
-
-
-
     );
   }
 }
 
-
-export default App;
+export default Auth;
