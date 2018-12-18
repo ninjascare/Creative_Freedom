@@ -12,6 +12,7 @@ import UploadContent from "./components/Users/UploadContent";
 import PostIndex from "./components/Post/PostIndex";
 import UserSettings from "./components/Users/UserSettings";
 import CreateProfile from "./components/Onboarding/CreateProfile";
+import PostShow from "./components/Post/PostShow";
 
 class App extends Component {
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
 
               {/* routes for posts */}
               <Route path="/posts" component={PostIndex} />
+              <Route path="/post/:postId" component={PostShow} />
 
               
 

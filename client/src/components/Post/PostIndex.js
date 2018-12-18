@@ -11,11 +11,18 @@ const CommentsView = styled.div`
 
 class PostIndex extends Component {
   state = {
+    user: {},
     showComments: false,
     posts: []
   };
 
   componentDidMount() {
+    const userId = this.props.match.params.userId;
+    axios.get(`/api/user/${userId}`).then(res => {
+      this.setState({
+        user: res.data
+      });
+    });
     this.getAllPosts();
   }
 
@@ -36,87 +43,63 @@ class PostIndex extends Component {
   render() {
     return (
       // Page Container Lvl
-      <div className='PostPageContainer'>
+      <div className="PostPageContainer">
         <h1>Post Index</h1>
         <h2>News Feed</h2>
 
         {this.state.posts.map(post => (
-          <div key={post._id}>
-            {/* ↓ All Posts Style Lvl ↓ */}
-
-            <div className='PostContainer'>
-
-
-              {/* ↓ User Profile Style Lvl ↓ */}
-              <Link to={`/member/${post.user.id}`} className='PostUserProfileInfo'>
-
-                {/* User Profile Image Style */}
-                <img src={post.user.image_url} alt="" className='PostProfileImg' />
-
-
-
-                {/* ↓ User Profile Info Style ↓ */}
-                <div className='PostUser'>
-                  <h2>{post.user.name}</h2>
-                  <h2>{post.user.title}</h2>
-                </div>
-              </Link>{" "}
-
-              {/* ↑ User Profile Info Style ↑ */}
-
-              {/* ↑ User Profile Style Lvl ↑ */}
-
-
-              {/* ↓ Post Content(s) Style Lvl ↓ */}
-              {post.image_url ? (
-                <img src={post.image_url} className='PostContentImg' />
-              ) : null}
-
-              {post.video_url ? (
-                <div className='PostContentVideo'>
-                  <iframe width='500px' height='500px' src={post.video_url} frameborder="50" allowFullScreen />
-                </div>
-              ) : null
-
-              }
-              {/* trying to make audio work with different methods */}
-              {post.audio_url ? (
-                <audio controls src={post.audio_url} type="audio/mpeg" />
-              ) : null}
-              {/* ↑ Post Content(s) Style Lvl ↑ */}
-
-
-              {/* ↓ Post Info Style Lvl ↓ */}
-              <div className='PostInfo'>
-                <h4>{post.user.name}</h4>
-                <h6>{post.content}</h6>
-                <h6>{post.created_at}</h6>
-              </div>
-              {/* ↑ Post Info Style Lvl ↑ */}
-
-
-              {/* ↓ Comment Functionality Lvl ↓ */}
-              {/* ↓ Post Comment Button Style Lvl ↓ */}
-              <button onClick={this.handleClick} className='commentButton'>
-                {this.state.showComments ? "Hide Comments" : "View comments:"}
-              </button>
-              {/* ↑ Post Comment Button Style Lvl ↑ */}
-              {this.state.showComments ? (
-                <CommentsView>
-                  {post.comments.map(comment => (
-                    <div>
-                      <h4>{comment.created_at}</h4>
-                      <p>{comment.content}</p>
-                    </div>
-                  ))}
-
-                  <h4>Add new comment:</h4>
-                  <AddComment {...this.props} />
-                </CommentsView>
-              ) : null}
-              {/* ↑ Comment Functionality Lvl ↑ */}
+          <div key={post.id}>
+            {/* {/* ↓ All Posts Style Lvl ↓ */}
+            <Link to={`/post/${post.id}`}>
+              <button>See Post</button>
+            </Link>
+            {/* <div className="PostContainer"> */}
+            {/* ↓ User Profile Style Lvl ↓ */}
+            {/* ↑ User Profile Info Style ↑ */}
+            {/* ↑ User Profile Style Lvl ↑ */}
+            {/* ↓ Post Content(s) Style Lvl ↓ */}
+            <img src={post.image_url} className="PostContentImg" />
+            <div className="PostContentVideo">
+              <iframe
+                width="500px"
+                height="500px"
+                src={post.video_url}
+                frameborder="50"
+                allowFullScreen
+              />
             </div>
+            {/* trying to make audio work with different methods */}
+            {post.audio_url ? (
+              <audio controls src={post.audio_url} typ e="audio/mpeg" />
+            ) : null}
+            {/* ↑ Post Content(s) Style Lvl ↑ */}
+            {/* ↓ Post Info Style Lvl ↓ */}
+            <div className="PostInfo">
+              <h4>{post.user.name}</h4>
+              <h6>{post.content}</h6>
+              <h6>{post.created_at}</h6>
+            </div>
+            {/* ↑ Post Info Style Lvl ↑ */}
+            {/* ↓ Comment Functionality Lvl ↓ */}
+            {/* ↓ Post Comment Button Style Lvl ↓ */}
+            <button onClick={this.handleClick} className="commentButton">
+              {this.state.showComments ? "Hide Comments" : "View comments:"}
+            </button>
+            {/* ↑ Post Comment Button Style Lvl ↑ */}
+            {this.state.showComments ? (
+              <CommentsView>
+                {post.comments.map(comment => (
+                  <div>
+                    <h4>{comment.created_at}</h4>
+                    <p>{comment.content}</p>
+                  </div>
+                ))}
 
+                <h4>Add new comment:</h4>
+                <AddComment {...this.props} />
+              </CommentsView>
+            ) : null}
+            {/* ↑ Comment Functionality Lvl ↑ */}
           </div>
         ))}
         <Navbar />
