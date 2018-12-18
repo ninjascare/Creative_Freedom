@@ -7,9 +7,9 @@ from django.db import models
 
 
 class User(models.Model):
-    name = models.CharField(max_length=100)
-    title = models.CharField(max_length=100)
-    image_url = models.TextField()
+    username = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=100, default='First Name')
+    last_name = models.CharField(max_length=100, default='Last Name')
     email = models.TextField()
     password = models.TextField()
 

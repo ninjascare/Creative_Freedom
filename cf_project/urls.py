@@ -16,12 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework_jwt.views import obtain_jwt_token
 
 from . import views
 
 urlpatterns = [
     path('api/', include('main.urls')),
     path('admin/', admin.site.urls),
+    path('token-auth/', obtain_jwt_token),
     url(r'^$', views.FrontendAppView.as_view())  # New URL for the index route
 ]
 

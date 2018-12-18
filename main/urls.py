@@ -1,5 +1,10 @@
 from django.urls import path, include
+from django.conf.urls import include
+from django.contrib import admin
+from django.contrib.auth import views as auth_views
 from rest_framework import routers
+
+from .views import current_user, UserList
 
 from . import views
 
@@ -10,5 +15,8 @@ router.register('comment', views.CommentView)
 
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('admin', admin.site.urls),
+    path('', include(router.urls)),
+    path('current_user/', current_user),
+    path('users/', UserList.as_view())
 ]
