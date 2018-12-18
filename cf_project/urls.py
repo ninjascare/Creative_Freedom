@@ -15,13 +15,25 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 
 from . import views
 
 urlpatterns = [
     path('api/', include('main.urls')),
     path('admin/', admin.site.urls),
-    url(r'^$', views.FrontendAppView.as_view())  # New URL for the index route
-]
+    url(r'^$', views.FrontendAppView.as_view()),
+    url(r'post/^.*', views.FrontendAppView.as_view()),
+    url(r'profile/^.*', views.FrontendAppView.as_view()),
+    url(r'member/^.*', views.FrontendAppView.as_view())
+   
+    
+    ]
 
+REACT_ROUTES = ['users', 'posts', 'post/<int:pk>', 'user', 'profile/<int:pk>', 'member/<int:pk>', 'login', 'new', 'settings', 'upload', 'creators']
+
+for route in REACT_ROUTES:
+
+    urlpatterns += [
+        path(f'{route}', views.FrontendAppView.as_view())
+    ]
