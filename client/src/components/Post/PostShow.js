@@ -36,7 +36,7 @@ class PostShow extends Component {
       <div className="PostPageContainer">
         <h1>Post Show</h1>
         <h2>Post Feed</h2>
-
+      
         {/* {/* ↓ All Posts Style Lvl ↓ */}
         <Link to={`/member/${this.props.match.params.userId}`}>
           <button>See Member</button>

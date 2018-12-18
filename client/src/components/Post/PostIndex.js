@@ -43,42 +43,51 @@ class PostIndex extends Component {
   render() {
     return (
       // Page Container Lvl
-      <div className="PostPageContainer">
-        <h1>Post Index</h1>
-        <h2>News Feed</h2>
+      <div>
+        <h1 className='PageTop'>
+          <span>Connx</span> <div>Discover</div> <div>Events</div> (MemberList)
+        </h1>
 
-        {this.state.posts.map(post => (
-          <div key={post.id}>
-            {/* {/* ↓ All Posts Style Lvl ↓ */}
-            <Link to={`/post/${post.id}`}>
-    
-            {/* <div className="PostContainer"> */}
-            {/* ↓ User Profile Style Lvl ↓ */}
-            {/* ↑ User Profile Info Style ↑ */}
-            {/* ↑ User Profile Style Lvl ↑ */}
-            {/* ↓ Post Content(s) Style Lvl ↓ */}
-            <img src={post.image_url} className="PostContentImg" />
-            <div className="PostContentVideo">
-              <iframe
-                width="500px"
-                height="500px"
-                src={post.video_url}
-                frameborder="50"
-                allowFullScreen
-              />
-            </div>
-            {/* trying to make audio work with different methods */}
-            {post.audio_url ? (
-              <audio controls src={post.audio_url} typ e="audio/mpeg" />
-            ) : null}
-            {/* ↑ Post Content(s) Style Lvl ↑ */}
+        <div className='dummySearchBar'>
+          <div>Search</div> 🔍
+        </div>
+
+
+        <div className="PostGridContainer">
+
+          {this.state.posts.map(post => (
+            <Link to={`/post/${post.id}`} key={post.id} className='PostIndexPeskyATag'>
+
+            {/* {/* ↓ All Posts Style Lvl ↓ */}  
+
+              {/* ↓ Post Content(s) Style Lvl ↓ */}
+              {post.image_url ? (
+                <img src={post.image_url} className="PostIndexContentImg" />
+              ) : null}
+
+
+              {post.video_url ? (
+                <div className="PostIndexContentVideo">
+                  <iframe
+                    width="300px"
+                    height="300px"
+                    src={post.video_url}
+                    frameborder="0"
+                    allowFullScreen />
+                </div>
+                ) : null}
+
+              {/* trying to make audio work with different methods */}
+              {post.audio_url ? (
+                <audio controls src={post.audio_url} type="audio/mpeg" />
+              ) : null}
+              {/* ↑ Post Content(s) Style Lvl ↑ */}
             </Link>
-           
-          </div>
-        ))}
-        <Navbar />
+          ))}
 
-      </div>
+        </div>
+        <Navbar />
+      </div >
     );
   }
 }
