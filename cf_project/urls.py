@@ -22,10 +22,12 @@ from . import views
 urlpatterns = [
     path('api/', include('main.urls')),
     path('admin/', admin.site.urls),
-    url(r'^$', views.FrontendAppView.as_view())
+    url(r'^$', views.FrontendAppView.as_view()),
+    url(r'post/^.*', views.FrontendAppView.as_view())
+    
     ]
 
-REACT_ROUTES = ['users', 'posts', 'post/^.*', 'user', 'profile', 'member', 'login', 'new', 'settings', 'upload', 'creators']
+REACT_ROUTES = ['users', 'posts', 'user', 'profile', 'member', 'login', 'new', 'settings', 'upload', 'creators']
 
 for route in REACT_ROUTES:
 
