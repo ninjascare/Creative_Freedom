@@ -67,13 +67,13 @@ class PostIndex extends Component {
 
 
               {post.video_url ? (
-                <div className="PostIndexContentVideo">
+                <div className='VideoWrapper'> <i class="fas fa-video" id='videocam'></i>
                   <iframe
-                    width="300px"
-                    height="300px"
+                    width="500px"
+                    height="500px"
                     src={post.video_url}
                     frameborder="0"
-                    allowFullScreen />
+                    allowFullScreen className="PostIndexContentVideo" />
                 </div>
                 ) : null}
 
