@@ -41,10 +41,11 @@ export default class MemberList extends Component {
               </div>
 
               <h2 className='userInfo2'>{user.headline}</h2>
-            </Link>{" "}
+            </Link>
 
 
           </div>
+          
         ))}
         <Navbar />
 

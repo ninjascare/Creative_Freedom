@@ -161,7 +161,7 @@ class ProfileShow extends Component {
 
   render() {
     return (
-      <div>          
+      <div>
         <Page>
           <Header>
             <h1>My Profile</h1>
@@ -218,7 +218,7 @@ class ProfileShow extends Component {
           </Container>
         </Page>
 
-<Navbar />
+        <Navbar />
 
       </div>
 
