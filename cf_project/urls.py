@@ -27,7 +27,7 @@ urlpatterns = [
     
     ]
 
-REACT_ROUTES = ['users', 'posts', 'user', 'profile', 'member', 'login', 'new', 'settings', 'upload', 'creators']
+REACT_ROUTES = ['users', 'posts', 'post/<int:pk>', 'user', 'profile', 'member', 'login', 'new', 'settings', 'upload', 'creators']
 
 for route in REACT_ROUTES:
 
