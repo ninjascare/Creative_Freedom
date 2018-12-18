@@ -42,16 +42,16 @@ class PostIndex extends Component {
 
   render() {
     return (
-      // Page Container Lvl
+      // ↓ This is the top of the page Menu x Dummy Search Bar ↓
       <div>
         <h1 className='PageTop'>
           <span>Connx</span> <div>Discover</div> <div>Events</div> (MemberList)
         </h1>
 
-        <div className='dummySearchBar'>
+        <div className='PostIndexDummySearchBar'>
           <div>Search</div> 🔍
         </div>
-
+      {/* ↑ This is the top of the page Menu x Dummy Search Bar ↑ */}
 
         <div className="PostGridContainer">
 
@@ -77,10 +77,6 @@ class PostIndex extends Component {
                 </div>
                 ) : null}
 
-              {/* trying to make audio work with different methods */}
-              {post.audio_url ? (
-                <audio controls src={post.audio_url} type="audio/mpeg" />
-              ) : null}
               {/* ↑ Post Content(s) Style Lvl ↑ */}
             </Link>
           ))}

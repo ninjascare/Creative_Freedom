@@ -163,6 +163,7 @@
 }
 
 .PageTop {
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -231,9 +232,19 @@
 }
 /* Member List Style End */
 
+/* ↓ Post Index Style Start ↓ */
+.PostIndexDummySearchBar {
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    background-color: white;
+    border-bottom: 3pt solid black;
+    font-size: xx-large;
+}
 
-
-/* Post Index Style Start */
 .PostGridContainer {
     width: 100vw;
     height: 100%;
@@ -270,9 +281,16 @@
     max-height: 33%;
     max-width: 33%;
 }
-/* Post Index Style End */
+/* ↑ Post Index Style End ↑ */
 
-/* Post Index Style End */
+
+/* ↓ Post Show Style Start ↓ */
+
+/* .PostShowPageContainer {
+    width: 100vw;
+    height: 100vw;
+} */
+
 .PostUserProfileInfo {
     width: 100%;
     height: 5%;
@@ -343,4 +361,4 @@
     top:1px;
     }
     
-/* Post Index Style End */
+/* Post Show Style End */
