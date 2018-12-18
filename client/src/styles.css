@@ -14,11 +14,12 @@
     grid-template-rows: 500px;
     grid-template-areas: "onboarding1 onboarding2 onboarding3 onboarding4";
 }
+
 @media only screen and (min-device-width : 320px) and (max-width: 480px){
     .onboardingSlideContainer
     { 
         height: 100vh;
-        width: 100vw;
+        width: 100vw;      
     }
 }
 
@@ -48,9 +49,6 @@ margin-left: 16%;
     background-color: #bbb;
     border-radius: 50%;
 } 
-
-
-    
 
 #one {
     margin-left: 50px;
@@ -100,6 +98,8 @@ margin-left: 16%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -20%;
+
 }
 @media only screen and (min-device-width : 320px) and (max-width: 480px){
     .onboardingLogo
