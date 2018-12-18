@@ -3,12 +3,22 @@ import axios from "axios";
 
 export default class AddComment extends Component {
   state = {
+    post: {},
     newComment: {
       content: "",
-      created_at: ""
-     
+      created_at: "",
+      post: ""
     }
   };
+
+  componentDidMount() {
+    const postId = this.props.match.params.postId;
+    axios.get(`/api/post/${postId}`).then(res => {
+      this.setState({
+        post: res.data
+      });
+    });
+  }
 
   handleChange = e => {
     console.log("name", e.target.name);
@@ -18,12 +28,24 @@ export default class AddComment extends Component {
     this.setState({ newComment: createdComment });
   };
 
+  setPostId = () => {
+    const postId = this.props.match.params.postId;
+    const comment = {
+      content: "",
+      created_at: "",
+      post: postId
+    };
+    this.setState({ newComment: comment });
+  };
+
   handleSubmit = event => {
     event.preventDefault();
-    axios.post(`/api/comment/`, this.state.newComment).then(res => {
-      console.log(res.data);
-      this.props.history.push(`/posts`);
-    });
+    axios
+      .post(`/api/comment/`, this.state.newComment, this.state.post.id)
+      .then(res => {
+        console.log(res.data);
+        this.props.history.push(`/posts`);
+      });
   };
 
   render() {
