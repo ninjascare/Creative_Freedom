@@ -22,6 +22,6 @@ from . import views
 urlpatterns = [
     path('api/', include('main.urls')),
     path('admin/', admin.site.urls),
-    url(r'^.*/$', views.FrontendAppView.as_view())  # New URL for the index route
+    url(r'^$', views.FrontendAppView.as_view())  # New URL for the index route
 ]
 
