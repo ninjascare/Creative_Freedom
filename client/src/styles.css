@@ -14,6 +14,13 @@
     grid-template-rows: 500px;
     grid-template-areas: "onboarding1 onboarding2 onboarding3 onboarding4";
 }
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboardingSlideContainer
+    { 
+        height: 100vh;
+        width: 100vw;
+    }
+}
 
 /* dotSelector Start */
 .dotContainer {
@@ -24,7 +31,12 @@
     margin-left: 575px;
     padding-top: 50px;
 }
-
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .dotContainer
+    { 
+margin-left: 16%;
+    }
+}
 .dotSelectors {
     display: flex ;
     flex-direction: row ;
@@ -36,6 +48,7 @@
     background-color: #bbb;
     border-radius: 50%;
 } 
+
 
     
 
@@ -68,17 +81,33 @@
     background-position: center;
     margin-bottom: 75px;
 }
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboarding1
+    { 
+        height: 100vh;
+        width: 100vw;
+    }
+}
 
 .onboardingLogo {
     height: 250px; 
     width: 400px;
     background-image: url('./images/LogoArtboard8.png');
     background-position: center;
+    background-repeat: no-repeat;
     background-size: 35vw;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboardingLogo
+    { 
+        height: 100%;
+        width: 100%;
+        background-size: 60vw;
+    }
 }
 
 .flexContainer {
@@ -90,8 +119,25 @@
     align-items: center;
 }
 
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .flexContainer
+    { 
+    height: 50vh; 
+    width: 100vw;
+    }
+}
 .onboardingText {
     color: white;
+    margin-top: -150px;
+    text-align: center;
+}
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboardingText 
+    { 
+    font-size: 7vw;  
+    margin-top: 40%;
+    text-align: center;
+    }
 }
 /* Onboarding Page 1 End */
 
@@ -108,7 +154,17 @@
     background-position: center;
     margin-bottom: 75px;
 }
-
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboarding2
+    { 
+        height: 100vh;
+        width: 100vw;
+    }
+}
+.onboarding2Text {
+    color: white;
+    margin-left: 45%;
+}
 /* Onboarding Page 2 End */
 
 
@@ -123,6 +179,13 @@
     background-size: cover;
     background-position: center;
     margin-bottom: 75px;
+}
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboarding3
+    { 
+        height: 100vh;
+        width: 100vw;
+    }
 }
 /* Onboarding Page 3 End */
 
@@ -139,14 +202,26 @@
     background-position: center;
     margin-bottom: 75px;
 }
-
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboarding4
+    { 
+        height: 100vh;
+        width: 100vw;
+    }
+}
 .buttonStyle {
     height: 7vw;
     width: 20vw;
     background-color: rgba(240, 248, 255, 0.543);
     font-size: x-large;
-    border-radius: 30px;
-
+    border-radius: 20px;
+}
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .buttonStyle
+    { 
+        height: 10vh;
+        width: 50vw;
+    }
 }
 /* Onboarding Page 4 End */
 /* END ALL ONBOARDING STYLE */

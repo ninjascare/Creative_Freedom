@@ -6,16 +6,16 @@ class Onboarding1 extends Component {
     render() {
         return (
             <div className='onboarding1GlobalContainer' >
-                
+
                 <div className='flexContainer'>
-            
-               <div className='onboardingLogo'/> 
 
-                <h1 className='onboardingText' >
-                    An Exclusive Social Network for Creatives
-                </h1>
+                    <div className='onboardingLogo'></div>
+                    </div>
+                    <h1 className='onboardingText' >
+                        An Exclusive Social Network for Creatives
+                    </h1>
 
-               </div>
+                
 
             </div>
         );
