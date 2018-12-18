@@ -233,7 +233,7 @@ margin-left: 16%;
 .memberListPageContainer {
     background: rgb(244,244,244);
     background: linear-gradient(to bottom, rgb(244,244,244) 0%,rgb(213,213,213) 51%,rgb(111,111,111) 100%);
-    height: 180vh;
+    height: 100%;
     width: 100vw;
     
 }
@@ -242,8 +242,8 @@ margin-left: 16%;
     .memberListPageContainer
     {     
       font-size: 2vw; 
-      height: 100vh;
-      width: 100vw;
+      height: 100%;
+      /* width: 100%; */
     }
 }
 
@@ -302,12 +302,15 @@ margin-left: 16%;
     width: 300px;
     display: flex;
     padding: 20px;
+    max-height: 150px;
+    /* max-width: 150px; */
 }
 @media only screen and (min-device-width : 320px) and (max-width: 480px){
     .memberPic
     { 
       width: 100px;
       margin-top: -5%;
+      max-height: 75px;
     }
 }
 .userInfo1 {
