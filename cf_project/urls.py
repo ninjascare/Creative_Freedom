@@ -23,7 +23,10 @@ urlpatterns = [
     path('api/', include('main.urls')),
     path('admin/', admin.site.urls),
     url(r'^$', views.FrontendAppView.as_view()),
-    url(r'post/^.*', views.FrontendAppView.as_view())
+    url(r'post/^.*', views.FrontendAppView.as_view()),
+    url(r'profile/^.*', views.FrontendAppView.as_view()),
+    url(r'member/^.*', views.FrontendAppView.as_view())
+   
     
     ]
 
