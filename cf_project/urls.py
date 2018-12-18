@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^$', views.FrontendAppView.as_view())
     ]
 
-REACT_ROUTES = ['users', 'posts','post','user','profile','member','login','new','settings', 'upload','creator']
+REACT_ROUTES = ['users', 'posts', 'post/:postId', 'user', 'profile', 'member', 'login', 'new', 'settings', 'upload', 'creator']
 
 for route in REACT_ROUTES:
 
