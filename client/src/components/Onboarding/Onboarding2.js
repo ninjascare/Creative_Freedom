@@ -10,7 +10,7 @@ class Onboarding2 extends Component {
                 <div className='flexContainer'>
 
                <h1 className='onboarding2Text'>
-               #Hastags
+              <i> #Hashtags</i>
                </h1>
 
                <h1 className='onboardingText'>Get suggestions based on your location, interests, and goals</h1> 

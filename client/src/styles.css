@@ -15,6 +15,14 @@
     grid-template-areas: "onboarding1 onboarding2 onboarding3 onboarding4";
 }
 
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboardingSlideContainer
+    { 
+        height: 100vh;
+        width: 100vw;      
+    }
+}
+
 /* dotSelector Start */
 .dotContainer {
     position: relative;
@@ -24,7 +32,12 @@
     margin-left: 575px;
     padding-top: 50px;
 }
-
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .dotContainer
+    { 
+margin-left: 16%;
+    }
+}
 .dotSelectors {
     display: flex ;
     flex-direction: row ;
@@ -36,8 +49,6 @@
     background-color: #bbb;
     border-radius: 50%;
 } 
-
-    
 
 #one {
     margin-left: 50px;
@@ -68,17 +79,35 @@
     background-position: center;
     margin-bottom: 75px;
 }
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboarding1
+    { 
+        height: 100vh;
+        width: 100vw;
+    }
+}
 
 .onboardingLogo {
     height: 250px; 
     width: 400px;
     background-image: url('./images/LogoArtboard8.png');
     background-position: center;
+    background-repeat: no-repeat;
     background-size: 35vw;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -20%;
+
+}
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboardingLogo
+    { 
+        height: 100%;
+        width: 100%;
+        background-size: 60vw;
+    }
 }
 
 .flexContainer {
@@ -90,8 +119,25 @@
     align-items: center;
 }
 
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .flexContainer
+    { 
+    height: 50vh; 
+    width: 100vw;
+    }
+}
 .onboardingText {
     color: white;
+    margin-top: -150px;
+    text-align: center;
+}
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboardingText 
+    { 
+    font-size: 7vw;  
+    margin-top: 40%;
+    text-align: center;
+    }
 }
 /* Onboarding Page 1 End */
 
@@ -108,7 +154,17 @@
     background-position: center;
     margin-bottom: 75px;
 }
-
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboarding2
+    { 
+        height: 100vh;
+        width: 100vw;
+    }
+}
+.onboarding2Text {
+    color: white;
+    margin-left: 45%;
+}
 /* Onboarding Page 2 End */
 
 
@@ -123,6 +179,13 @@
     background-size: cover;
     background-position: center;
     margin-bottom: 75px;
+}
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboarding3
+    { 
+        height: 100vh;
+        width: 100vw;
+    }
 }
 /* Onboarding Page 3 End */
 
@@ -139,14 +202,26 @@
     background-position: center;
     margin-bottom: 75px;
 }
-
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .onboarding4
+    { 
+        height: 100vh;
+        width: 100vw;
+    }
+}
 .buttonStyle {
     height: 7vw;
     width: 20vw;
     background-color: rgba(240, 248, 255, 0.543);
     font-size: x-large;
-    border-radius: 30px;
-
+    border-radius: 20px;
+}
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .buttonStyle
+    { 
+        height: 10vh;
+        width: 50vw;
+    }
 }
 /* Onboarding Page 4 End */
 /* END ALL ONBOARDING STYLE */
@@ -158,8 +233,18 @@
 .memberListPageContainer {
     background: rgb(244,244,244);
     background: linear-gradient(to bottom, rgb(244,244,244) 0%,rgb(213,213,213) 51%,rgb(111,111,111) 100%);
-    height: 100vw;
+    height: 180vh;
     width: 100vw;
+    
+}
+
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .memberListPageContainer
+    {     
+      font-size: 2vw; 
+      height: 100vh;
+      width: 100vw;
+    }
 }
 
 .memberListPageTop {
@@ -175,7 +260,7 @@
 .dummySearchBar {
     height: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: left;
     background-color: white;
@@ -183,12 +268,18 @@
     font-size: xx-large;
     margin-bottom: 20px;
 }
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .dummySearchBar
+    { 
+      font-size: 4vw; 
+    }
+}
 
 .userContainer .peskyAtag {
     width: 95vw;
     height: 20vw;
     border-radius: 11pt;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
@@ -197,9 +288,14 @@
     margin: 0 auto;
     text-decoration: none;
     margin-bottom: 50px;
-    
 }
-
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .userContainer .peskyAtag
+    { 
+        width: 95vw;
+        height: 100px;
+    }
+}
 .memberPic {
     grid-area: picture;
     border-radius: 100%;
@@ -207,7 +303,13 @@
     display: flex;
     padding: 20px;
 }
-
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .memberPic
+    { 
+      width: 100px;
+      margin-top: -5%;
+    }
+}
 .userInfo1 {
     width: auto;
     height: auto;
@@ -217,7 +319,13 @@
     flex-direction: column;
     justify-content: space-around;
 }
-
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .userInfo1
+    { 
+      width: 150px;
+      margin-left: -20%;
+    }
+}
 
 .userInfo2 {
     width: auto;
@@ -228,6 +336,15 @@
     justify-content: space-around;
     text-align: center;
     padding: 20px;
+}
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .userInfo2
+    { 
+      width: auto;
+      height: 50px;
+      margin-left: -15px;
+      margin-top: 5px;
+    }
 }
 /* Member List Style End */
 

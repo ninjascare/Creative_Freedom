@@ -209,6 +209,7 @@ class ProfileShow extends Component {
         </Page>
 
         <Navbar />
+
       </div>
     );
   }
