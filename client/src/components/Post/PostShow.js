@@ -84,7 +84,7 @@ class PostShow extends Component {
         {this.state.showComments ? (
           <div>
             {this.state.post.comments.map(comment => (
-              <div key={comment.id}>
+              <div>
                 <h4>{comment.created_at}</h4>
                 <p>{comment.content}</p>
               </div>
