@@ -12,6 +12,7 @@ export default class AddComment extends Component {
   };
 
   componentDidMount() {
+    this.setPostId();
     const postId = this.props.match.params.postId;
     axios.get(`/api/post/${postId}`).then(res => {
       this.setState({
@@ -19,15 +20,6 @@ export default class AddComment extends Component {
       });
     });
   }
-
-  handleChange = e => {
-    console.log("name", e.target.name);
-    console.log("value", e.target.value);
-    const createdComment = { ...this.state.newGame };
-    createdComment[e.target.name] = e.target.value;
-    this.setState({ newComment: createdComment });
-  };
-
   setPostId = () => {
     const postId = this.props.match.params.postId;
     const comment = {
@@ -38,14 +30,19 @@ export default class AddComment extends Component {
     this.setState({ newComment: comment });
   };
 
+  handleChange = e => {
+    console.log("name", e.target.name);
+    console.log("value", e.target.value);
+    const createdComment = { ...this.state.newComment };
+    createdComment[e.target.name] = e.target.value;
+    this.setState({ newComment: createdComment });
+  };
+
   handleSubmit = event => {
-    event.preventDefault();
-    axios
-      .post(`/api/comment/`, this.state.newComment, this.state.post.id)
-      .then(res => {
-        console.log(res.data);
-        this.props.history.push(`/posts`);
-      });
+    axios.post(`/api/comment/`, this.state.newComment).then(res => {
+      console.log("Hey!!", res.data);
+      this.props.history.push(`/post/${this.state.post.id}`);
+    });
   };
 
   render() {
