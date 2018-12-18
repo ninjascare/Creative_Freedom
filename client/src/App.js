@@ -12,7 +12,6 @@ import UploadContent from "./components/Users/UploadContent";
 import PostIndex from "./components/Post/PostIndex";
 import UserSettings from "./components/Users/UserSettings";
 import CreateProfile from "./components/Onboarding/CreateProfile";
-import PostIndex from "./components/Post/PostIndex";
 import PostShow from "./components/Post/PostShow";
 
 class App extends Component {
@@ -43,7 +42,6 @@ class App extends Component {
               
 
             </Switch>
-            <Navbar/>
 
           </div>
         </Router>
