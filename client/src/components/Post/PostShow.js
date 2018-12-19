@@ -43,10 +43,7 @@ class PostShow extends Component {
         </Link>
         {/* <div className="PostContainer"> */}
 
-        {/* ↓ User Profile Style Lvl ↓ */}
-        
-        {/* ↑ User Profile Info Style ↑ */}
-        {/* ↑ User Profile Style Lvl ↑ */}
+  
 
 
         {/* ↓ Post Content(s) Style Lvl ↓ */}

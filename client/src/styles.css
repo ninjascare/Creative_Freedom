@@ -251,7 +251,6 @@
     border: 2px solid black;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    background-color: darkgray;
 }
 
 
@@ -292,19 +291,23 @@
     z-index: 0;
 }
 
-/* This is the Icon! ↓ */
+/* This is the Video Icon! ↓ */
 #videocam{
-    font-size: 50px;
+    font-size: 65px;
     position: absolute;
     z-index: 1;
-    margin-left: 30%;
+    margin-left: 90%;
     }
 
-.PostIndexContentVideo:hover {
-    opacity: 0;
-    background-color: rgba(30, 143, 255, 0.644);
-    transition-duration: .5s;
-}
+/* This is the Music Icon! ↓ */
+#musicNote{
+    font-size: 65px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 90%;
+    
+    }
+
 
 /* ↑ Post Index Style End ↑ */
 

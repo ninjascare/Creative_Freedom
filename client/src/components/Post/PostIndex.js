@@ -51,23 +51,28 @@ class PostIndex extends Component {
         <div className='PostIndexDummySearchBar'>
           <div>Search</div> 🔍
         </div>
-      {/* ↑ This is the top of the page Menu x Dummy Search Bar ↑ */}
+        {/* ↑ This is the top of the page Menu x Dummy Search Bar ↑ */}
 
         <div className="PostGridContainer">
 
           {this.state.posts.map(post => (
             <Link to={`/post/${post.id}`} key={post.id} className='PostIndexPeskyATag'>
 
-            {/* {/* ↓ All Posts Style Lvl ↓ */}  
+              {/* {/* ↓ All Posts Style Lvl ↓ */}
 
               {/* ↓ Post Content(s) Style Lvl ↓ */}
               {post.image_url ? (
                 <img src={post.image_url} className="PostIndexContentImg" />
               ) : null}
 
+              {post.audio_url ? (
+                <i class="fa fa-music" aria-hidden="true" id='musicNote'></i>
+              ) : null}
+
 
               {post.video_url ? (
-                <div className='VideoWrapper'> <i class="fas fa-video" id='videocam'></i>
+                <div className='VideoWrapper'>
+                 <i class="fas fa-video" id='videocam'></i>
                   <iframe
                     width="500px"
                     height="500px"
@@ -75,7 +80,7 @@ class PostIndex extends Component {
                     frameborder="0"
                     allowFullScreen className="PostIndexContentVideo" />
                 </div>
-                ) : null}
+              ) : null}
 
               {/* ↑ Post Content(s) Style Lvl ↑ */}
             </Link>
