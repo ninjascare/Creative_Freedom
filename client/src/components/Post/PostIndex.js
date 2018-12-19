@@ -45,14 +45,14 @@ class PostIndex extends Component {
       // ↓ This is the top of the page Menu x Dummy Search Bar ↓
       <div>
         <h1 className='PageTop'>
-          <span>Connx</span><Link to='/posts'> <div>Discover</div> </Link>  <div>Events</div> 
+          <span>Connx</span><Link to='/posts'> <div>Discover</div> </Link>  <div>Events</div>
         </h1>
 
         <div className='PostIndexDummySearchBar'>
           <div>Search</div> 🔍
         </div>
         {/* ↑ This is the top of the page Menu x Dummy Search Bar ↑ */}
-
+<div className="biggerContainer"></div>
         <div className="PostGridContainer">
 
           {this.state.posts.map(post => (

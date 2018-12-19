@@ -257,6 +257,12 @@ margin-left: 16%;
     padding: 10px;
     margin: 0px;
 }
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .PageTop
+    { 
+      font-size: 5vw; 
+    }
+}
 
 .dummySearchBar {
     height: 50px;
@@ -298,7 +304,7 @@ a:visited {
     .userContainer .peskyAtag
     { 
         width: 95vw;
-        height: 100px;
+        height: 125px;
     }
 }
 .memberPic {
@@ -365,12 +371,18 @@ a:visited {
     height: 50px;
     width: 100vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     text-align: left;
     background-color: white;
     border-bottom: 3pt solid black;
     font-size: xx-large;
+}
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .PostIndexDummySearchBar
+    { 
+      font-size: 5vw; 
+    }
 }
 
 .PostGridContainer {
@@ -380,7 +392,12 @@ a:visited {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
 }
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .PostGridContainer
+    { 
 
+    }
+}
 
 .PostGridContainer img iframe audio{
     max-width: 100%;
@@ -398,6 +415,16 @@ a:visited {
     margin-bottom: 50px;
     
 }
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .PostIndexPeskyATag
+    { 
+      margin-top: 10%;
+      display: flex;
+      justify-content: center;
+      margin-left: 40%;
+      flex-direction: column-reverse
+    }
+}
 
 .PostIndexContentImg{
     display: flex;
@@ -406,11 +433,29 @@ a:visited {
     max-height: 100%;
     max-width: 100%;
 }
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .PostIndexContentImg
+    { 
+        max-height: 35vw;
+        max-width: 35vw;
+        z-index: 2;
+        margin-bottom: 10%;
+    }
+}
 
 .PostIndexContentVideo {
     max-height: 30vw;
     max-width: 30vw;
     z-index: 2;
+}
+@media only screen and (min-device-width : 320px) and (max-width: 480px){
+    .PostIndexContentVideo
+    { 
+        max-height: 35vw;
+        max-width: 35vw;
+        z-index: 2;
+        margin-bottom: 10%;
+    }
 }
 
 .VideoWrapper {
@@ -426,6 +471,14 @@ a:visited {
     z-index: 1;
     margin-left: 90%;
     }
+    @media only screen and (min-device-width : 320px) and (max-width: 480px){
+        #videocam
+        { 
+          font-size: 25px;
+          margin-left:30%;
+          margin-top: -1%;
+        }
+    }
 
 /* This is the Music Icon! ↓ */
 #musicNote{
@@ -434,6 +487,16 @@ a:visited {
     z-index: 1;
     margin-left: 90%;
     
+    }
+    @media only screen and (min-device-width : 320px) and (max-width: 480px){
+        #musicNote
+        { 
+          font-size: 25px;
+          margin-left: 30%;
+          margin-top: -1%;
+          z-index: 10;
+
+        }
     }
 
 

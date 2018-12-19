@@ -16,7 +16,7 @@ const IconStyle = styled.div`
   color: white;
   display: flex;
   justify-content: space-evenly;
-  letter-spacing: 35px;
+  letter-spacing: 30px;
   a:visited {
     color: white;
   }
