@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/Users/kevinrosales/.local/share/virtualenvs/cf_project-2A5PZAOM/bin/python"
+    "python.pythonPath": "/Users/kevinrosales/.local/share/virtualenvs/cf_project-2A5PZAOM/bin/python",
+    "python.linting.pylintEnabled": true
 }
