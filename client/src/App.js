@@ -31,12 +31,12 @@ class App extends Component {
               <Route exact path="/new" component={CreateProfile} />
               <Route exact path="/member/:userId" component={MemberShow} />
               <Route exact path="/creators" component={MemberList} />
+              <Route exact path="/profile/:userId" component={ProfileShow} />
               <Route
                 exact
                 path="/profile/:userId/upload"
                 component={UploadContent}
               />
-              <Route exact path="/profile/:userId" component={ProfileShow} />
               <Route
                 exact
                 path="/profile/:userId/settings"

@@ -152,6 +152,9 @@ class ProfileShow extends Component {
         <Page>
           <Header>
             <h1>My Profile</h1>
+            <Link to={`/profile/${this.props.match.params.userId}/upload`}>
+            <button>Upload</button>
+            </Link>
           </Header>
           <Container>
             <Content>
