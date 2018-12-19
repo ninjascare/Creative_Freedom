@@ -97,6 +97,14 @@ const ImgStyle = styled.div`
       rgb(0 175 251)
     )
   }
+  @media only screen and (min-device-width: 320px) and (max-width: 480px) {
+    {
+      button{
+        height: 35px;
+        width: 100px;
+      }
+   }
+ }
   img {
     position: absolute;
     z-index: 10;
