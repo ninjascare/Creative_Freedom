@@ -72,18 +72,49 @@ const ImgStyle = styled.div`
     position: absolute;
     z-index: 20;
     margin-left: -30%;
+    text-shadow: 2px 2px 2px black;
   }
   h3 {
     text-decoration: none;
   }
+  button{
+    position: absolute;
+    z-index: 20;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    height: 65px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 5px black;
+    display: block;
+    margin-left: 30%;
+    background-image: linear-gradient(
+      to top right,
+      rgb(236 0 255),
+      rgb(166 4 255),
+      rgb(32 118 255),
+      rgb(0 175 251)
+    )
+    
+  }
+  @media only screen and (min-device-width: 320px) and (max-width: 480px) {
+    {
+      button{
+        height: 35px;
+        width: 100px;
+      }
+   }
+ }
+  @media only screen and (min-device-width: 320px) and (max-width: 480px) {
+    {
   img {
     position: absolute;
     z-index: 10;
     width: 100vw;
     height: 100vw;
     object-fit: cover;
-    @media only screen and (min-device-width: 320px) and (max-width: 480px) {
-       {
+
         border: none;
         border-radius: 0px;
         margin-left: -4%;
@@ -152,9 +183,7 @@ class ProfileShow extends Component {
         <Page>
           <Header>
             <h1>My Profile</h1>
-            <Link to={`/profile/${this.props.match.params.userId}/upload`}>
-            <button>Upload</button>
-            </Link>
+
           </Header>
           <Container>
             <Content>
@@ -174,6 +203,11 @@ class ProfileShow extends Component {
                     <i class="fas fa-cog" />
                   </h3>
                 </Link>
+                <button> <Link to={`/profile/${this.props.match.params.userId}/upload`}>
+                Upload
+            </Link>
+                </button>
+
                 <img src={this.state.users.image_url} alt="profile pic" />
               </ImgStyle>
             </Content>
