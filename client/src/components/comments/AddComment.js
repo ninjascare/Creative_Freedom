@@ -3,26 +3,45 @@ import axios from "axios";
 
 export default class AddComment extends Component {
   state = {
+    post: {},
     newComment: {
       content: "",
-      created_at: ""
-     
+      created_at: "",
+      post: ""
     }
+  };
+
+  componentDidMount() {
+    this.setPostId();
+    const postId = this.props.match.params.postId;
+    axios.get(`/api/post/${postId}`).then(res => {
+      this.setState({
+        post: res.data
+      });
+    });
+  }
+  setPostId = () => {
+    const postId = this.props.match.params.postId;
+    const comment = {
+      content: "",
+      created_at: "",
+      post: postId
+    };
+    this.setState({ newComment: comment });
   };
 
   handleChange = e => {
     console.log("name", e.target.name);
     console.log("value", e.target.value);
-    const createdComment = { ...this.state.newGame };
+    const createdComment = { ...this.state.newComment };
     createdComment[e.target.name] = e.target.value;
     this.setState({ newComment: createdComment });
   };
 
   handleSubmit = event => {
-    event.preventDefault();
     axios.post(`/api/comment/`, this.state.newComment).then(res => {
-      console.log(res.data);
-      this.props.history.push(`/posts`);
+      console.log("Hey!!", res.data);
+      this.props.history.push(`/post/${this.state.post.id}`);
     });
   };
 

@@ -30,6 +30,13 @@ class PostShow extends Component {
     });
   };
 
+  handleDelete = postId => {
+    axios.delete(`/api/post/${postId}`).then(res => {
+      this.setState({ post: res.data });
+    });
+    window.location.reload();
+  };
+
   render() {
     return (
       // Page Container Lvl
@@ -98,6 +105,13 @@ class PostShow extends Component {
           </div>
         ) : null}
         {/* ↑ Comment Functionality Lvl ↑ */}
+        <Link to="/posts">
+          <button onClick={() => this.handleDelete(this.state.post.id)}>
+            Delete this post
+          </button>
+        </Link>
+        <br />
+        
         <Navbar />
       </div>
     );
