@@ -434,10 +434,17 @@ margin-left: 16%;
 
 /* ↓ Post Show Style Start ↓ */
 
-/* .PostShowPageContainer {
-    width: 100vw;
-    height: 100vw;
-} */
+.PostShowPageContainer {
+    width: 95vw;
+    height: 100%;
+    max-width: 1000px;
+    border: 1px solid black;
+    margin: 30px auto;
+    display: flex; 
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
 
 .PostContainer {
     width: 68%;
@@ -475,19 +482,19 @@ margin-left: 16%;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.PostContentVideo {
     max-height: 50%;
     max-width: 50%;
 }
 
-.PostContentVideo {
-    max-height: 33%;
-    max-width: 33%;
-}
-
-.PostInfo h4{
+.PostInfo h6{
     display: flex;
-    /* justify-content: space-between; */
-    align-content: left;
+    justify-content: center;
+    /* align-content: center; */
 }
 
 .commentButton {
@@ -495,7 +502,6 @@ margin-left: 16%;
     -moz-border-radius:42px;
     -webkit-border-radius:42px;
     border-radius:42px;
-    display:inline-block;
     cursor:pointer;
     color:#ffffff;
     font-family:Arial;

@@ -40,25 +40,26 @@ class PostShow extends Component {
   render() {
     return (
       // Page Container Lvl
-      <div>
-        <h1>Post Show</h1>
-        <h2>Post Feed</h2>
-      
+      <div className='PostShowPageContainer'>
+        
+        <div className='PostShowContainer'> 
         {/* {/* ↓ All Posts Style Lvl ↓ */}
         <Link to={`/member/${this.props.match.params.userId}`}>
           <button>See Member</button>
         </Link>
         {/* <div className="PostContainer"> */}
 
-  
-
-
         {/* ↓ Post Content(s) Style Lvl ↓ */}
 
+        {/* ↓ This ternary operator works like this: "If the object is an image, then pull up this data." ↓ */}
         {this.state.post.image_url ? (
           <img src={this.state.post.image_url} className="PostContentImg" />
         ) : null}
 
+
+
+
+        {/* ↓ "If the object is Video, then pull up this data." ↓ */}
         {this.state.post.video_url ? (
           <div className="PostContentVideo">
             <iframe
@@ -71,11 +72,21 @@ class PostShow extends Component {
           </div>
         ) : null}
 
-        {/* trying to make audio work with different methods */}
+        {/* Same thing as the others, but with audio */}
         {this.state.post.audio_url ? (
-          <audio controls src={this.state.post.audio_url} typ e="audio/mpeg" />
+          <div>
+
+          <audio controls src={this.state.post.audio_url} typ e="audio/mpeg" 
+          /> 
+
+          
+
+          </div>
         ) : null}
         {/* ↑ Post Content(s) Style Lvl ↑ */}
+
+
+
         {/* ↓ Post Info Style Lvl ↓ */}
         <div className="PostInfo">
           {/* <h4>{this.state.post.use}</h4> */}
@@ -113,6 +124,7 @@ class PostShow extends Component {
         <br />
         
         <Navbar />
+        </div>
       </div>
     );
   }
