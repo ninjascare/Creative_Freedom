@@ -12,6 +12,10 @@ class Onboarding4 extends Component {
           <button className="buttonStyle">Join the Network</button>
           </Link>
 
+          <Link to={`/posts`}>
+          <button className="buttonStyle">Skip Button</button>
+          </Link>
+
         </div>
       </div>
     );
