@@ -8,7 +8,7 @@ const Container = styled.div`
   font-size: 2vw;
   text-align: center;
   height: 90vh;
-  background-image: url(../images/pinkGlazedDonutBlur.png);
+  background-image: url('../images/pinkGlazedDonutBlur.png');
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: -2.8%;
