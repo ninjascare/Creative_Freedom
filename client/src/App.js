@@ -14,6 +14,7 @@ import UserSettings from "./components/Users/UserSettings";
 import CreateProfile from "./components/Onboarding/CreateProfile";
 import PostShow from "./components/Post/PostShow";
 import EditPost from "./components/Post/EditPost";
+import Interest from "./components/Users/Interest";
 
 class App extends Component {
   render() {
@@ -41,6 +42,12 @@ class App extends Component {
                 path="/profile/:userId/settings"
                 component={UserSettings}
               />
+              <Route
+                exact
+                path="/profile/:userId/settings"
+                component={UserSettings}
+              />
+              <Route path="/interests" component={Interest} />
 
               {/* routes for posts */}
               <Route path="/posts" component={PostIndex} />

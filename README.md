@@ -16,6 +16,6 @@
 ## Technologies Used:
 Languages - HTML5, CSS3, Javascript, Python React
 
-Design - Animista.net
+Design - UX/UI CFC group
 
 Software - Visual Studio, PyCharm,  and Google, Google and more Google.

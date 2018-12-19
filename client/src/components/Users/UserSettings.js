@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Header = styled.div`
   display: flex;
   justify-content: center;
-`;
+`
 const Container = styled.div`
   display: flex;
   justify-content: center;
