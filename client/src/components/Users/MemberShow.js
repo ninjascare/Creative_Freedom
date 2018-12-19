@@ -49,11 +49,14 @@ const Title = styled.div`
   text-shadow: 1px 1px 1px black;
   margin-top: 65%;
   margin-left: -35%;
+  font-size: 4vw;
 
   @media only screen and (min-device-width: 320px) and (max-width: 480px) {
      {
-      margin-top: 75%;
-      margin-left: -15%;
+      margin-top: 85%;
+      margin-left: -25%;
+      font-size: 5vw;
+
     }
   }
 `;

@@ -13,6 +13,7 @@ import PostIndex from "./components/Post/PostIndex";
 import UserSettings from "./components/Users/UserSettings";
 import CreateProfile from "./components/Onboarding/CreateProfile";
 import PostShow from "./components/Post/PostShow";
+import Interest from "./components/Users/Interest";
 
 class App extends Component {
   render() {
@@ -34,6 +35,7 @@ class App extends Component {
               <Route exact path="/profile/:userId/upload" component={UploadContent} />
               <Route exact path="/profile/:userId" component={ProfileShow} />
               <Route exact path="/profile/:userId/settings" component={UserSettings} />
+              <Route path="/interests" component={Interest} />
 
               {/* routes for posts */}
               <Route path="/posts" component={PostIndex} />
