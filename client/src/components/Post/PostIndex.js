@@ -42,49 +42,53 @@ class PostIndex extends Component {
 
   render() {
     return (
-      // Page Container Lvl
-      <div className="PostPageContainer">
-        <h1>Post Index</h1>
-        <h2>News Feed</h2>
+      // ↓ This is the top of the page Menu x Dummy Search Bar ↓
+      <div>
+        <h1 className='PageTop'>
+          <span>Connx</span> <div>Discover</div> <div>Events</div> (MemberList)
+        </h1>
 
-        {this.state.posts.map(post => (
-          <div key={post.id}>
-            {/* {/* ↓ All Posts Style Lvl ↓ */}
-            <Link to={`/post/${post.id}`}>
-              {/* <div className="PostContainer"> */}
-              {/* ↓ User Profile Style Lvl ↓ */}
-              {/* ↑ User Profile Info Style ↑ */}
-              {/* ↑ User Profile Style Lvl ↑ */}
+        <div className='PostIndexDummySearchBar'>
+          <div>Search</div> 🔍
+        </div>
+        {/* ↑ This is the top of the page Menu x Dummy Search Bar ↑ */}
+
+        <div className="PostGridContainer">
+
+          {this.state.posts.map(post => (
+            <Link to={`/post/${post.id}`} key={post.id} className='PostIndexPeskyATag'>
+
+              {/* {/* ↓ All Posts Style Lvl ↓ */}
+
               {/* ↓ Post Content(s) Style Lvl ↓ */}
-              <img src={post.image_url} className="PostContentImg" />
-              <div className="PostContentVideo">
-                <iframe
-                  width="500px"
-                  height="500px"
-                  src={post.video_url}
-                  frameborder="50"
-                  allowFullScreen
-                />
-              </div>
-              {/* trying to make audio work with different methods */}
-              {post.audio_url ? (
-                <audio controls src={post.audio_url} typ e="audio/mpeg" />
+              {post.image_url ? (
+                <img src={post.image_url} className="PostIndexContentImg" />
               ) : null}
+
+              {post.audio_url ? (
+                <i class="fa fa-music" aria-hidden="true" id='musicNote'></i>
+              ) : null}
+
+
+              {post.video_url ? (
+                <div className='VideoWrapper'>
+                 <i class="fas fa-video" id='videocam'></i>
+                  <iframe
+                    width="500px"
+                    height="500px"
+                    src={post.video_url}
+                    frameborder="0"
+                    allowFullScreen className="PostIndexContentVideo" />
+                </div>
+              ) : null}
+
               {/* ↑ Post Content(s) Style Lvl ↑ */}
-              {/* ↓ Post Info Style Lvl ↓ */}
-
-              {/* ↑ Post Info Style Lvl ↑ */}
-              {/* ↓ Comment Functionality Lvl ↓ */}
-              {/* ↓ Post Comment Button Style Lvl ↓ */}
-
-              {/* ↑ Post Comment Button Style Lvl ↑ */}
-
-              {/* ↑ Comment Functionality Lvl ↑ */}
             </Link>
-          </div>
-        ))}
+          ))}
+
+        </div>
         <Navbar />
-      </div>
+      </div >
     );
   }
 }

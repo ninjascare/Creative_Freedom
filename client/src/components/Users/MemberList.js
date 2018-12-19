@@ -21,7 +21,7 @@ export default class MemberList extends Component {
   render() {
     return (
       <div className='memberListPageContainer'>
-        <h1 className='memberListPageTop'>
+        <h1 className='PageTop'>
           <span>Connx</span> <div>Discover</div> <div>Events</div> (MemberList)
         </h1>
 

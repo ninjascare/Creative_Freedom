@@ -40,18 +40,19 @@ class PostShow extends Component {
   render() {
     return (
       // Page Container Lvl
-      <div className="PostPageContainer">
+      <div>
         <h1>Post Show</h1>
         <h2>Post Feed</h2>
-
+      
         {/* {/* ↓ All Posts Style Lvl ↓ */}
         <Link to={`/member/${this.props.match.params.userId}`}>
           <button>See Member</button>
         </Link>
         {/* <div className="PostContainer"> */}
-        {/* ↓ User Profile Style Lvl ↓ */}
-        {/* ↑ User Profile Info Style ↑ */}
-        {/* ↑ User Profile Style Lvl ↑ */}
+
+  
+
+
         {/* ↓ Post Content(s) Style Lvl ↓ */}
 
         {this.state.post.image_url ? (
@@ -82,12 +83,14 @@ class PostShow extends Component {
           <h6>{this.state.post.created_at}</h6>
         </div>
         {/* ↑ Post Info Style Lvl ↑ */}
+
         {/* ↓ Comment Functionality Lvl ↓ */}
         {/* ↓ Post Comment Button Style Lvl ↓ */}
         <button onClick={this.handleClick} className="commentButton">
           {this.state.showComments ? "Hide Comments" : "View comments:"}
         </button>
         {/* ↑ Post Comment Button Style Lvl ↑ */}
+        
         {this.state.showComments ? (
           <div>
             {this.state.post.comments.map(comment => (
