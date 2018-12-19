@@ -7,6 +7,7 @@ export default class MemberList extends Component {
   state = {
     users: []
   };
+  
   componentDidMount() {
     this.getAllUsers();
   }

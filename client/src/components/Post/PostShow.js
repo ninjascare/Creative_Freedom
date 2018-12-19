@@ -102,13 +102,17 @@ class PostShow extends Component {
           </div>
         ) : null}
         {/* ↑ Comment Functionality Lvl ↑ */}
+        <Link to={`/post/${this.state.post.id}/edit`}>
+          <button>Edit This Post</button>
+        </Link>
+
         <Link to="/posts">
           <button onClick={() => this.handleDelete(this.state.post.id)}>
             Delete this post
           </button>
         </Link>
         <br />
-        
+
         <Navbar />
       </div>
     );
