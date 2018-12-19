@@ -55,11 +55,11 @@ class Navbar extends Component {
                   {" "}
                   <i class="fas fa-theater-masks" />
                 </Link>
-                <Link to={`/profile/15`}>
+                <Link to={`/profile/33`}>
                   {" "}
                   <i class="fas fa-user-alt" />
                 </Link>
-                <Link to="/profile/15/upload">
+                <Link to="/profile/33/upload">
                   {" "}
                   <i class="fas fa-plus-circle" />{" "}
                 </Link>
