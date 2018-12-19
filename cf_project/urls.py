@@ -30,7 +30,7 @@ urlpatterns = [
     
     ]
 
-REACT_ROUTES = ['users', 'posts', 'post/<int:pk>', 'user', 'profile/<int:pk>', 'member/<int:pk>', 'login', 'new', 'settings', 'upload', 'creators', 'post/<int:pk>/edit', 'interests']
+REACT_ROUTES = ['users', 'posts', 'post/<int:pk>', 'user', 'profile/<int:pk>', 'member/<int:pk>', 'login', 'new', 'profile/<int:pk>/settings', 'profile/<int:pk>/upload', 'creators', 'post/<int:pk>/edit', 'interests']
 
 for route in REACT_ROUTES:
 
