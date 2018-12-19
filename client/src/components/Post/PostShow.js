@@ -11,7 +11,6 @@ import Navbar from "../Navbar";
 
 class PostShow extends Component {
   state = {
-    user: {},
     showComments: false,
     post: {}
   };
@@ -41,17 +40,11 @@ class PostShow extends Component {
   render() {
     return (
       // Page Container Lvl
+      <div>
       <div className='PostShowPageContainer'>
         
         <div className='PostShowContainer'> 
         {/* {/* ↓ All Posts Style Lvl ↓ */}
-      
-        <h1>Post Show</h1>
-        <h2>Post Feed</h2>
-
-        {/* {/* ↓ All Posts Style Lvl ↓ */}
-
-        {/* <div className="PostContainer"> */}
 
         {/* ↓ Post Content(s) Style Lvl ↓ */}
 
@@ -107,7 +100,7 @@ class PostShow extends Component {
         </button>
         </div>
         {/* ↑ Post Comment Button Style Lvl ↑ */}
-
+        
         {this.state.showComments ? (
           <div>
             {this.state.post.comments.map(comment => (
@@ -122,18 +115,17 @@ class PostShow extends Component {
           </div>
         ) : null}
         {/* ↑ Comment Functionality Lvl ↑ */}
-        <Link to={`/post/${this.state.post.id}/edit`}>
-          <button>Edit This Post</button>
-        </Link>
-
         <Link to="/posts">
           <button onClick={() => this.handleDelete(this.state.post.id)} className='deleteButtonStyle'>
             Delete this post
           </button>
         </Link>
-        <br />
-        <Navbar />
+
+        
+        
         </div>
+      </div>
+      <Navbar />
       </div>
     );
   }
