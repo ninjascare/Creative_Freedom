@@ -45,7 +45,7 @@ class PostIndex extends Component {
       // ↓ This is the top of the page Menu x Dummy Search Bar ↓
       <div>
         <h1 className='PageTop'>
-          <span>Connx</span> <div>Discover</div> <div>Events</div> (MemberList)
+          <span>Connx</span><Link to='/posts'> <div>Discover</div> </Link>  <div>Events</div> 
         </h1>
 
         <div className='PostIndexDummySearchBar'>
