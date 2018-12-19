@@ -96,25 +96,15 @@ const ImgStyle = styled.div`
       rgb(32 118 255),
       rgb(0 175 251)
     )
-    
   }
-  @media only screen and (min-device-width: 320px) and (max-width: 480px) {
-    {
-      button{
-        height: 35px;
-        width: 100px;
-      }
-   }
- }
-  @media only screen and (min-device-width: 320px) and (max-width: 480px) {
-    {
   img {
     position: absolute;
     z-index: 10;
     width: 100vw;
     height: 100vw;
     object-fit: cover;
-
+    @media only screen and (min-device-width: 320px) and (max-width: 480px) {
+       {
         border: none;
         border-radius: 0px;
         margin-left: -4%;
@@ -204,7 +194,7 @@ class ProfileShow extends Component {
                   </h3>
                 </Link>
                 <button> <Link to={`/profile/${this.props.match.params.userId}/upload`}>
-                Upload
+            Upload
             </Link>
                 </button>
 
