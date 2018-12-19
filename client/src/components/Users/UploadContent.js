@@ -117,12 +117,10 @@ class UploadContent extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    axios
-      .post("/api/post/", this.state.newPost, this.state.user.id)
-      .then(res => {
-        console.log(res.data);
-        this.props.history.push(`/profile/${this.state.user.id}`);
-      });
+    axios.post("/api/post/", this.state.newPost).then(res => {
+      console.log(res.data);
+      this.props.history.push(`/posts`);
+    });
   };
 
   render() {
@@ -194,7 +192,9 @@ class UploadContent extends Component {
                 <input value={this.state.user.name} name="user" />
               </CreatedOn>
             </div>
+
             <button type="submit">Post</button>
+
             <br />
           </form>
         </Container>
