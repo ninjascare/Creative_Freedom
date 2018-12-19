@@ -13,7 +13,7 @@ class Onboarding4 extends Component {
           </Link>
 
           <Link to={`/posts`}>
-          <button className="buttonStyle">Skip Button</button>
+          <button className="buttonStyle">Continue As Guest</button>
           </Link>
 
         </div>
