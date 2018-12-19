@@ -44,10 +44,6 @@ class PostShow extends Component {
         
         <div className='PostShowContainer'> 
         {/* {/* ↓ All Posts Style Lvl ↓ */}
-        <Link to={`/member/${this.props.match.params.userId}`}>
-          <button>See Member</button>
-        </Link>
-        {/* <div className="PostContainer"> */}
 
         {/* ↓ Post Content(s) Style Lvl ↓ */}
 
@@ -97,9 +93,11 @@ class PostShow extends Component {
 
         {/* ↓ Comment Functionality Lvl ↓ */}
         {/* ↓ Post Comment Button Style Lvl ↓ */}
-        <button onClick={this.handleClick} className="commentButton">
-          {this.state.showComments ? "Hide Comments" : "View comments:"}
+        <div className="commentButtonBox">
+        <button onClick={this.handleClick} className="commentButtonStyle">
+          {this.state.showComments ? "Hide Comments" : "View Comments:"}
         </button>
+        </div>
         {/* ↑ Post Comment Button Style Lvl ↑ */}
         
         {this.state.showComments ? (
@@ -117,7 +115,7 @@ class PostShow extends Component {
         ) : null}
         {/* ↑ Comment Functionality Lvl ↑ */}
         <Link to="/posts">
-          <button onClick={() => this.handleDelete(this.state.post.id)}>
+          <button onClick={() => this.handleDelete(this.state.post.id)} className='deleteButtonStyle'>
             Delete this post
           </button>
         </Link>

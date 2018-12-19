@@ -497,7 +497,12 @@ margin-left: 16%;
     /* align-content: center; */
 }
 
-.commentButton {
+.commentButtonBox {
+    display: flex;
+    justify-content: center;
+}
+
+.commentButtonStyle {
     background-color:#adadad;
     -moz-border-radius:42px;
     -webkit-border-radius:42px;
@@ -510,10 +515,26 @@ margin-left: 16%;
     padding:10px 76px;
     text-decoration:none;
     }
-.commentButton:hover {
+.deleteButtonStyle {
+    background-color:#adadad;
+    -moz-border-radius:42px;
+    -webkit-border-radius:42px;
+    border-radius:42px;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:15px;
+    font-style:italic;
+    padding:0px 46px;
+    text-decoration:none;
+    }
+.commentButtonStyle:hover {
     background-color:#318a96;
     }
-.commentButton:active {
+.deleteButtonStyle:hover {
+    background-color: red;
+    }
+.commentButtonStyle:active {
     position:relative;
     top:1px;
     }
