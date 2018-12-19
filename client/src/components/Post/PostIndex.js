@@ -52,7 +52,6 @@ class PostIndex extends Component {
           <div>Search</div> 🔍
         </div>
         {/* ↑ This is the top of the page Menu x Dummy Search Bar ↑ */}
-<div className="biggerContainer"></div>
         <div className="PostGridContainer">
 
           {this.state.posts.map(post => (

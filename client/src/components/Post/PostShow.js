@@ -41,6 +41,7 @@ class PostShow extends Component {
   render() {
     return (
       // Page Container Lvl
+      <div>
       <div className="PostShowPageContainer">
         <div className="PostShowContainer">
           {/* {/* ↓ All Posts Style Lvl ↓ */}
@@ -123,8 +124,9 @@ class PostShow extends Component {
             </button>
           </Link>
           <br />
-          <Navbar />
+          </div>
         </div>
+        <Navbar />
       </div>
     );
   }
