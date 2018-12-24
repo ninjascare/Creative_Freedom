@@ -28,7 +28,7 @@ button{
     font-weight: bold;
     margin: 10px;
     z-index: 1;
-    height: 65px;
+    height: 42px;
     width: 5.5em;
     border-radius: 15px;
     background: rgba(255, 255, 255, 0.702);
